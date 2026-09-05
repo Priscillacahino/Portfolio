@@ -88,19 +88,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                 
                 {/* Retrato Profissional */}
                 <div className="space-y-6">
-                  <div className="relative overflow-hidden border border-[#333] bg-[#121212] group">
-                    <img
-                      src="/priscilla-cahino-perfil.webp"
-                      alt="Priscilla Cahino - Retrato Profissional"
-                      width={480}
-                      height={560}
-                      className="w-full h-auto object-cover max-h-[380px] sm:max-h-[420px] object-top transition-transform duration-500 group-hover:scale-102"
-                      referrerPolicy="no-referrer"
-                      loading="eager"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = "/priscilla-cahino-perfil.png";
-                      }}
-                    />
+                  <div className="relative overflow-hidden border border-[#333] bg-[#121212] group aspect-[3/4] max-h-[460px] sm:max-h-[500px]">
+                    <picture>
+                      <source type="image/webp" srcSet="/priscilla-cahino-perfil.webp" />
+                      <source type="image/jpeg" srcSet="/priscilla-cahino-perfil.jpg" />
+                      <img
+                        src="/priscilla-cahino-perfil.jpg"
+                        alt="Priscilla Cahino - Retrato Profissional"
+                        width={864}
+                        height={1152}
+                        decoding="async"
+                        fetchPriority="high"
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102"
+                        referrerPolicy="no-referrer"
+                        loading="eager"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "/priscilla-cahino-perfil.png";
+                        }}
+                      />
+                    </picture>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#161616] via-transparent to-transparent opacity-30 pointer-events-none"></div>
                   </div>
 

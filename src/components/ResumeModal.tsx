@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { X, Printer, Download, Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Award, BookOpen, Briefcase, Code, Sparkles, CheckCircle2 } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { X, Printer, Download, Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Award, BookOpen, Briefcase, Code, Sparkles, CheckCircle2, Eye } from 'lucide-react';
 import { CONTACT_DATA } from '../data/portfolioData';
 import { Language } from '../types';
 
@@ -12,6 +12,7 @@ interface ResumeModalProps {
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, currentLanguage }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [viewCount, setViewCount] = useState<string | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -26,6 +27,52 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
       setTimeout(() => {
         closeButtonRef.current?.focus();
       }, 50);
+
+      // Track view and retrieve hit count
+      let isMounted = true;
+      const trackAndFetchViewCount = async () => {
+        try {
+          const res = await fetch(
+            'https://hits.sh/portifoliocpriscillacom.vercel.app/curriculo.svg?label=Acessos&color=ff6b35&labelColor=1a1a1a',
+            { cache: 'no-cache' }
+          );
+          if (res.ok) {
+            const svg = await res.text();
+            const match = svg.match(/aria-label="[^:]+:\s*([0-9,.]+)"/);
+            if (match && match[1] && isMounted) {
+              setViewCount(match[1]);
+              try {
+                localStorage.setItem('priscilla_resume_views_cached', match[1]);
+              } catch {}
+              return;
+            }
+          }
+        } catch {
+          // Network error or offline
+        }
+
+        // Resilient fallback with localStorage
+        if (isMounted) {
+          try {
+            const cached = localStorage.getItem('priscilla_resume_views_cached');
+            if (cached) {
+              setViewCount(cached);
+            } else {
+              const localVal = parseInt(localStorage.getItem('priscilla_resume_views') || '1', 10);
+              localStorage.setItem('priscilla_resume_views', String(localVal + 1));
+              setViewCount(String(localVal + 1));
+            }
+          } catch {}
+        }
+      };
+
+      trackAndFetchViewCount();
+
+      return () => {
+        isMounted = false;
+        document.body.style.overflow = 'unset';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -43,6 +90,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
   };
 
   const handleDownloadPdf = async () => {
+    // Discreetly track download hit
+    try {
+      fetch('https://hits.sh/portifoliocpriscillacom.vercel.app/curriculo-download.svg?label=Downloads&color=ff6b35', { mode: 'no-cors' }).catch(() => {});
+      const dlCount = parseInt(localStorage.getItem('priscilla_resume_downloads') || '0', 10);
+      localStorage.setItem('priscilla_resume_downloads', String(dlCount + 1));
+    } catch {}
+
     try {
       const response = await fetch('/Curriculo_Priscilla_Cahino.pdf');
       if (!response.ok) throw new Error('Network response not ok');
@@ -79,11 +133,20 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
         
         {/* Modal Action Bar (Hidden on Print) */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-[#2e2e2e] bg-[#121212] print:hidden gap-3 flex-wrap">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5 flex-wrap">
             <span className="w-2.5 h-2.5 bg-[#FF6B35]"></span>
             <h2 id="resume-title" className="text-xs uppercase tracking-widest font-mono text-white font-bold">
-              {isPt ? 'Currículo Profissional Completo' : isEs ? 'Currículum Vitae Completo' : 'Complete Professional Resume'}
+              {isPt ? 'Currículo Profissional Completo' : 'Currículum Vitae Completo'}
             </h2>
+            {viewCount && (
+              <span 
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#1c1c1c] border border-[#333] text-[11px] font-mono text-[#FF6B35]"
+                title={isPt ? `Visualizações registradas deste currículo: ${viewCount}` : `Visualizaciones registradas de este currículum: ${viewCount}`}
+              >
+                <Eye className="w-3 h-3 text-[#FF6B35]" />
+                <span>{viewCount} {isPt ? 'acessos' : 'accesos'}</span>
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
@@ -320,14 +383,14 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
               <div className="p-3 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent">
                 <span className="font-semibold text-white print:text-black block mb-1">ClínicaCare</span>
                 <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
-                  {isPt ? 'Modelagem relacional MySQL, análise com Python/Pandas e dashboard executivo no Power BI.' : 'Dashboard in Power BI, Python analysis & MySQL schema modeling.'}
+                  {isPt ? 'Modelagem relacional MySQL, análise com Python/Pandas e dashboard executivo no Power BI.' : 'Modelado relacional en MySQL, análisis con Python/Pandas y dashboard ejecutivo en Power BI.'}
                 </p>
               </div>
 
               <div className="p-3 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent">
                 <span className="font-semibold text-white print:text-black block mb-1">Petzona</span>
                 <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
-                  {isPt ? 'Protótipo mobile interativo no Figma com persona e mapeamento da jornada do cliente no Miro.' : 'Interactive mobile prototype in Figma with persona and journey map in Miro.'}
+                  {isPt ? 'Protótipo mobile interativo no Figma com persona e mapeamento da jornada do cliente no Miro.' : 'Prototipo móvil interactivo en Figma con persona y mapeo de la jornada del cliente en Miro.'}
                 </p>
               </div>
             </div>
@@ -337,7 +400,18 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
 
         {/* Footer info in modal */}
         <div className="px-6 py-4 border-t border-[#2e2e2e] bg-[#121212] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#888] print:hidden">
-          <span>{CONTACT_DATA.name} • João Pessoa - PB</span>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span>{CONTACT_DATA.name} • João Pessoa - PB</span>
+            {viewCount && (
+              <>
+                <span className="hidden sm:inline text-[#555]">•</span>
+                <span className="inline-flex items-center gap-1.5 text-[#FF6B35]">
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>{viewCount} {isPt ? 'visualizações deste currículo' : 'visualizaciones registradas'}</span>
+                </span>
+              </>
+            )}
+          </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <button
               type="button"
