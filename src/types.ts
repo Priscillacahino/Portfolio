@@ -1,8 +1,47 @@
-export type PageType = 'about' | 'projects';
+export type PageType = 'home' | 'about' | 'projects' | 'article';
 
 export type Language = 'pt' | 'es';
 
 export type ProjectCategory = 'all' | 'data' | 'ux-ui' | 'dev';
+
+export interface ArticleSection {
+  id: string;
+  title: string;
+  paragraphs: string[];
+  highlight?: string;
+}
+
+export interface ArticleData {
+  id: string;
+  title: string;
+  subtitle: string;
+  author: string;
+  undergraduate: string;
+  originalYear: number;
+  revisitYear: number;
+  tags: string[];
+  disclaimer: string;
+  summary: string;
+  sections: ArticleSection[];
+  conclusion: {
+    title: string;
+    paragraphs: string[];
+    closingQuote: string;
+  };
+  originalResearch: {
+    title: string;
+    institution: string;
+    course: string;
+    area: string;
+    pages: number;
+    year: number;
+    methodology: string;
+    instruments: string[];
+    objective: string;
+    context: string;
+    keyFindings: string[];
+  };
+}
 
 export interface AcademicProject {
   id: string;
@@ -19,6 +58,9 @@ export interface AcademicProject {
   liveUrl?: string;
   figmaUrl?: string;
   featured?: boolean;
+  objective?: string;
+  tools?: string[];
+  results?: string[];
 }
 
 export interface ContactInfo {

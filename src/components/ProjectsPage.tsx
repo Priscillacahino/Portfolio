@@ -21,8 +21,10 @@ import {
   Linkedin,
   Mail,
   FileText,
-  Download
+  Download,
+  Smartphone
 } from 'lucide-react';
+import { PetzoneWireframeViewer } from './PetzoneWireframeViewer';
 
 interface ProjectsPageProps {
   onSelectPage: (page: PageType) => void;
@@ -41,6 +43,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('all');
   const [activeModalProject, setActiveModalProject] = useState<AcademicProject | null>(null);
+  const [showWireframeStandalone, setShowWireframeStandalone] = useState<boolean>(false);
   
   const modalCloseBtnRef = useRef<HTMLButtonElement>(null);
   const previousActiveElement = useRef<HTMLElement | null>(null);
@@ -302,40 +305,48 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     </p>
                   </div>
 
-                  <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                    {project.description}
-                  </p>
+                  {/* 🎯 Objetivo (seção estruturada) */}
+                  {project.objective && (
+                    <div className="p-3.5 bg-[#141414] border-l-2 border-[#FF6B35] border-y border-r border-[#262626]">
+                      <span className="text-[11px] uppercase tracking-wider font-bold text-[#FF6B35] block mb-1">
+                        🎯 {currentLanguage === 'pt' ? 'Objetivo:' : 'Objetivo:'}
+                      </span>
+                      <p className="text-xs sm:text-[13px] text-[#e0e0e0] leading-relaxed">
+                        {project.objective}
+                      </p>
+                    </div>
+                  )}
 
-                  {/* Highlights */}
-                  <div className="space-y-2 pt-1">
-                    <p className="text-xs uppercase tracking-[0.2em] font-semibold text-[#9ca3af]">
-                      {t.highlightsLabel}
-                    </p>
-                    <ul className="space-y-1.5">
-                      {project.highlights.map((item, hIdx) => (
-                        <li key={hIdx} className="flex items-start gap-2 text-xs sm:text-[13px] text-[#bbb] font-light leading-relaxed">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35] shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Technology Tags */}
-                  <div className="pt-2">
-                    <p className="text-xs uppercase tracking-[0.2em] font-semibold text-[#9ca3af] mb-2">
-                      {t.techLabel}
-                    </p>
+                  {/* 🛠️ Ferramentas */}
+                  <div className="space-y-2">
+                    <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#9ca3af] block">
+                      🛠️ {currentLanguage === 'pt' ? 'Ferramentas & Tecnologias:' : 'Herramientas & Tecnologías:'}
+                    </span>
                     <div className="flex flex-wrap gap-1.5">
-                      {project.technologies.map((tech, tIdx) => (
+                      {(project.tools || project.technologies).map((tech, tIdx) => (
                         <span
                           key={tIdx}
-                          className="px-2.5 py-1 bg-[#141414] border border-[#2a2a2a] text-xs font-mono text-[#9ca3af]"
+                          className="px-2.5 py-1 bg-[#141414] border border-[#2e2e2e] text-xs font-mono text-[#d1d5db]"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
+                  </div>
+
+                  {/* 📊 Resultados com números & impacto */}
+                  <div className="space-y-2 pt-1">
+                    <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#FF6B35] block">
+                      📊 {currentLanguage === 'pt' ? 'Resultados & Impacto Mensurável:' : 'Resultados e Impacto Medible:'}
+                    </span>
+                    <ul className="space-y-2">
+                      {(project.results || project.highlights).map((item, hIdx) => (
+                        <li key={hIdx} className="flex items-start gap-2 text-xs sm:text-[13px] text-[#ccc] font-light leading-relaxed">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35] shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -367,6 +378,16 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                       <span>{t.btnFigma}</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </a>
+                  )}
+
+                  {project.id === 'petzona' && (
+                    <button
+                      onClick={() => setShowWireframeStandalone(true)}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#FF6B35] hover:bg-[#FF6B35]/15 bg-[#1c1c1c] text-[#FF6B35] text-xs uppercase tracking-wider font-semibold transition-colors cursor-pointer"
+                    >
+                      <Smartphone className="w-3.5 h-3.5" />
+                      <span>{currentLanguage === 'pt' ? 'Testar Wireframe Interativo (Figma)' : 'Probar Wireframe Interactivo (Figma)'}</span>
+                    </button>
                   )}
                 </div>
 
@@ -526,7 +547,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
             </div>
 
             {/* Modal Body */}
-            <div className="overflow-y-auto p-4 sm:p-6 space-y-4 bg-[#121212]">
+            <div className="overflow-y-auto p-4 sm:p-6 space-y-5 bg-[#121212]">
               {activeModalProject.image && (
                 <div className="flex items-center justify-center bg-[#101010] border border-[#2a2a2a] p-2">
                   <img
@@ -537,17 +558,44 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 </div>
               )}
 
+              {/* 🎯 Objetivo */}
+              {activeModalProject.objective && (
+                <div className="p-4 bg-[#161616] border-l-3 border-[#FF6B35] border-y border-r border-[#2a2a2a]">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[#FF6B35] block mb-1">
+                    🎯 {currentLanguage === 'pt' ? 'Objetivo do Projeto:' : 'Objetivo del Proyecto:'}
+                  </span>
+                  <p className="text-sm text-[#e5e5e5] leading-relaxed">
+                    {activeModalProject.objective}
+                  </p>
+                </div>
+              )}
+
               <p id="modal-project-desc" className="text-sm sm:text-base text-[#d1d5db] leading-relaxed font-light">
                 {activeModalProject.description}
               </p>
 
-              <div className="space-y-2 pt-2">
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#9ca3af]">
-                  {t.highlightsLabel}
+              {/* 🛠️ Ferramentas */}
+              <div className="pt-2">
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#9ca3af] mb-2">
+                  🛠️ {currentLanguage === 'pt' ? 'Ferramentas Utilizadas:' : 'Herramientas Utilizadas:'}
                 </h4>
-                <ul className="space-y-1.5">
-                  {activeModalProject.highlights.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-[#bbb] leading-relaxed">
+                <div className="flex flex-wrap gap-2">
+                  {(activeModalProject.tools || activeModalProject.technologies).map((tech, idx) => (
+                    <span key={idx} className="px-2.5 py-1 bg-[#1c1c1c] border border-[#333] text-xs font-mono text-[#d1d5db]">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* 📊 Resultados */}
+              <div className="space-y-2 pt-2">
+                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#FF6B35]">
+                  📊 {currentLanguage === 'pt' ? 'Resultados & Impacto Mensurável:' : 'Resultados e Impacto Medible:'}
+                </h4>
+                <ul className="space-y-2">
+                  {(activeModalProject.results || activeModalProject.highlights).map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-[#ccc] leading-relaxed">
                       <CheckCircle2 className="w-4 h-4 text-[#FF6B35] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -555,18 +603,18 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 </ul>
               </div>
 
-              <div className="pt-2">
-                <h4 className="text-xs uppercase tracking-wider font-semibold text-[#9ca3af] mb-2">
-                  {t.techLabel}
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {activeModalProject.technologies.map((tech, idx) => (
-                    <span key={idx} className="px-2.5 py-1 bg-[#1c1c1c] border border-[#333] text-xs font-mono text-[#d1d5db]">
-                      {tech}
-                    </span>
-                  ))}
+              {/* Wireframe Interativo integrado para PetZona */}
+              {activeModalProject.id === 'petzona' && (
+                <div className="pt-4 border-t border-[#2a2a2a] space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Smartphone className="w-4 h-4 text-[#FF6B35]" />
+                    <h4 className="text-xs uppercase tracking-wider font-bold text-white">
+                      {currentLanguage === 'pt' ? 'Simulador de Wireframe & Diretrizes Figma' : 'Simulador de Wireframe y Directrices Figma'}
+                    </h4>
+                  </div>
+                  <PetzoneWireframeViewer />
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Modal Footer */}
@@ -611,6 +659,24 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Standalone Wireframe Simulator Modal */}
+      {showWireframeStandalone && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-sm animate-fadeIn overflow-y-auto"
+          onClick={() => setShowWireframeStandalone(false)}
+        >
+          <div 
+            className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto bg-[#141414] border border-[#3a3a3a] shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <PetzoneWireframeViewer 
+              onClose={() => setShowWireframeStandalone(false)}
+              isModal={true}
+            />
           </div>
         </div>
       )}

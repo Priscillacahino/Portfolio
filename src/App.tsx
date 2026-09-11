@@ -9,6 +9,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { AboutPage } from './components/AboutPage';
 import { ProjectsPage } from './components/ProjectsPage';
+import { ArticlePage } from './components/ArticlePage';
 import { ResumeModal } from './components/ResumeModal';
 
 export default function App() {
@@ -21,7 +22,10 @@ export default function App() {
   const handleHashChange = useCallback(() => {
     const hash = window.location.hash.toLowerCase();
 
-    if (hash.startsWith('#/projetos')) {
+    if (hash.startsWith('#/artigo')) {
+      setCurrentPage('article');
+      setActiveProjectId(null);
+    } else if (hash.startsWith('#/projetos')) {
       setCurrentPage('projects');
       const parts = hash.split('/');
       if (parts.length >= 3 && parts[2]) {
@@ -47,7 +51,9 @@ export default function App() {
   const handleSelectPage = (page: PageType) => {
     setCurrentPage(page);
     setActiveProjectId(null);
-    if (page === 'projects') {
+    if (page === 'article') {
+      window.location.hash = '#/artigos/instituicoes-financeiras-sustentabilidade';
+    } else if (page === 'projects') {
       window.location.hash = '#/projetos';
     } else {
       window.location.hash = '#/';
@@ -72,28 +78,39 @@ export default function App() {
   const handleCloseResume = () => {
     setIsResumeOpen(false);
     if (window.location.hash === '#/curriculo' || window.location.hash === '#/cv') {
-      window.location.hash = currentPage === 'projects' ? '#/projetos' : '#/';
+      if (currentPage === 'article') {
+        window.location.hash = '#/artigos/instituicoes-financeiras-sustentabilidade';
+      } else if (currentPage === 'projects') {
+        window.location.hash = '#/projetos';
+      } else {
+        window.location.hash = '#/';
+      }
     }
   };
 
   useEffect(() => {
-    const titles: Record<Language, { about: string; projects: string }> = {
+    const titles: Record<Language, { about: string; projects: string; article: string; home: string }> = {
       pt: {
-        about: 'Priscilla Cahino | Customer Success & Operações em Tecnologia',
-        projects: 'Priscilla Cahino | Projetos Acadêmicos & GitHub'
+        home: 'Priscilla Cahino | CX, Dados & Tecnologia',
+        about: 'Priscilla Cahino | CX, Dados & Tecnologia',
+        projects: 'Priscilla Cahino | Projetos Acadêmicos & Portfólio',
+        article: 'Instituições Financeiras e Sustentabilidade | Priscilla Cahino'
       },
       es: {
-        about: 'Priscilla Cahino | Customer Success y Operaciones en Tecnología',
-        projects: 'Priscilla Cahino | Proyectos Académicos & GitHub'
+        home: 'Priscilla Cahino | CX, Datos & Tecnología',
+        about: 'Priscilla Cahino | CX, Datos & Tecnología',
+        projects: 'Priscilla Cahino | Proyectos Académicos & Portafolio',
+        article: 'Instituciones Financieras y Sostenibilidad | Priscilla Cahino'
       }
     };
 
-    document.title = titles[currentLanguage][currentPage];
+    const currentTitles = titles[currentLanguage];
+    document.title = currentTitles[currentPage] || currentTitles.about;
   }, [currentPage, currentLanguage]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#121212] text-[#f5f5f5] selection:bg-[#FF6B35]/30 selection:text-[#FF6B35]">
-      {/* Persistent Navigation Header with Language Switcher */}
+      {/* Persistent Navigation Header with 9 items */}
       <Header 
         currentPage={currentPage} 
         onSelectPage={handleSelectPage}
@@ -102,22 +119,29 @@ export default function App() {
         onOpenResume={handleOpenResume}
       />
 
-      {/* Main 2-Page Dynamic Content with Deep-Link Support */}
+      {/* Main Dynamic Content */}
       <main className="flex-1">
-        {currentPage === 'about' ? (
-          <AboutPage 
-            onSelectPage={handleSelectPage} 
+        {currentPage === 'article' ? (
+          <ArticlePage
+            onBackToHome={() => handleSelectPage('about')}
             currentLanguage={currentLanguage}
             onOpenResume={handleOpenResume}
-            onSelectProject={handleSelectProject}
           />
-        ) : (
+        ) : currentPage === 'projects' ? (
           <ProjectsPage 
             onSelectPage={handleSelectPage} 
             currentLanguage={currentLanguage} 
             onOpenResume={handleOpenResume}
             activeProjectId={activeProjectId}
             onSelectProject={handleSelectProject}
+          />
+        ) : (
+          <AboutPage 
+            onSelectPage={handleSelectPage} 
+            currentLanguage={currentLanguage}
+            onOpenResume={handleOpenResume}
+            onSelectProject={handleSelectProject}
+            onOpenArticle={() => handleSelectPage('article')}
           />
         )}
       </main>
