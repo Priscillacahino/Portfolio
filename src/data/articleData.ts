@@ -15,7 +15,7 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
     "Pesquisa acadêmica",
     "Dados"
   ],
-  "disclaimer": "Artigo de reflexão baseado na monografia concluída em 2013 no Instituto de Educação Superior da Paraíba (IESP). Os gráficos identificam a coleta como realizada em 2012. Como as planilhas originais não estão disponíveis e há divergências numéricas no material, esta releitura omite percentuais e quantidade de participantes. Não representa o cenário atual nem valida os cálculos originais.",
+  "disclaimer": "Artigo de reflexão baseado na monografia concluída em 2013 no UNIESP. Os gráficos identificam a coleta como realizada em 2012. Como as planilhas originais não estão disponíveis e há divergências numéricas no material, esta releitura omite percentuais e quantidade de participantes. Não representa o cenário atual nem valida os cálculos originais.",
   "summary": "Pesquisa acadêmica sobre sustentabilidade e percepção dos clientes do Banco Real, agência Cruz das Armas, em João Pessoa/PB. A releitura recupera o processo de investigação e relaciona seus aprendizados à minha experiência com clientes e à formação em tecnologia e dados.",
   "sections": [
     {
@@ -69,7 +69,7 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
   },
   "originalResearch": {
     "title": "As Instituições Financeiras como Facilitador da Sustentabilidade",
-    "institution": "Instituto de Educação Superior da Paraíba — IESP",
+    "institution": "Centro Universitário UNIESP",
     "course": "Bacharelado em Ciências Contábeis",
     "area": "Contabilidade Financeira",
     "year": 2013,
@@ -80,7 +80,7 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
       "Entrevista com o gerente-geral da agência"
     ],
     "objective": "Analisar os resultados das práticas de sustentabilidade para a instituição e seus públicos, incluindo o conhecimento e a percepção dos clientes.",
-    "context": "Monografia de Ciências Contábeis concluída em 2013 no IESP. Estudo realizado no Banco Real, agência Cruz das Armas, em João Pessoa/PB; gráficos identificam a pesquisa de campo como realizada em 2012.",
+    "context": "Monografia de Ciências Contábeis concluída em 2013 no UNIESP. Estudo realizado no Banco Real, agência Cruz das Armas, em João Pessoa/PB; gráficos identificam a pesquisa de campo como realizada em 2012.",
     "keyFindings": [
       "Conhecimento sobre sustentabilidade e sobre iniciativas específicas da instituição.",
       "Percepções dos clientes sobre benefícios e formas de divulgação.",

@@ -758,7 +758,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
 
               <span className="text-xs font-mono px-2.5 py-1 bg-[#1e1e1e] text-[#ccc] border border-[#333]">
-                Monografia UNIPÊ
+                Monografia UNIESP
               </span>
             </div>
 

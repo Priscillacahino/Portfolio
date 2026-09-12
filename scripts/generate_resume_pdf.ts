@@ -369,7 +369,7 @@ async function generateResumePdf() {
 
   drawEducation(
     'Graduação em Ciências Contábeis (Bacharelado)',
-    'Instituto de Educação Superior da Paraíba (IESP)',
+    'Centro Universitário UNIESP',
     '2009 - 2013 (Concluído)',
     'Base sólida em conformidade fiscal, conciliação contábil, auditoria e finanças. TCC em Responsabilidade Socioambiental e Sustentabilidade nas Instituições Financeiras.'
   );

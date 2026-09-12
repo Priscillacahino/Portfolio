@@ -55,7 +55,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
               {res.title}
             </h3>
             <p className="text-xs text-[#999] font-light">
-              Trabalho de Conclusão de Curso (TCC) aprovado perante banca examinadora no UNIPÊ.
+              Trabalho de Conclusão de Curso (TCC) aprovado perante banca examinadora no UNIESP.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
             <span className="text-[#888] font-mono block text-[10px] uppercase">Instituição & Curso</span>
             <div className="flex items-center gap-1.5 font-semibold text-white">
               <Building2 className="w-3.5 h-3.5 text-[#FF6B35]" />
-              <span>UNIPÊ — Ciências Contábeis</span>
+              <span>UNIESP — Ciências Contábeis</span>
             </div>
           </div>
 
@@ -146,8 +146,8 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
 
         {/* Footer com Ações */}
         <div className="border-t border-[#2a2a2a] pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="text-[11px] text-[#777] font-mono">
-            Acervo acadêmico • IESP João Pessoa/PB
+           <span className="text-[11px] text-[#777] font-mono">
+            Acervo acadêmico • UNIESP João Pessoa/PB
           </span>
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
