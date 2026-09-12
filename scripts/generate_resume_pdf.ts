@@ -369,7 +369,7 @@ async function generateResumePdf() {
 
   drawEducation(
     'Graduação em Ciências Contábeis (Bacharelado)',
-    'Centro Universitário UNIESP',
+    'UNIESP',
     '2009 - 2013 (Concluído)',
     'Base sólida em conformidade fiscal, conciliação contábil, auditoria e finanças. TCC em Responsabilidade Socioambiental e Sustentabilidade nas Instituições Financeiras.'
   );

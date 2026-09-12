@@ -103,6 +103,16 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
           </div>
         </div>
 
+        {/* Contexto da Pesquisa Original */}
+        <div className="p-3.5 bg-[#1a1a1a] border border-[#2e2e2e] text-xs space-y-1">
+          <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] font-semibold block">
+            Contexto da pesquisa original
+          </span>
+          <p className="text-[#ccc] font-light leading-relaxed text-xs">
+            {res.context}
+          </p>
+        </div>
+
         {/* Advertência sobre Temporalidade */}
         <div className="p-3.5 bg-[#241a15] border border-[#FF6B35]/40 text-xs text-[#ffcaa6] space-y-1">
           <div className="flex items-center gap-1.5 font-semibold text-[#FF6B35]">
@@ -147,7 +157,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
         {/* Footer com Ações */}
         <div className="border-t border-[#2a2a2a] pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
            <span className="text-[11px] text-[#777] font-mono">
-            Acervo acadêmico • UNIESP João Pessoa/PB
+            Acervo acadêmico • UNIESP
           </span>
 
           <div className="flex items-center gap-2 w-full sm:w-auto">

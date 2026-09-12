@@ -270,7 +270,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                 </>
               ) : isEs ? (
                 <>
-                  Profesional con <strong className="text-white print:text-black font-semibold">+18 años de sólida trayectoria</strong> en negocios, crédito y atención al cliente en los sectores bancario e inmobiliario, en <strong className="text-white print:text-black font-semibold">transición consciente a la tecnología</strong>. Licenciatura en Ciencias Contables (UNIESP), formación en Análisis y Desarrollo de Sistemas en curso (UNIPÊ) con participación en la Fábrica de Software y Posgrado en Ingeniería de Datos (UNIESP). No me posiciono como especialista en TI, sino con madurez senior en procesos y negocios combinada con <strong className="text-white print:text-black font-semibold">nociones prácticas en SQL, Python, Power BI y Figma</strong> para Customer Success, Operaciones, Análisis de Datos y UX.
+                  Profesional con <strong className="text-white print:text-black font-semibold">+18 años de sólida trayectoria</strong> en negocios, crédito y atención al cliente en los sectores bancario e inmobiliario, en <strong className="text-white print:text-black font-semibold">transición consciente a la tecnología</strong>. Licenciatura en Ciencias Contables (UNIESP), formación en Análisis y Desenvolvimento de Sistemas en curso (UNIPÊ) con participación en la Fábrica de Software y Posgrado en Ingeniería de Datos (UNIESP). No me posiciono como especialista en TI, sino con madurez senior en procesos y negocios combinada con <strong className="text-white print:text-black font-semibold">nociones prácticas en SQL, Python, Power BI y Figma</strong> para Customer Success, Operaciones, Análisis de Datos y UX.
                 </>
               ) : (
                 <>
@@ -530,7 +530,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                   </span>
                   <span className="font-mono text-[#888] print:text-neutral-600">2009 – 2013 • {isPt ? 'Concluído' : 'Completed'}</span>
                 </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">Centro Universitário UNIESP</p>
+                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">UNIESP</p>
                 <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
                   {isPt 
                     ? 'Formação com sólida base em conformidade contábil, conciliação, auditoria, análise de balanços e operações financeiras. Trabalho de Conclusão de Curso (TCC) voltado a Instituições Financeiras e Sustentabilidade Socioambiental.' 

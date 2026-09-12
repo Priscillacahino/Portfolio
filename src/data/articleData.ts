@@ -15,14 +15,14 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
     "Pesquisa acadêmica",
     "Dados"
   ],
-  "disclaimer": "Artigo de reflexão baseado na monografia concluída em 2013 no UNIESP. Os gráficos identificam a coleta como realizada em 2012. Como as planilhas originais não estão disponíveis e há divergências numéricas no material, esta releitura omite percentuais e quantidade de participantes. Não representa o cenário atual nem valida os cálculos originais.",
-  "summary": "Pesquisa acadêmica sobre sustentabilidade e percepção dos clientes do Banco Real, agência Cruz das Armas, em João Pessoa/PB. A releitura recupera o processo de investigação e relaciona seus aprendizados à minha experiência com clientes e à formação em tecnologia e dados.",
+  "disclaimer": "Artigo de reflexão baseado na monografia concluída em 2013 no UNIESP, como parte da graduação em Ciências Contábeis. A pesquisa foi desenvolvida no setor financeiro, utilizando pesquisa documental, questionário aplicado a clientes e entrevista com um gestor da instituição. Esta releitura recupera aspectos da metodologia e os principais temas discutidos no estudo original, relacionando-os à minha trajetória profissional e aos conhecimentos que venho desenvolvendo em tecnologia e dados. Os resultados pertencem ao contexto da pesquisa original e não representam o cenário atual do setor financeiro.",
+  "summary": "Pesquisa acadêmica sobre sustentabilidade e percepção dos clientes de uma instituição financeira. A releitura recupera o processo de investigação e relaciona seus aprendizados à minha experiência com clientes e à formação em tecnologia e dados.",
   "sections": [
     {
       "id": "secao-1",
       "title": "A pergunta que orientou o estudo",
       "paragraphs": [
-        "O trabalho buscou analisar os resultados das práticas de sustentabilidade para a instituição e seus públicos. Uma das frentes foi compreender como os clientes percebiam essas iniciativas e o que conheciam sobre os produtos, serviços e ações apresentados pelo banco.",
+        "O trabalho buscou analisar os resultados das práticas de sustentabilidade para a instituição e seus públicos. Uma das frentes foi compreender como os clientes percebiam essas iniciativas e o que conheciam sobre os produtos, serviços e ações apresentados pela instituição pesquisada.",
         "Essa abordagem permitiu observar uma questão de comunicação: oferecer uma iniciativa e torná-la conhecida pelo público são etapas diferentes. Para compreender essa relação, era necessário consultar os clientes e considerar também as informações da instituição."
       ]
     },
@@ -30,15 +30,15 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
       "id": "secao-2",
       "title": "Como a pesquisa foi desenvolvida",
       "paragraphs": [
-        "A metodologia reuniu pesquisa documental, aplicação de questionário fechado aos clientes e entrevista com o gerente-geral da agência. O questionário abordou conhecimento sobre sustentabilidade, avaliação de iniciativas, linhas de crédito, benefícios percebidos e meios de divulgação.",
-        "A análise documental ajudou a contextualizar as práticas descritas pelo banco. O questionário registrou percepções dos clientes, enquanto a entrevista trouxe a perspectiva da gestão da agência. Organizar essas informações foi parte importante do meu aprendizado acadêmico."
+        "A metodologia reuniu pesquisa documental, aplicação de questionário fechado a clientes e entrevista com um gestor da instituição financeira pesquisada. O questionário abordou conhecimento sobre sustentabilidade, avaliação de iniciativas, linhas de crédito, benefícios percebidos e formas de divulgação.",
+        "A análise documental ajudou a contextualizar as práticas descritas pela instituição financeira. O questionário registrou percepções dos clientes, enquanto a entrevista trouxe a perspectiva da gestão da instituição. Organizar essas informações foi parte importante do meu aprendizado acadêmico."
       ]
     },
     {
       "id": "secao-3",
       "title": "O que o material permite discutir",
       "paragraphs": [
-        "Os registros da monografia apresentam diferenças entre o conhecimento declarado sobre sustentabilidade e o conhecimento de ações específicas do banco. Também registram percepções distintas sobre benefícios e formas de divulgação. Esses temas oferecem pontos de reflexão sobre clareza da comunicação e acesso à informação.",
+        "Os registros da monografia apresentam diferenças entre o conhecimento declarado sobre sustentabilidade e o conhecimento de ações específicas da instituição pesquisada. Também registram percepções distintas sobre benefícios e formas de divulgação. Esses temas oferecem pontos de reflexão sobre clareza da comunicação e acesso à informação.",
         "Essas observações se referem ao contexto estudado. Não permitem concluir, por si só, que as iniciativas aumentaram o lucro, reduziram a inadimplência ou melhoraram a satisfação dos clientes. Para avaliar esses efeitos, seriam necessários indicadores e procedimentos específicos."
       ]
     },
@@ -69,18 +69,18 @@ export const SUSTAINABILITY_ARTICLE: ArticleData = {
   },
   "originalResearch": {
     "title": "As Instituições Financeiras como Facilitador da Sustentabilidade",
-    "institution": "Centro Universitário UNIESP",
+    "institution": "UNIESP",
     "course": "Bacharelado em Ciências Contábeis",
     "area": "Contabilidade Financeira",
     "year": 2013,
-    "methodology": "Pesquisa documental e pesquisa de campo, com questionário fechado aos clientes e entrevista com o gerente-geral de uma agência.",
+    "methodology": "Pesquisa documental e pesquisa de campo, com questionário fechado a clientes e entrevista com um gestor da instituição financeira pesquisada.",
     "instruments": [
       "Pesquisa documental",
-      "Questionário fechado aplicado aos clientes da agência",
-      "Entrevista com o gerente-geral da agência"
+      "Questionário fechado aplicado a clientes da instituição",
+      "Entrevista com um gestor da instituição"
     ],
     "objective": "Analisar os resultados das práticas de sustentabilidade para a instituição e seus públicos, incluindo o conhecimento e a percepção dos clientes.",
-    "context": "Monografia de Ciências Contábeis concluída em 2013 no UNIESP. Estudo realizado no Banco Real, agência Cruz das Armas, em João Pessoa/PB; gráficos identificam a pesquisa de campo como realizada em 2012.",
+    "context": "Monografia de Ciências Contábeis concluída em 2013 no UNIESP. O estudo analisou práticas de sustentabilidade no setor financeiro e a percepção de clientes em relação às iniciativas apresentadas pela instituição pesquisada.",
     "keyFindings": [
       "Conhecimento sobre sustentabilidade e sobre iniciativas específicas da instituição.",
       "Percepções dos clientes sobre benefícios e formas de divulgação.",
