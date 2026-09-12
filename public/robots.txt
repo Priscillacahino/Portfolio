@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfoliocpriscillacom.vercel.app/sitemap.xml
+Sitemap: https://portfoliopriscilla.vercel.app/sitemap.xml

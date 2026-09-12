@@ -29,7 +29,7 @@ export default function App() {
       setCurrentPage('projects');
       const parts = hash.split('/');
       if (parts.length >= 3 && parts[2]) {
-        setActiveProjectId(parts[2]);
+        setActiveProjectId(parts[2] === 'petzone' ? 'petzona' : parts[2]);
       } else {
         setActiveProjectId(null);
       }

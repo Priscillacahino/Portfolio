@@ -33,7 +33,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
       const trackAndFetchViewCount = async () => {
         try {
           const res = await fetch(
-            'https://hits.sh/portfoliocpriscillacom.vercel.app/curriculo.svg?label=Acessos&color=ff6b35&labelColor=1a1a1a',
+            'https://hits.sh/portfoliopriscilla.vercel.app/curriculo.svg?label=Acessos&color=ff6b35&labelColor=1a1a1a',
             { cache: 'no-cache' }
           );
           if (res.ok) {
@@ -92,7 +92,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
   const handleDownloadPdf = async () => {
     // Discreetly track download hit
     try {
-      fetch('https://hits.sh/portfoliocpriscillacom.vercel.app/curriculo-download.svg?label=Downloads&color=ff6b35', { mode: 'no-cors' }).catch(() => {});
+      fetch('https://hits.sh/portfoliopriscilla.vercel.app/curriculo-download.svg?label=Downloads&color=ff6b35', { mode: 'no-cors' }).catch(() => {});
       const dlCount = parseInt(localStorage.getItem('priscilla_resume_downloads') || '0', 10);
       localStorage.setItem('priscilla_resume_downloads', String(dlCount + 1));
     } catch {}
@@ -246,13 +246,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                 <span>github.com/Priscillacahino</span>
               </a>
               <a 
-                href="https://portfoliocpriscillacom.vercel.app" 
+                href="https://portfoliopriscilla.vercel.app" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-[#FF6B35] hover:underline print:text-black flex items-center gap-1"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
-                <span>portfoliocpriscillacom.vercel.app</span>
+                <span>portfoliopriscilla.vercel.app</span>
               </a>
             </div>
           </div>
@@ -292,7 +292,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
               <div className="border-l-2 border-[#FF6B35] pl-4 space-y-1.5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
                   <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Designer de Interface do Usuário / UI/UX (Estágio)' : 'UI/UX Interface Designer (Internship)'}
+                    {isPt ? 'UX/UI — Projeto de Extensão' : 'UX/UI — University Extension Project'}
                   </span>
                   <span className="font-mono text-[#888] print:text-neutral-600">
                     mar/2026 – jul/2026 • {isPt ? 'Híbrido' : 'Hybrid'}

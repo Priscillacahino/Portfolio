@@ -166,7 +166,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         featured: true
       },
       {
-        id: "petzone",
+        id: "petzona",
         title: "Petzona",
         subtitle: "Projeto Final de UX/UI & Mobile First (Fábrica de Software 2026.1)",
         category: "ux-ui",
@@ -360,7 +360,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         featured: true
       },
       {
-        id: "petzone",
+        id: "petzona",
         title: "Petzona",
         subtitle: "Proyecto Final de UX/UI y Mobile First (Fábrica de Software 2026.1)",
         category: "ux-ui",

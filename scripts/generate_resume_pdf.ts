@@ -1,4 +1,4 @@
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { PDFDocument, PDFName, PDFString, StandardFonts, rgb } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 
@@ -97,7 +97,7 @@ async function generateResumePdf() {
   y -= 13;
 
   // Links Row
-  const linksText = clean('LinkedIn: linkedin.com/in/priscilla-cahino | GitHub: github.com/Priscillacahino | Portfólio: portfoliocpriscillacom.vercel.app');
+  const linksText = clean('LinkedIn: linkedin.com/in/priscilla-cahino | GitHub: github.com/Priscillacahino | Portfólio: portfoliopriscilla.vercel.app');
   page.drawText(linksText, {
     x: marginX,
     y,
@@ -105,6 +105,22 @@ async function generateResumePdf() {
     size: 8,
     color: accentColor,
   });
+  const contactLinks = [
+    ['LinkedIn: linkedin.com/in/priscilla-cahino', 'https://www.linkedin.com/in/priscilla-cahino/'],
+    ['GitHub: github.com/Priscillacahino', 'https://github.com/Priscillacahino'],
+    ['Portfólio: portfoliopriscilla.vercel.app', 'https://portfoliopriscilla.vercel.app/'],
+  ];
+  let linkX = marginX;
+  const annotations = contactLinks.map(([label, url]) => {
+    const width = helveticaBold.widthOfTextAtSize(clean(label), 8);
+    const annotation = doc.context.register(doc.context.obj({
+      Type: 'Annot', Subtype: 'Link', Rect: [linkX, y - 2, linkX + width, y + 9],
+      Border: [0, 0, 0], A: { Type: 'Action', S: 'URI', URI: PDFString.of(url) },
+    }));
+    linkX += width + helveticaBold.widthOfTextAtSize(' | ', 8);
+    return annotation;
+  });
+  page.node.set(PDFName.of('Annots'), doc.context.obj(annotations));
   y -= 13;
 
   // Divider
@@ -226,7 +242,7 @@ async function generateResumePdf() {
 
   // Exp 1: Fábrica de Software
   drawExperience(
-    'Designer de Interface do Usuário / UI/UX (Estágio)',
+    'UX/UI — Projeto de Extensão',
     'Fábrica de Software UBTech Office / UNIPÊ',
     'mar/2026 - jul/2026',
     'Híbrido - João Pessoa/PB',
@@ -448,7 +464,7 @@ async function generateResumePdf() {
   );
 
   // Footer page 2
-  page.drawText(clean('Priscilla Santos Cahino | portfoliocpriscillacom.vercel.app | João Pessoa - PB'), {
+  page.drawText(clean('Priscilla Santos Cahino | portfoliopriscilla.vercel.app | João Pessoa - PB'), {
     x: marginX,
     y: 22,
     font: helvetica,
