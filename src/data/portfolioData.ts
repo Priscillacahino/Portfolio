@@ -2,7 +2,7 @@ import { AcademicProject, ContactInfo } from '../types';
 
 export const CONTACT_DATA: ContactInfo = {
   name: "Priscilla Cahino",
-  tagline: "Customer Success e Operações em Tecnologia — 18 anos em negócios e crédito, em transição para Tech (cursando ADS)",
+  tagline: "CX, Dados e Tecnologia — experiência em negócios e crédito, estudante de ADS",
   phone: "+5583999553329",
   phoneFormatted: "(83) 99955-3329",
   email: "priscilla_cahino@hotmail.com",
@@ -23,11 +23,11 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     categoryLabel: "Projeto Acadêmico de Análise de Dados",
     summary: "Projeto acadêmico envolvendo banco de dados relacional, manipulação com SQL, análise exploratória em Python e dashboard executivo no Power BI para suporte a decisões de uma clínica de saúde.",
     description: "Projeto acadêmico desenvolvido como desafio técnico final de workshop, simulando o cenário de uma clínica de saúde que precisa organizar e analisar seus dados operacionais. O trabalho reúne etapas de modelagem de banco de dados no MySQL, criação e manipulação com SQL, análise exploratória e introdução a Machine Learning em Python, e construção de dashboard de indicadores no Power BI.",
-    objective: "Identificar gargalos na jornada operacional de consultas e pagamentos de uma clínica de saúde, estruturando banco relacional e propondo melhorias preventivas para redução de inadimplência com dados.",
+    objective: "Praticar modelagem relacional, consultas SQL, análise exploratória e visualização de indicadores de uma clínica fictícia.",
     tools: ["SQL (MySQL)", "Python (Pandas)", "Power BI", "Modelagem Relacional", "Machine Learning (Scikit-Learn)"],
     results: [
       "Estruturação e modelagem relacional completa em MySQL com scripts padronizados de DDL e DML",
-      "Análise exploratória com Python/Pandas identificando correlações de faltas e histórico financeiro",
+      "Análise exploratória com Python/Pandas de consultas e pagamentos em uma base acadêmica simulada",
       "Dashboard executivo no Power BI com acompanhamento dinâmico de faturamento, especialidades e inadimplência",
       "Geração de insights para tomada de decisão preventiva sobre agendamentos e cobrança"
     ],
@@ -51,14 +51,14 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     categoryLabel: "Projeto de Extensão Comunitária",
     summary: "Projeto de extensão relacionado à gestão e acompanhamento da jornada dos alunos na Fábrica de Software do UNIPÊ, atuando na concepção de interfaces, fluxos e prototipação no Figma.",
     description: "Desenvolvido na Fábrica de Software do UNIPÊ para apoiar o projeto de extensão Administração para Todos, que oferece cursos gratuitos de capacitação comunitária em gestão. Atuei na concepção de UX/UI, sendo responsável pela prototipação das telas, organização dos fluxos e arquitetura da informação para três perfis de usuários: Coordenação, Instrutores e Alunos.",
-    objective: "Desenvolver interface centrada no humano para digitalizar a gestão de cursos comunitários, otimizando o fluxo de 3 perfis de usuários e eliminando fricções operacionais.",
+    objective: "Desenvolver interface centrada no humano para digitalizar a gestão de cursos comunitários, organizando os fluxos de 3 perfis de usuários.",
     tools: ["Figma", "UX Research", "Prototipação Interativa", "Design Centrado no Humano", "Metodologias Ágeis"],
     results: [
-      "Redução de 30% nos pontos de atrito identificados em testes de usabilidade com usuários reais",
+      "Prototipação de telas e organização dos fluxos de navegação no Figma",
       "Arquitetura de informação e fluxos desenhados para 3 perfis: Coordenação, Instrutores e Alunos",
       "Centralização de processos manuais: turmas, presença digital, notas e emissão de certificados",
-      "Colaboração ágil com a equipe de engenharia garantindo 100% de fidelidade entre design e implementação",
-      "Plataforma web publicada e em produção no ambiente de extensão"
+      "Colaboração com a equipe de desenvolvimento na apresentação das interfaces e dos fluxos propostos",
+      "Plataforma web publicada para visualização do projeto"
     ],
     image: "/projects/adm4all.webp",
     technologies: ["Figma", "UX/UI", "Fluxos", "Prototipação", "Arquitetura de Informação"],
@@ -83,9 +83,9 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     summary: "Projeto desenvolvido como avaliação final de workshop de UX/UI para participação na Fábrica de Software, englobando persona, jornada no Miro e protótipo interativo no Figma.",
     description: "Proposta de solução digital mobile para o segmento pet, criada como avaliação final do Workshop da Fábrica de Software 2026.1. O processo compreendeu a criação da persona 'Tamiris', mapeamento completo da jornada do cliente no Miro, esboços iniciais manuais, wireframes e protótipos de baixa e alta fidelidade navegáveis no Figma.",
     objective: "Mapear a jornada do tutor de pets e prototipar uma solução mobile-first para agendamento ágil de consultas e serviços veterinários com alta usabilidade.",
-    tools: ["Figma", "Miro", "Pesquisa com Usuários", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
+    tools: ["Figma", "Miro", "Construção de Persona", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
     results: [
-      "Projeto avaliativo com nota de destaque que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
+      "Projeto avaliativo que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
       "Mapeamento completo da jornada da persona 'Tamiris' no Miro com identificação de dores e oportunidades",
       "Evolução visual desde esboços manuais até protótipo interativo em alta fidelidade navegável",
       "Fluxo de agendamento mobile simplificado com feedback imediato ao usuário"

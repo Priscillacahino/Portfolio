@@ -15,7 +15,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       roles: [
         "Customer Success e Operações em Tecnologia",
         "18 anos em negócios, crédito e relacionamento com clientes",
-        "Em transição para Tech • Cursando ADS & MBA em Engenharia de Dados"
+        "Estudante de ADS • Pós-graduação em Engenharia de Dados"
       ],
       btnProjects: "Ver Projetos Acadêmicos",
       btnResume: "Baixar Currículo (CV)",
@@ -24,7 +24,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       presentationEyebrow: "Tese & Posicionamento",
       presentationHeadline: "Profissional de negócios e crédito com 18 anos de bagagem, em transição para tecnologia com foco em Customer Success, Operações, Dados e Produtos Digitais.",
       presentationP1: "Minha trajetória consolida mais de 18 anos de vivência prática nos setores bancário e imobiliário, gerenciando esteiras de concessão de crédito, atendimento consultivo, conformidade documental e resolução ágil de atritos operacionais complexos.",
-      presentationP2: "Hoje construo a minha transição para o mercado tech de forma consciente e fundamentada: não me posiciono como especialista em TI, mas trago maturidade sênior de negócios somada à capacidade prática de aplicar ferramentas modernas (SQL, Python, Power BI e prototipação no Figma) para analisar métricas de retenção, mapear jornadas de clientes e apoiar decisões com dados.",
+      presentationP2: "Curso ADS e desenvolvo conhecimentos em SQL, Python, Power BI e Figma por meio de projetos acadêmicos. Busco oportunidades em que possa aprender, aplicar esses conhecimentos e contribuir com minha experiência em atendimento, crédito e processos.",
       copyEmail: "Copiar E-mail",
       copied: "Copiado!",
       pillarsEyebrow: "Pilares Estratégicos & Competências",
@@ -52,8 +52,8 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       storyBadge: "Priscilla Cahino • CS/CX & Tecnologia",
       storyHighlight: "Sou uma profissional com mais de dezoito anos de experiência consolidada nos segmentos bancário e imobiliário. Foi nesse ambiente de alta exigência que desenvolvi domínio em atendimento, relacionamento com clientes, esteiras financeiras, crédito e resolução de demandas críticas.",
       storyP1: "Ao longo dessa vivência, percebi que a tecnologia e a análise de dados oferecem ferramentas poderosas para potencializar aquilo que sempre fiz: aproximar o cliente da solução ideal, simplificar processos burocráticos e eliminar gargalos operacionais.",
-      storyP2: "Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) na UNIPÊ, integrando a Fábrica de Software. Não busco me apresentar como iniciante genérica em TI nem como analista isolada de números, mas como uma profissional sênior em negócios que vem ampliando sua capacidade de dialogar e trabalhar com ferramentas de produtos digitais e dados.",
-      storyP3: "Dados e UX são diferenciais que utilizo no dia a dia para desenhar esteiras mais fluídas, entender indicadores de cancelamento ou inadimplência e construir pontes sólidas entre as áreas de negócio e engenharia.",
+      storyP2: "Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ e participei de projetos na Fábrica de Software. Estou conectando minha experiência em negócios e relacionamento com clientes aos conhecimentos que venho desenvolvendo em tecnologia e análise de dados.",
+      storyP3: "Nos projetos acadêmicos, venho praticando SQL, Python e Power BI para organizar e explorar informações, além de Figma e mapeamento de jornadas para estudar a experiência do usuário. Quero ampliar essa prática e contribuir com a visão de processos e de atendimento que construí ao longo da minha trajetória.",
       storyQuoteBox: "“Minha missão é aplicar inteligência de processos, visão de dados e empatia na experiência do usuário para transformar operações complexas em jornadas simples, humanas e orientadas a resultados.”",
       personalTitle: "Além do trabalho e da tecnologia",
       personalText: "Nos momentos de descanso, gosto de aproveitar o mar e a praia em João Pessoa, assistir a um bom filme com pipoca e manter um olhar atento ao comportamento humano. Observar o cotidiano é uma das melhores formas de exercitar a empatia: primeiro ouvir com atenção, compreender as reais necessidades das pessoas e, só então, desenhar soluções funcionais.",
@@ -70,7 +70,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       quoteNote: "Texto estruturado por Priscilla Cahino.",
       ctaEyebrow: "Contato & Conexão",
       ctaTitle: "Aberta a novas oportunidades e conexões estratégicas",
-      ctaDescription: "Disponível para posições em Customer Success, Operações em Tecnologia, Gestão de Relacionamento e projetos que valorizem bagagem sênior combinada a diferenciais analíticos."
+      ctaDescription: "Estou em busca de oportunidades que me permitam aplicar minha experiência profissional, continuar aprendendo e desenvolver minha trajetória em tecnologia, dados, Customer Experience e áreas relacionadas."
     },
     projects: {
       eyebrow: "Portfólio Técnico & GitHub",
@@ -93,12 +93,12 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       returnBoxDesc: "Confira os 18+ anos de experiência consolidada em operações, crédito e relacionamento com clientes na página Sobre Mim.",
       ctaEyebrow: "Contato & Conexão",
       ctaTitle: "Vamos conversar sobre oportunidades e desafios?",
-      ctaDescription: "Estou à disposição para entrevistas e alinhamentos sobre posições de Customer Success, Operações e Tecnologia.",
+      ctaDescription: "Estou à disposição para entrevistas e alinhamentos sobre oportunidades em Customer Experience, Análise de Dados, Operações e Tecnologia.",
       modalClose: "Fechar",
       modalOpenGithub: "Abrir repositório no GitHub"
     },
     footer: {
-      roleLine: "Customer Success e Operações em Tecnologia • 18 anos de bagagem sólida em crédito, atendimento e processos",
+      roleLine: "CX, Dados e Tecnologia • 18 anos de bagagem sólida em crédito, atendimento e processos",
       aboutLink: "01. Sobre Mim & Trajetória",
       projectsLink: "02. Projetos Acadêmicos",
       resumeLink: "03. Currículo (CV)",
@@ -118,7 +118,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         tools: ["Power BI", "SQL (MySQL)", "Python (Pandas)", "Machine Learning (Scikit-Learn)", "Modelagem Relacional"],
         results: [
           "Estruturação e modelagem relacional completa em MySQL com scripts padronizados de DDL e DML",
-          "Análise exploratória com Python/Pandas identificando correlações de faltas e histórico financeiro",
+          "Análise exploratória com Python/Pandas de consultas e pagamentos em uma base acadêmica simulada",
           "Dashboard executivo no Power BI com acompanhamento dinâmico de faturamento, especialidades e inadimplência",
           "Geração de insights para tomada de decisão preventiva sobre agendamentos e cobrança"
         ],
@@ -142,14 +142,14 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         categoryLabel: "UX/UI Design & Produto",
         summary: "Plataforma desenvolvida na Fábrica de Software do UNIPÊ para o projeto de extensão comunitário, onde atuei na área de UX/UI prototipando telas, fluxos e interfaces no Figma.",
         description: "Desenvolvido na Fábrica de Software do UNIPÊ para apoiar o projeto de extensão Administração para Todos, que oferece cursos gratuitos de capacitação comunitária em gestão. Atuei na concepção de UX/UI, sendo responsável pela prototipação das telas, organização dos fluxos e arquitetura da informação para três perfis de usuários: Coordenação, Instrutores e Alunos.",
-        objective: "Desenvolver interface centrada no humano para digitalizar a gestão de cursos comunitários, otimizando o fluxo de 3 perfis de usuários e eliminando fricções operacionais.",
+        objective: "Desenvolver interface centrada no humano para digitalizar a gestão de cursos comunitários, organizando os fluxos de 3 perfis de usuários.",
         tools: ["Figma", "UX Research", "Prototipação Interativa", "Design Centrado no Humano", "Metodologias Ágeis"],
         results: [
-          "Redução de 30% nos pontos de atrito identificados em testes de usabilidade com usuários reais",
+          "Prototipação de telas e organização dos fluxos de navegação no Figma",
           "Arquitetura de informação e fluxos desenhados para 3 perfis: Coordenação, Instrutores e Alunos",
           "Centralização de processos manuais: turmas, presença digital, notas e emissão de certificados",
-          "Colaboração ágil com a equipe de engenharia garantindo 100% de fidelidade entre design e implementação",
-          "Plataforma web publicada e em produção no ambiente de extensão"
+          "Colaboração com a equipe de desenvolvimento na apresentação das interfaces e dos fluxos propostos",
+          "Plataforma web publicada para visualização do projeto"
         ],
         image: "/projects/adm4all.webp",
         technologies: ["UX/UI Design", "Figma", "Prototipação", "Mapeamento de Fluxos", "Arquitetura de Informação", "Usabilidade"],
@@ -174,9 +174,9 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         summary: "Projeto final de UX/UI desenvolvido como critério de avaliação para ingresso na equipe de UX/UI do Adm4All na Fábrica de Software, englobando persona, jornada no Miro e protótipo interativo no Figma.",
         description: "Proposta de solução digital mobile para o segmento pet, criada como avaliação final do Workshop da Fábrica de Software 2026.1. O processo compreendeu a criação da persona 'Tamiris', mapeamento completo da jornada do cliente no Miro, esboços iniciais manuais, wireframes e protótipos de baixa e alta fidelidade navegáveis no Figma.",
         objective: "Mapear a jornada do tutor de pets e prototipar uma solução mobile-first para agendamento ágil de consultas e serviços veterinários com alta usabilidade.",
-        tools: ["Figma", "Miro", "Pesquisa com Usuários", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
+        tools: ["Figma", "Miro", "Construção de Persona", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
         results: [
-          "Projeto avaliativo com nota de destaque que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
+          "Projeto avaliativo que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
           "Mapeamento completo da jornada da persona 'Tamiris' no Miro com identificação de dores e oportunidades",
           "Evolução visual desde esboços manuais até protótipo interativo em alta fidelidade navegável",
           "Fluxo de agendamento mobile simplificado com feedback imediato ao usuário"
@@ -209,7 +209,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       roles: [
         "Customer Success y Operaciones en Tecnología",
         "18 años en negocios, crédito y relación con clientes",
-        "En transición a Tech • Cursando ADS y MBA en Ingeniería de Datos"
+        "Estudiante de ADS • Posgrado en Ingeniería de Datos"
       ],
       btnProjects: "Ver Proyectos Académicos",
       btnResume: "Descargar CV",
@@ -218,7 +218,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       presentationEyebrow: "Tesis y Posicionamiento",
       presentationHeadline: "Profesional de negocios y crédito con 18 años de experiencia, en transición a tecnología con foco en Customer Success, Operaciones, Datos y Productos Digitales.",
       presentationP1: "Mi trayectoria consolida más de 18 años de experiencia en los sectores bancario e inmobiliario, gestionando flujos de crédito, relaciones consultivas de alta exigencia, cumplimiento normativo y resolución ágil de fricciones operativas complejas.",
-      presentationP2: "Hoy construyo mi transición al entorno tecnológico de forma transparente y fundamentada: no me posiciono como especialista en TI, sino con la madurez de negocios sumada a la capacidad práctica de aplicar herramientas modernas (SQL, Python, Power BI y prototipado en Figma) para analizar retención, mapear jornadas y respaldar decisiones con datos.",
+      presentationP2: "Curso ADS y desarrollo conocimientos de SQL, Python, Power BI y Figma mediante proyectos académicos. Busco oportunidades para aprender, aplicar estos conocimientos y aportar mi experiencia en atención al cliente, crédito y procesos.",
       copyEmail: "Copiar Correo",
       copied: "¡Copiado!",
       pillarsEyebrow: "Pilares Estratégicos y Competencias",
@@ -246,8 +246,8 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       storyBadge: "Priscilla Cahino • CS/CX y Tecnología",
       storyHighlight: "Cuento con más de dieciocho años de experiencia en los sectores bancario e inmobiliario, donde consolidé dominio en atención al cliente, esteiras de crédito, relación de cuentas y resolución de situaciones operativas críticas.",
       storyP1: "A lo largo de esa trayectoria comprendí que la tecnología y el análisis de datos son herramientas ideales para potenciar mi vocación: conectar al cliente con la mejor solución, simplificar procesos burocráticos y eliminar cuellos de botella.",
-      storyP2: "Por ello curso Análisis y Desarrollo de Sistemas (ADS) en UNIPÊ e integro la Fábrica de Software. No busco presentarme como principiante genérica en TI, sino como profesional senior en negocios que viene ampliando su capacidad de dialogar y trabajar con herramientas de productos digitales y datos.",
-      storyP3: "Datos y UX son diferenciales que empleo cotidianamente para diseñar esteiras más fluidas, entender indicadores de churn o morosidad y tender puentes sólidos entre negocio e ingeniería.",
+      storyP2: "Por ello curso Análisis y Desarrollo de Sistemas en UNIPÊ y participé en proyectos de la Fábrica de Software. Estoy conectando mi experiencia en negocios y atención al cliente con los conocimientos que desarrollo en tecnología y análisis de datos.",
+      storyP3: "En proyectos académicos practico SQL, Python y Power BI para organizar y explorar información, además de Figma y mapeo de jornadas para estudiar la experiencia del usuario. Busco ampliar esa práctica y aportar mi experiencia en procesos y atención al cliente.",
       storyQuoteBox: "“Mi misión es aplicar inteligencia de procesos, visión analítica y empatía en la experiencia del usuario para transformar operaciones complejas en jornadas simples, humanas e orientadas a resultados.”",
       personalTitle: "Más allá de la tecnología",
       personalText: "En mis momentos libres disfruto de la costa y el mar en João Pessoa, de una buena película con palomitas y de observar la interacción humana. Observar es la mejor manera de cultivar la empatía: primero escuchar activamente, comprender las necesidades reales y, solo entonces, diseñar soluciones efectivas.",
@@ -264,7 +264,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       quoteNote: "Texto estructurado por Priscilla Cahino.",
       ctaEyebrow: "Contacto y Conexión",
       ctaTitle: "Abierta a nuevas oportunidades y colaboraciones estratégicas",
-      ctaDescription: "Disponible para posiciones en Customer Success, Operações en Tecnología, Gestión de Cuentas y proyectos que valoren liderazgo senior combinado con rigor analítico y UX."
+      ctaDescription: "Busco oportunidades para aplicar mi experiencia profesional, seguir aprendiendo y desarrollar mi trayectoria en tecnología, datos, Customer Experience y áreas relacionadas."
     },
     projects: {
       eyebrow: "Portafolio Técnico y GitHub",
@@ -287,12 +287,12 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       returnBoxDesc: "Consulte los 18+ años de experiencia consolidada en operaciones, crédito y relación con clientes en la página Sobre Mí.",
       ctaEyebrow: "Contacto y Conexión",
       ctaTitle: "¿Conversamos sobre nuevas oportunidades?",
-      ctaDescription: "Estoy a disposición para entrevistas y conversaciones sobre puestos en Customer Success, Operaciones y Tecnología.",
+      ctaDescription: "Estoy a disposición para entrevistas y conversaciones sobre oportunidades en Customer Experience, Análisis de Datos, Operaciones y Tecnología.",
       modalClose: "Cerrar",
       modalOpenGithub: "Abrir repositorio en GitHub"
     },
     footer: {
-      roleLine: "Customer Success y Operaciones en Tecnología • 18 años de experiencia en crédito, atención y procesos",
+      roleLine: "CX, Datos y Tecnología • 18 años de experiencia en crédito, atención y procesos",
       aboutLink: "01. Sobre Mí y Trayectoria",
       projectsLink: "02. Proyectos Académicos",
       resumeLink: "03. Currículum (CV)",
@@ -308,11 +308,11 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         categoryLabel: "Análisis de Datos & BI",
         summary: "Proyecto académico que simula el escenario de una clínica de salud para analizar indicadores de consultas, pacientes y estudio exploratorio sobre riesgo de morosidad.",
         description: "Proyecto académico desarrollado como desafío técnico de taller, simulando el escenario de una clínica que necesita organizar y analizar sus datos operativos. Reúne etapas de modelado relacional en MySQL, creación y consultas en SQL, análisis exploratorio con Python/Pandas e introducción a Machine Learning, y tablero ejecutivo en Power BI.",
-        objective: "Identificar fricciones operativas en citas y cobros clínicos, modelando una base relacional MySQL y proponiendo análisis predictivos en Python para mitigar la morosidad.",
+        objective: "Practicar modelado relacional, consultas SQL, análisis exploratorio y visualización de indicadores de una clínica ficticia.",
         tools: ["Power BI", "SQL (MySQL)", "Python (Pandas)", "Machine Learning", "Modelado de Base de Datos"],
         results: [
           "Modelado relacional estructurado en MySQL con scripts optimizados de creación y consulta",
-          "Análisis exploratorio en Python/Pandas identificando factores críticos asociados a morosidad",
+          "Análisis exploratorio con Python/Pandas de citas y pagos en una base académica simulada",
           "Dashboard ejecutivo en Power BI con filtros dinámicos por especialidad, pagos y asistencia",
           "Generación de información procesable para gestión operativa preventiva"
         ],
@@ -335,15 +335,15 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         category: "ux-ui",
         categoryLabel: "Diseño UX/UI & Producto",
         summary: "Plataforma desarrollada en la Fábrica de Software de UNIPÊ para el proyecto de extensión comunitaria, donde actué en el área de UX/UI prototipando pantallas, flujos e interfaces en Figma.",
-        description: "Desarrollado en la Fábrica de Software de UNIPÊ para apoyar el proyecto de extensión comunitaria que ofrece cursos gratuitos de gestión. Lideré el diseño UX/UI en Figma, organizando los flujos y la arquitectura de información para tres perfiles de usuario: Coordinación, Instructores y Alumnos.",
+        description: "Desarrollado en la Fábrica de Software de UNIPÊ para apoyar el proyecto de extensión comunitaria que ofrece cursos gratuitos de gestión. Participé en el diseño UX/UI en Figma, organizando los flujos y la arquitectura de información para tres perfiles de usuario: Coordinación, Instructores y Alumnos.",
         objective: "Diseñar interfaces centradas en las personas para digitalizar la gestión de cursos comunitarios, optimizando la experiencia de 3 perfiles de usuario y reduciendo la fricción.",
         tools: ["Figma", "UX Research", "Prototipado Interactivo", "Diseño Centrado en el Humano", "Metodologías Ágiles"],
         results: [
-          "Reducción del 30% en los puntos de fricción identificados en pruebas de usabilidad con usuarios",
+          "Prototipado de pantallas y organización de los flujos de navegación en Figma",
           "Arquitectura de información y flujos para Coordinación, Docentes y Alumnos",
           "Centralización de procesos manuales: clases, asistencia digital, calificaciones y certificados",
-          "Alineación ágil con el equipo de desarrollo para garantizar máxima fidelidad técnica",
-          "Plataforma web publicada y en uso en el programa de extensión"
+          "Colaboración con el equipo de desarrollo en la presentación de interfaces y flujos propuestos",
+          "Plataforma web publicada para visualizar el proyecto"
         ],
         image: "/projects/adm4all.webp",
         technologies: ["Diseño UX/UI", "Figma", "Prototipado", "Mapeo de Flujos", "Arquitectura de Información", "Usabilidade"],
@@ -368,9 +368,9 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         summary: "Proyecto final de UX/UI desarrollado como evaluación para ingreso en el equipo de UX/UI de Adm4All en la Fábrica de Software, incluyendo persona, journey map en Miro y prototipo interactivo en Figma.",
         description: "Solución móvil para servicios del segmento pet, creada como evaluación final del Workshop de la Fábrica de Software 2026.1. El proceso abarcó la creación de la persona 'Tamiris', mapeo de la jornada en Miro, bocetos manuales, wireframes y prototipos interactivos en Figma.",
         objective: "Mapear la jornada del cliente y diseñar una solución mobile-first intuitiva para reserva ágil de atención veterinaria y servicios pet.",
-        tools: ["Figma", "Miro", "Investigación de Usuarios", "Mapeo de Jornada (CX)", "Diseño Mobile First"],
+        tools: ["Figma", "Miro", "Construcción de Persona", "Mapeo de Jornada (CX)", "Diseño Mobile First"],
         results: [
-          "Proyecto evaluado con distinción que facilitó el ingreso al equipo de UX/UI de la Fábrica de Software",
+          "Proyecto evaluativo que facilitó el ingreso al equipo de UX/UI de la Fábrica de Software",
           "Mapeo completo de la jornada de la persona 'Tamiris' en Miro, con identificación de oportunidades",
           "Evolución del diseño desde bocetos hasta prototipos navegables en alta fidelidad",
           "Flujo móvil simplificado con respuesta visual inmediata"

@@ -87,10 +87,10 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
           </div>
 
           <div className="p-3 bg-[#1c1c1c] border border-[#2a2a2a] space-y-1">
-            <span className="text-[#888] font-mono block text-[10px] uppercase">Extensão & Ano</span>
+            <span className="text-[#888] font-mono block text-[10px] uppercase">Período</span>
             <div className="flex items-center gap-1.5 font-semibold text-white">
               <Calendar className="w-3.5 h-3.5 text-[#FF6B35]" />
-              <span>{res.pages} páginas • Ano de Conclusão: 2013</span>
+              <span>Conclusão: {res.year} • Pesquisa de campo: 2012</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
             <span className="text-[#888] font-mono block text-[10px] uppercase">Tipo de Investigação</span>
             <div className="flex items-center gap-1.5 font-semibold text-white">
               <Layers className="w-3.5 h-3.5 text-[#FF6B35]" />
-              <span>Qualitativa e Quantitativa (Mista)</span>
+              <span>Pesquisa documental e de campo</span>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
             <span>Nota de Contexto Temporal</span>
           </div>
           <p className="font-light leading-relaxed text-[11px]">
-            Os dados estatísticos, percentuais e práticas corporativas descritos na monografia original pertencem ao cenário bancário de 2013. A conclusão do estudo original já afirmava que o setor financeiro estava incorporando aspectos sociais e ambientais às decisões de crédito, embora houvesse diferenças significativas entre o reporte institucional e a percepção do cliente na ponta.
+            A monografia foi concluída em 2013 e os gráficos identificam a coleta como realizada em 2012. Sem as planilhas originais e diante de divergências numéricas, esta releitura apresenta o contexto e os aprendizados, sem reproduzir percentuais ou quantidade de participantes.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
         {/* Principais Achados */}
         <div className="space-y-2">
           <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] font-semibold block">
-            Síntese das Conclusões da Pesquisa de 2013
+            Temas e aprendizados da pesquisa
           </span>
           <ul className="space-y-1.5 text-xs text-[#bbb] font-light leading-relaxed">
             {res.keyFindings.map((finding, idx) => (
@@ -147,7 +147,7 @@ export const OriginalResearchModal: React.FC<OriginalResearchModalProps> = ({
         {/* Footer com Ações */}
         <div className="border-t border-[#2a2a2a] pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span className="text-[11px] text-[#777] font-mono">
-            Acervo acadêmico • UNIPÊ João Pessoa/PB
+            Acervo acadêmico • IESP João Pessoa/PB
           </span>
 
           <div className="flex items-center gap-2 w-full sm:w-auto">

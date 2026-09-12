@@ -33,7 +33,7 @@ export interface ArticleData {
     institution: string;
     course: string;
     area: string;
-    pages: number;
+    pages?: number;
     year: number;
     methodology: string;
     instruments: string[];

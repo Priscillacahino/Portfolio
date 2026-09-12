@@ -229,7 +229,7 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({
                 </span>
               </div>
               <p className="text-xs text-[#aaa] font-light leading-relaxed">
-                Graduada em Ciências Contábeis pelo UNIPÊ (2013), estudante de Análise e Desenvolvimento de Sistemas e pós-graduanda em Engenharia de Dados. Mais de 18 anos de experiência consolidada em operações financeiras e relacionamento com clientes.
+                Graduada em Ciências Contábeis pelo IESP (2013), estudante de Análise e Desenvolvimento de Sistemas e com pós-graduação em Engenharia de Dados. Mais de 18 anos de experiência consolidada em operações financeiras e relacionamento com clientes.
               </p>
               <div className="flex items-center justify-center sm:justify-start gap-4 pt-2">
                 <a

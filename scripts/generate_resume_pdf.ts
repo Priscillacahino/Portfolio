@@ -6,7 +6,7 @@ async function generateResumePdf() {
   const doc = await PDFDocument.create();
   doc.setTitle('Currículo Profissional — Priscilla Santos Cahino');
   doc.setAuthor('Priscilla Santos Cahino');
-  doc.setSubject('Analista de Dados | CX | UX/UI Design | Engenharia de Dados');
+  doc.setSubject('Customer Experience | Análise de Dados | Estudante de ADS');
   doc.setKeywords(['Analista de Dados', 'Customer Experience', 'UX Design', 'Engenharia de Dados', 'Power BI', 'SQL', 'Python', 'Currículo']);
 
   const helvetica = await doc.embedFont(StandardFonts.Helvetica);
@@ -66,7 +66,7 @@ async function generateResumePdf() {
   y -= 19;
 
   // Title
-  page.drawText(clean('Analista de Dados | CX | UX/UI Design | Engenharia de Dados'), {
+  page.drawText(clean('Customer Experience | Análise de Dados | Estudante de ADS'), {
     x: marginX,
     y,
     font: helveticaBold,
@@ -144,7 +144,7 @@ async function generateResumePdf() {
   }
   y -= 3;
 
-  const summaryP2 = 'Graduada em Ciências Contábeis, graduanda em ADS (UNIPÊ) com vivência prática na Fábrica de Software UBTech Office e pós-graduada com MBA em Engenharia de Dados (UNIESP). Não me posiciono como especialista em TI, mas trago maturidade sênior de negócios somada a noções práticas aplicadas em SQL, Python, Power BI e prototipação no Figma para analisar métricas e apoiar decisões com dados.';
+  const summaryP2 = 'Graduada em Ciências Contábeis, graduanda em ADS (UNIPÊ) com vivência prática na Fábrica de Software UBTech Office e com pós-graduação em Engenharia de Dados (UNIESP). Não me posiciono como especialista em TI, mas trago maturidade sênior de negócios somada a noções práticas aplicadas em SQL, Python, Power BI e prototipação no Figma para analisar métricas e apoiar decisões com dados.';
   const summaryLines2 = wrapText(summaryP2, contentWidth, helvetica, 9);
   for (const line of summaryLines2) {
     page.drawText(line, { x: marginX, y, font: helvetica, size: 9, color: primaryColor });
@@ -184,7 +184,7 @@ async function generateResumePdf() {
   let col2Y = colStartY - 13;
   const col2Items = [
     'Power BI, Dashboards Executivos, KPIs e DAX',
-    'SQL (MySQL), Modelagem Relacional e Consultas Complexas',
+    'SQL (MySQL), Modelagem Relacional e Consultas em Projetos Acadêmicos',
     'Python (Pandas, Análise Exploratória, Scikit-Learn)',
     'UX/UI Design: Figma, Miro, Prototipação e Usabilidade',
     'IA Generativa, Copilot e Aceleração de Produtividade',
@@ -231,9 +231,9 @@ async function generateResumePdf() {
     'mar/2026 - jul/2026',
     'Híbrido - João Pessoa/PB',
     [
-      'Design de interfaces do projeto Administração para Todos: pesquisa de UX, arquitetura de informação, wireframes, protótipos de alta fidelidade e testes de usabilidade.',
-      'Aplicação de design centrado no humano com redução sensível e estimada dos pontos de atrito identificados em jornadas de navegação.',
-      'Colaboração ágil com equipe de desenvolvimento de software, assegurando fidelidade entre protótipo e implementação, além de conformidade de contraste e acessibilidade.',
+      'Design de interfaces do projeto Administração para Todos: pesquisa de UX, arquitetura de informação, wireframes, protótipos de alta fidelidade.',
+      'Organização de fluxos de navegação para Coordenação, Instrutores e Alunos.',
+      'Colaboração com a equipe de desenvolvimento na apresentação de protótipos e fluxos.',
     ]
   );
 
@@ -361,7 +361,7 @@ async function generateResumePdf() {
   );
 
   drawEducation(
-    'MBA em Engenharia de Dados',
+    'Pós-graduação em Engenharia de Dados',
     'UNIESP Centro Universitário',
     'nov/2023 - mar/2024 (Concluído)',
     'Transformação de grandes volumes de dados em insights estratégicos. SQL, arquiteturas ETL/ELT, modelagem analítica e Business Intelligence.'
@@ -369,7 +369,7 @@ async function generateResumePdf() {
 
   drawEducation(
     'Graduação em Ciências Contábeis (Bacharelado)',
-    'Centro Universitário de João Pessoa (UNIPÊ)',
+    'Instituto de Educação Superior da Paraíba (IESP)',
     '2009 - 2013 (Concluído)',
     'Base sólida em conformidade fiscal, conciliação contábil, auditoria e finanças. TCC em Responsabilidade Socioambiental e Sustentabilidade nas Instituições Financeiras.'
   );
@@ -428,7 +428,7 @@ async function generateResumePdf() {
     'Análise de Dados, SQL, Python & Power BI',
     'Identificar gargalos operacionais e padrões de inadimplência em clínica de saúde.',
     'Power BI, MySQL (SQL), Python (Pandas), Scikit-Learn.',
-    'Modelagem relacional completa, análise exploratória de correlações e dashboard executivo com indicadores dinâmicos de faturamento e risco.'
+    'Modelagem relacional, análise exploratória em Python e dashboard no Power BI com dados acadêmicos simulados.'
   );
 
   drawProject(
@@ -436,15 +436,15 @@ async function generateResumePdf() {
     'Interface UX/UI & Inclusão Digital (Fábrica de Software UNIPÊ)',
     'Criar interface acessível de capacitação para microempreendedores.',
     'Figma, Design System, Heurísticas de Usabilidade, Métodos Ágeis.',
-    'Prototipação de alta fidelidade com conformidade de contraste WCAG AA, componentes modulares e validação de fluxo intuitivo.'
+    'Prototipação de interfaces no Figma e organização de fluxos para Coordenação, Instrutores e Alunos.'
   );
 
   drawProject(
     'Petzona',
     'Experiência Mobile & Jornada do Cliente',
-    'Solução mobile completa para adoção responsável e cuidados de pets.',
+    'Protótipo mobile para agendamento de cuidados e serviços pet.',
     'Figma, Miro, Customer Journey Mapping, Personas.',
-    'Mapeamento de jornada ponta a ponta com redução de desistências de adoção via triagem preventiva e design intuitivo.'
+    'Construção de persona, jornada no Miro e protótipo navegável de serviços pet no Figma.'
   );
 
   // Footer page 2

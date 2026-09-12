@@ -304,11 +304,11 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </p>
 
             <p>
-              Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ, integrando a Fábrica de Software. Não busco me apresentar como iniciante genérica em TI nem como analista isolada de números, mas como uma profissional sênior em negócios que vem ampliando sua capacidade de dialogar e trabalhar com ferramentas de produtos digitais e dados.
+              Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ e participei de projetos na Fábrica de Software. Estou conectando minha experiência em negócios e relacionamento com clientes aos conhecimentos que venho desenvolvendo em tecnologia e análise de dados.
             </p>
 
             <p>
-              Dados e UX são diferenciais que utilizo no dia a dia para desenhar esteiras mais fluídas, entender indicadores de cancelamento ou inadimplência e construir pontes sólidas entre as áreas de negócio e engenharia.
+              Nos projetos acadêmicos, venho praticando SQL, Python e Power BI para organizar e explorar informações, além de Figma e mapeamento de jornadas para estudar a experiência do usuário. Quero ampliar essa prática e contribuir com a visão de processos e de atendimento que construí ao longo da minha trajetória.
             </p>
 
             {/* Sun Tzu Quote Box */}
@@ -951,7 +951,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               Currículo
             </h2>
             <p className="text-sm text-[#d1d5db] font-light max-w-xl leading-relaxed">
-              Toda a minha trajetória profissional detalhada (+18 anos em negócios, crédito e relacionamento bancário e imobiliário), formação acadêmica completa (graduação em Ciências Contábeis, ADS e MBA em Engenharia de Dados) e certificações estão consolidadas no documento oficial em PDF.
+              Toda a minha trajetória profissional detalhada (+18 anos em negócios, crédito e relacionamento bancário e imobiliário), formação acadêmica completa (graduação em Ciências Contábeis, ADS e Pós-graduação em Engenharia de Dados) e certificações estão consolidadas no documento oficial em PDF.
             </p>
           </div>
 

@@ -337,7 +337,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                   {/* 📊 Resultados com números & impacto */}
                   <div className="space-y-2 pt-1">
                     <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#FF6B35] block">
-                      📊 {currentLanguage === 'pt' ? 'Resultados & Impacto Mensurável:' : 'Resultados e Impacto Medible:'}
+                      📊 {currentLanguage === 'pt' ? 'Entregas e aprendizados:' : 'Entregas y aprendizajes:'}
                     </span>
                     <ul className="space-y-2">
                       {(project.results || project.highlights).map((item, hIdx) => (
@@ -591,7 +591,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
               {/* 📊 Resultados */}
               <div className="space-y-2 pt-2">
                 <h4 className="text-xs uppercase tracking-wider font-semibold text-[#FF6B35]">
-                  📊 {currentLanguage === 'pt' ? 'Resultados & Impacto Mensurável:' : 'Resultados e Impacto Medible:'}
+                  📊 {currentLanguage === 'pt' ? 'Entregas e aprendizados:' : 'Entregas y aprendizajes:'}
                 </h4>
                 <ul className="space-y-2">
                   {(activeModalProject.results || activeModalProject.highlights).map((item, idx) => (
