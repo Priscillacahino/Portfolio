@@ -386,7 +386,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                       className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#FF6B35] hover:bg-[#FF6B35]/15 bg-[#1c1c1c] text-[#FF6B35] text-xs uppercase tracking-wider font-semibold transition-colors cursor-pointer"
                     >
                       <Smartphone className="w-3.5 h-3.5" />
-                      <span>{currentLanguage === 'pt' ? 'Testar Wireframe Interativo (Figma)' : 'Probar Wireframe Interactivo (Figma)'}</span>
+                      <span>{currentLanguage === 'pt' ? 'Ver wireframe interativo' : 'Ver wireframe interactivo'}</span>
                     </button>
                   )}
                 </div>

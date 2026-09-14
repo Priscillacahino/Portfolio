@@ -79,27 +79,27 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     title: "PetZona",
     subtitle: "UX/UI com visão de Customer Experience — projeto acadêmico em evolução",
     category: "ux-ui",
-    categoryLabel: "Projeto de Estudo & Avaliação Prática",
+    categoryLabel: "UX/UI & Customer Experience",
     summary: "Projeto acadêmico de UX/UI que reúne proto-persona, jornada do usuário, wireframes e prototipação no Figma, evoluindo também para uma visão de Customer Experience.",
-    description: "Proposta de solução digital mobile para o segmento pet, criada inicialmente como avaliação final do Workshop da Fábrica de Software 2026.1 e posteriormente ampliada como estudo de evolução da experiência. Além da interface, o projeto considera a jornada do tutor, pontos de atrito, confiança na contratação e acompanhamento dos serviços.",
-    objective: "Mapear a jornada do tutor de pets e prototipar uma solução mobile-first para agendamento ágil de consultas e serviços veterinários com alta usabilidade.",
-    tools: ["Figma", "Miro", "Construção de Persona", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
+    description: "Proposta de solução digital mobile para o segmento pet, criada inicialmente como avaliação final do Workshop da Fábrica de Software 2026.1 e posteriormente ampliada como estudo de evolução da experiência. Além da interface, o projeto considera a jornada do tutor, pontos de atrito, confiança na contratação e acompanhamento dos serviços. A nova prototipação de alta fidelidade está em desenvolvimento.",
+    objective: "Mapear a jornada do tutor e evoluir uma solução mobile-first para produtos e serviços pet, considerando usabilidade, pontos de atrito, confiança e acompanhamento da experiência.",
+    tools: ["Figma", "Miro", "Proto-persona", "Jornada do Usuário", "Customer Experience (CX)", "Prototipação Mobile"],
     results: [
       "Projeto avaliativo que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
-      "Mapeamento completo da jornada da persona 'Tamiris' no Miro com identificação de dores e oportunidades",
-      "Evolução visual desde esboços manuais até protótipo interativo em alta fidelidade navegável",
-      "Fluxo de agendamento mobile simplificado com feedback imediato ao usuário"
+      "Mapeamento da jornada da proto-persona 'Tamiris' com identificação de necessidades, pontos de atrito e oportunidades",
+      "Evolução de esboços e wireframes para uma nova prototipação de alta fidelidade atualmente em desenvolvimento",
+      "Ampliação da proposta para produtos e serviços como Spa Pet e Táxi Pet, considerando confiança, acompanhamento e experiência do tutor"
     ],
     image: "/projects/petzone.webp",
-    technologies: ["Persona", "Jornada", "Wireframe", "Figma", "UX/UI"],
+    technologies: ["Proto-persona", "Jornada do Usuário", "Miro", "Figma", "Wireframes", "UX/UI", "Customer Experience (CX)", "Mobile First"],
     highlights: [
       "Projeto avaliativo que viabilizou o ingresso na equipe de UX/UI da Fábrica de Software",
-      "Construção da persona e Mapeamento da Jornada do Cliente no Miro",
-      "Evolução visual desde esboços à mão até protótipos de baixa e alta fidelidade",
-      "Protótipo navegável interativo no Figma com fluxos de agendamento de cuidados e serviços veterinários"
+      "Construção de proto-persona e mapeamento da jornada do usuário no Miro",
+      "Evolução visual desde esboços e wireframes até uma nova alta fidelidade em desenvolvimento",
+      "Visão de Customer Experience aplicada a pontos de atrito, confiança e acompanhamento dos serviços"
     ],
     githubUrl: "https://github.com/Priscillacahino/Workshop_Desafio-Final_PetZona",
-    figmaUrl: "https://www.figma.com/proto/O5rsOpFFIhtEOQWkDdcwW7/Sem-t%C3%ADtulo?node-id=94-537&p=f&t=iJxgDcyvzsfzQQxZ-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+
     featured: true
   }
 ];
