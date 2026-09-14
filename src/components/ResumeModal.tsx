@@ -631,7 +631,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
               </div>
 
               <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
-                <span className="font-semibold text-white print:text-black block text-sm">Petzona</span>
+                <span className="font-semibold text-white print:text-black block text-sm">PetZona</span>
                 <p className="text-[#FF6B35] text-[11px] font-mono">Figma • Miro • Customer Journey</p>
                 <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
                   <strong>Objetivo:</strong> Prototipação mobile de agendamento de cuidados e serviços pet.<br/>

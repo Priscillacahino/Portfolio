@@ -456,7 +456,7 @@ async function generateResumePdf() {
   );
 
   drawProject(
-    'Petzona',
+    'PetZona',
     'Experiência Mobile & Jornada do Cliente',
     'Protótipo mobile para agendamento de cuidados e serviços pet.',
     'Figma, Miro, Customer Journey Mapping, Personas.',

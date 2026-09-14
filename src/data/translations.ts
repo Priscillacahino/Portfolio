@@ -167,12 +167,12 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       },
       {
         id: "petzona",
-        title: "Petzona",
-        subtitle: "Projeto Final de UX/UI & Mobile First (Fábrica de Software 2026.1)",
+        title: "PetZona",
+        subtitle: "UX/UI com visão de Customer Experience — projeto acadêmico em evolução",
         category: "ux-ui",
         categoryLabel: "UX/UI Design & Mobile",
-        summary: "Projeto final de UX/UI desenvolvido como critério de avaliação para ingresso na equipe de UX/UI do Adm4All na Fábrica de Software, englobando persona, jornada no Miro e protótipo interativo no Figma.",
-        description: "Proposta de solução digital mobile para o segmento pet, criada como avaliação final do Workshop da Fábrica de Software 2026.1. O processo compreendeu a criação da persona 'Tamiris', mapeamento completo da jornada do cliente no Miro, esboços iniciais manuais, wireframes e protótipos de baixa e alta fidelidade navegáveis no Figma.",
+        summary: "Projeto acadêmico de UX/UI que reúne proto-persona, jornada do usuário, wireframes e prototipação no Figma, evoluindo também para uma visão de Customer Experience.",
+        description: "Proposta de solução digital mobile para o segmento pet, criada inicialmente como avaliação final do Workshop da Fábrica de Software 2026.1 e posteriormente ampliada como estudo de evolução da experiência. Além da interface, o projeto considera a jornada do tutor, pontos de atrito, confiança na contratação e acompanhamento dos serviços.",
         objective: "Mapear a jornada do tutor de pets e prototipar uma solução mobile-first para agendamento ágil de consultas e serviços veterinários com alta usabilidade.",
         tools: ["Figma", "Miro", "Construção de Persona", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
         results: [
@@ -361,12 +361,12 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       },
       {
         id: "petzona",
-        title: "Petzona",
-        subtitle: "Proyecto Final de UX/UI y Mobile First (Fábrica de Software 2026.1)",
+        title: "PetZona",
+        subtitle: "UX/UI con visión de Customer Experience — proyecto académico en evolución",
         category: "ux-ui",
         categoryLabel: "Diseño UX/UI & Móvil",
-        summary: "Proyecto final de UX/UI desarrollado como evaluación para ingreso en el equipo de UX/UI de Adm4All en la Fábrica de Software, incluyendo persona, journey map en Miro y prototipo interactivo en Figma.",
-        description: "Solución móvil para servicios del segmento pet, creada como evaluación final del Workshop de la Fábrica de Software 2026.1. El proceso abarcó la creación de la persona 'Tamiris', mapeo de la jornada en Miro, bocetos manuales, wireframes y prototipos interactivos en Figma.",
+        summary: "Proyecto académico de UX/UI que reúne proto-persona, jornada del usuario, wireframes y prototipado en Figma, evolucionando también hacia una visión de Customer Experience.",
+        description: "Propuesta de solución digital móvil para el segmento pet, creada inicialmente como evaluación final del Workshop de la Fábrica de Software 2026.1 y posteriormente ampliada como estudio de evolución de la experiencia. Además de la interfaz, el proyecto considera la jornada del tutor, puntos de fricción, confianza en la contratación y seguimiento de los servicios.",
         objective: "Mapear la jornada del cliente y diseñar una solución mobile-first intuitiva para reserva ágil de atención veterinaria y servicios pet.",
         tools: ["Figma", "Miro", "Construcción de Persona", "Mapeo de Jornada (CX)", "Diseño Mobile First"],
         results: [

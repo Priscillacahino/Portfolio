@@ -676,14 +676,14 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 space-y-4 transition-colors flex flex-col justify-between"
                 >
                   <div className="space-y-3">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block">
-                      Projeto de Estudo & Avaliação Prática
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] block">
+                      {project.subtitle || "UX/UI com visão de Customer Experience — projeto acadêmico em evolução"}
                     </span>
                     <h3 className="text-xl font-serif-artistic italic text-white">
                       {project.title}
                     </h3>
                     <p className="text-xs text-[#ccc] font-light leading-relaxed">
-                      Projeto desenvolvido como avaliação final de workshop de UX/UI para participação na Fábrica de Software.
+                      {project.summary}
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
                       {['Persona', 'Jornada', 'Wireframe', 'Figma'].map((tag, idx) => (

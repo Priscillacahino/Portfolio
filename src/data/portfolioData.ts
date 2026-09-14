@@ -77,11 +77,11 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
     id: "petzona",
     title: "PetZona",
-    subtitle: "Projeto desenvolvido como avaliação final de workshop de UX/UI para participação na Fábrica de Software",
+    subtitle: "UX/UI com visão de Customer Experience — projeto acadêmico em evolução",
     category: "ux-ui",
     categoryLabel: "Projeto de Estudo & Avaliação Prática",
-    summary: "Projeto desenvolvido como avaliação final de workshop de UX/UI para participação na Fábrica de Software, englobando persona, jornada no Miro e protótipo interativo no Figma.",
-    description: "Proposta de solução digital mobile para o segmento pet, criada como avaliação final do Workshop da Fábrica de Software 2026.1. O processo compreendeu a criação da persona 'Tamiris', mapeamento completo da jornada do cliente no Miro, esboços iniciais manuais, wireframes e protótipos de baixa e alta fidelidade navegáveis no Figma.",
+    summary: "Projeto acadêmico de UX/UI que reúne proto-persona, jornada do usuário, wireframes e prototipação no Figma, evoluindo também para uma visão de Customer Experience.",
+    description: "Proposta de solução digital mobile para o segmento pet, criada inicialmente como avaliação final do Workshop da Fábrica de Software 2026.1 e posteriormente ampliada como estudo de evolução da experiência. Além da interface, o projeto considera a jornada do tutor, pontos de atrito, confiança na contratação e acompanhamento dos serviços.",
     objective: "Mapear a jornada do tutor de pets e prototipar uma solução mobile-first para agendamento ágil de consultas e serviços veterinários com alta usabilidade.",
     tools: ["Figma", "Miro", "Construção de Persona", "Mapeamento de Jornada (CX)", "Prototipação Mobile"],
     results: [
