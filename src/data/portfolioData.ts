@@ -98,7 +98,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
       "Evolução visual desde esboços e wireframes até uma nova alta fidelidade em desenvolvimento",
       "Visão de Customer Experience aplicada a pontos de atrito, confiança e acompanhamento dos serviços"
     ],
-    githubUrl: "https://github.com/Priscillacahino/Workshop_Desafio-Final_PetZona",
+    githubUrl: "https://github.com/Priscillacahino/PetZona",
 
     featured: true
   }

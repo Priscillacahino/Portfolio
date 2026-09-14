@@ -189,7 +189,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
           "Evolução visual desde esboços e wireframes até uma nova alta fidelidade em desenvolvimento",
           "Visão de Customer Experience aplicada a pontos de atrito, confiança e acompanhamento dos serviços"
         ],
-        githubUrl: "https://github.com/Priscillacahino/Workshop_Desafio-Final_PetZona",
+        githubUrl: "https://github.com/Priscillacahino/PetZona",
         featured: true
       }
     ]
@@ -382,7 +382,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
           "Evolución visual desde bocetos y wireframes hacia una nueva alta fidelidad en desarrollo",
           "Visión de Customer Experience aplicada a puntos de fricción, confianza y seguimiento de los servicios"
         ],
-        githubUrl: "https://github.com/Priscillacahino/Workshop_Desafio-Final_PetZona",
+        githubUrl: "https://github.com/Priscillacahino/PetZona",
         featured: true
       }
     ]
