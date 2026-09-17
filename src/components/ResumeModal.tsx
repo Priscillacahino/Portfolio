@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { X, Printer, Download, Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Award, BookOpen, Briefcase, Code, Sparkles, CheckCircle2, Eye } from 'lucide-react';
-import { CONTACT_DATA } from '../data/portfolioData';
+import React, { useEffect, useRef } from 'react';
+import { X, Download, ExternalLink } from 'lucide-react';
 import { Language } from '../types';
 
 interface ResumeModalProps {
@@ -12,69 +11,17 @@ interface ResumeModalProps {
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, currentLanguage }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const [viewCount, setViewCount] = useState<string | null>(null);
+  const isPt = currentLanguage === 'pt';
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose();
-      }
+      if (e.key === 'Escape') onClose();
     };
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleKeyDown);
-      setTimeout(() => {
-        closeButtonRef.current?.focus();
-      }, 50);
-
-      // Track view and retrieve hit count
-      let isMounted = true;
-      const trackAndFetchViewCount = async () => {
-        try {
-          const res = await fetch(
-            'https://hits.sh/portfoliopriscilla.vercel.app/curriculo.svg?label=Acessos&color=ff6b35&labelColor=1a1a1a',
-            { cache: 'no-cache' }
-          );
-          if (res.ok) {
-            const svg = await res.text();
-            const match = svg.match(/aria-label="[^:]+:\s*([0-9,.]+)"/);
-            if (match && match[1] && isMounted) {
-              setViewCount(match[1]);
-              try {
-                localStorage.setItem('priscilla_resume_views_cached', match[1]);
-              } catch {}
-              return;
-            }
-          }
-        } catch {
-          // Network error or offline
-        }
-
-        // Resilient fallback with localStorage
-        if (isMounted) {
-          try {
-            const cached = localStorage.getItem('priscilla_resume_views_cached');
-            if (cached) {
-              setViewCount(cached);
-            } else {
-              const localVal = parseInt(localStorage.getItem('priscilla_resume_views') || '1', 10);
-              localStorage.setItem('priscilla_resume_views', String(localVal + 1));
-              setViewCount(String(localVal + 1));
-            }
-          } catch {}
-        }
-      };
-
-      trackAndFetchViewCount();
-
-      return () => {
-        isMounted = false;
-        document.body.style.overflow = 'unset';
-        window.removeEventListener('keydown', handleKeyDown);
-      };
-    } else {
-      document.body.style.overflow = 'unset';
+      setTimeout(() => closeButtonRef.current?.focus(), 50);
     }
 
     return () => {
@@ -85,607 +32,70 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
 
   if (!isOpen) return null;
 
-  const handlePrint = () => {
-    window.print();
-  };
-
-  const handleDownloadPdf = async () => {
-    // Discreetly track download hit
-    try {
-      fetch('https://hits.sh/portfoliopriscilla.vercel.app/curriculo-download.svg?label=Downloads&color=ff6b35', { mode: 'no-cors' }).catch(() => {});
-      const dlCount = parseInt(localStorage.getItem('priscilla_resume_downloads') || '0', 10);
-      localStorage.setItem('priscilla_resume_downloads', String(dlCount + 1));
-    } catch {}
-
-    try {
-      const response = await fetch('/Curriculo_Priscilla_Cahino.pdf');
-      if (!response.ok) throw new Error('Network response not ok');
-      const blob = await response.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = blobUrl;
-      link.download = 'Curriculo_Priscilla_Cahino.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
-    } catch {
-      // Fallback
-      window.open('/Curriculo_Priscilla_Cahino.pdf', '_blank');
-    }
-  };
-
-  const isPt = currentLanguage === 'pt';
-  const isEs = currentLanguage === 'es';
-
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto print:p-0 print:bg-white print:static"
+    <div
+      ref={modalRef}
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-2 sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="resume-title"
-      ref={modalRef}
       onClick={(e) => {
         if (e.target === modalRef.current) onClose();
       }}
     >
-      <div className="relative w-full max-w-4xl bg-[#181818] border border-[#333] shadow-2xl my-8 text-[#eee] print:border-0 print:bg-white print:text-black print:my-0 print:shadow-none">
-        
-        {/* Modal Action Bar (Hidden on Print) */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-[#2e2e2e] bg-[#121212] print:hidden gap-3 flex-wrap">
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="w-2.5 h-2.5 bg-[#FF6B35]"></span>
-            <h2 id="resume-title" className="text-xs uppercase tracking-widest font-mono text-white font-bold">
-              {isPt ? 'Currículo Profissional Completo' : 'Currículum Vitae Completo'}
+      <div className="mx-auto flex h-full w-full max-w-6xl flex-col overflow-hidden border border-[#333] bg-[#121212] shadow-2xl">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#2e2e2e] bg-[#121212] px-3 py-3 sm:px-5">
+          <div className="min-w-0">
+            <h2 id="resume-title" className="text-xs font-bold uppercase tracking-widest text-white sm:text-sm">
+              {isPt ? 'Currículo — visualização em PDF' : 'Currículum — visualización en PDF'}
             </h2>
-            {viewCount && (
-              <span 
-                className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#1c1c1c] border border-[#333] text-[11px] font-mono text-[#FF6B35]"
-                title={isPt ? `Visualizações registradas deste currículo: ${viewCount}` : `Visualizaciones registradas de este currículum: ${viewCount}`}
-              >
-                <Eye className="w-3 h-3 text-[#FF6B35]" />
-                <span>{viewCount} {isPt ? 'acessos' : 'accesos'}</span>
-              </span>
-            )}
+            <p className="mt-1 text-[11px] text-[#9ca3af] sm:text-xs">
+              {isPt
+                ? 'Use a rolagem e os controles do visualizador para navegar pelas páginas e ajustar o zoom.'
+                : 'Utiliza el desplazamiento y los controles del visor para navegar por las páginas y ajustar el zoom.'}
+            </p>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
-            <button
-              id="btn-modal-download-resume"
-              type="button"
-              onClick={handleDownloadPdf}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-[#121212] text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              title={isPt ? 'Baixar Arquivo PDF' : isEs ? 'Descargar Archivo PDF' : 'Download PDF File'}
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href="/Curriculo_Priscilla_Cahino.pdf"
+              download="Curriculo_Priscilla_Cahino.pdf"
+              className="inline-flex items-center gap-1.5 bg-[#FF6B35] px-3 py-2 text-xs font-bold uppercase tracking-wider text-[#121212] transition-colors hover:bg-[#ff7f4d]"
             >
-              <Download className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Baixar PDF' : isEs ? 'Descargar PDF' : 'Download PDF'}</span>
-            </button>
+              <Download className="h-4 w-4" />
+              <span>{isPt ? 'Baixar PDF' : 'Descargar PDF'}</span>
+            </a>
 
-            <button
-              type="button"
-              onClick={handlePrint}
-              className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 border border-[#444] bg-[#242424] hover:bg-[#303030] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
-              title={isPt ? 'Imprimir ou Salvar em PDF' : isEs ? 'Imprimir o Guardar en PDF' : 'Print or Save to PDF'}
+            <a
+              href="/Curriculo_Priscilla_Cahino.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 border border-[#444] bg-[#1d1d1d] px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:border-[#FF6B35]"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Imprimir' : isEs ? 'Imprimir' : 'Print'}</span>
-            </button>
+              <ExternalLink className="h-4 w-4 text-[#FF6B35]" />
+              <span>{isPt ? 'Abrir em nova aba' : 'Abrir en nueva pestaña'}</span>
+            </a>
 
             <button
               ref={closeButtonRef}
               type="button"
               onClick={onClose}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-[#252525] hover:bg-[#333] border border-[#555] transition-colors cursor-pointer"
-              aria-label={isPt ? 'Voltar ao Portfólio' : isEs ? 'Volver al Portafolio' : 'Back to Portfolio'}
+              className="inline-flex items-center gap-1.5 border border-[#444] bg-[#252525] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#333]"
+              aria-label={isPt ? 'Fechar visualização do currículo' : 'Cerrar visualización del currículum'}
             >
-              <X className="w-4 h-4 text-[#FF6B35]" />
-              <span>{isPt ? 'Voltar ao Portfólio' : isEs ? 'Volver al Portafolio' : 'Back to Portfolio'}</span>
+              <X className="h-4 w-4 text-[#FF6B35]" />
+              <span>{isPt ? 'Fechar' : 'Cerrar'}</span>
             </button>
           </div>
         </div>
 
-        {/* Printable Resume Document Area */}
-        <div className="p-6 sm:p-10 space-y-8 bg-[#181818] print:bg-white print:text-black print:p-8">
-          
-          {/* Header */}
-          <div className="border-b border-[#333] pb-6 print:border-black">
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-              <div>
-                <h1 className="font-serif-artistic italic text-3xl sm:text-4xl text-white print:text-black font-bold">
-                  {CONTACT_DATA.name}
-                </h1>
-                <p className="text-[#FF6B35] print:text-black font-semibold text-sm sm:text-base mt-1">
-                  {isPt 
-                    ? 'Customer Experience | Análise de Dados | Estudante de ADS' 
-                    : isEs 
-                    ? 'Customer Experience | Análisis de Datos | Estudiante de ADS' 
-                    : 'Customer Experience | Data Analysis | Systems Development Student'}
-                </p>
-                <p className="text-xs sm:text-sm text-[#bbb] print:text-neutral-700 mt-1 font-light max-w-2xl">
-                  {isPt 
-                    ? '+18 anos em atendimento, crédito e relacionamento; em formação em tecnologia' 
-                    : isEs 
-                    ? '+18 años uniendo experiencia del cliente, operaciones, análisis de datos y tecnología'
-                    : '+18 years bridging customer experience, operations, data analytics, and technology'}
-                </p>
-              </div>
-
-              <div className="space-y-1 text-xs font-mono text-[#aaa] print:text-neutral-800 text-left sm:text-right mt-3 sm:mt-0">
-                <p className="flex items-center sm:justify-end gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#FF6B35] print:hidden" />
-                  <span>{CONTACT_DATA.location}</span>
-                </p>
-                <p className="flex items-center sm:justify-end gap-1.5">
-                  <Phone className="w-3.5 h-3.5 text-[#FF6B35] print:hidden" />
-                  <span>{CONTACT_DATA.phoneFormatted}</span>
-                </p>
-                <p className="flex items-center sm:justify-end gap-1.5">
-                  <Mail className="w-3.5 h-3.5 text-[#FF6B35] print:hidden" />
-                  <span>{CONTACT_DATA.email}</span>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-[#2a2a2a] print:border-neutral-300 text-xs font-mono">
-              <a 
-                href={CONTACT_DATA.linkedin} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#FF6B35] hover:underline print:text-black flex items-center gap-1"
-              >
-                <Linkedin className="w-3.5 h-3.5" />
-                <span>linkedin.com/in/priscilla-cahino</span>
-              </a>
-              <a 
-                href={CONTACT_DATA.github} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#FF6B35] hover:underline print:text-black flex items-center gap-1"
-              >
-                <Github className="w-3.5 h-3.5" />
-                <span>github.com/Priscillacahino</span>
-              </a>
-              <a 
-                href="https://portfoliopriscilla.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[#FF6B35] hover:underline print:text-black flex items-center gap-1"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                <span>portfoliopriscilla.vercel.app</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Posicionamento Estratégico / Resumo */}
-          <div className="space-y-2">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Posicionamento Profissional' : isEs ? 'Posicionamiento Profesional' : 'Executive Summary'}</span>
-            </h3>
-            <p className="text-sm text-[#ccc] print:text-neutral-800 leading-relaxed font-light">
-              {isPt ? (
-                <>
-                  Profissional com <strong className="text-white print:text-black font-semibold">+18 anos de sólida trajetória</strong> em negócios, crédito e relacionamento com clientes nos setores bancário e imobiliário, em <strong className="text-white print:text-black font-semibold">transição consciente para a área de tecnologia</strong>. Graduação em Ciências Contábeis (UNIESP), graduação em Análise e Desenvolvimento de Sistemas em andamento (UNIPÊ) com vivência prática na Fábrica de Software e Pós-graduação em Engenharia de Dados (UNIESP). Não me posiciono como especialista em TI, mas trago maturidade de negócios e visão de processos somadas a <strong className="text-white print:text-black font-semibold">conhecimentos em desenvolvimento aplicados em projetos acadêmicos, especialmente em análise de dados, UX/UI e ferramentas digitais</strong>, com foco em Customer Success, Operações, Processos e Tecnologia.
-                </>
-              ) : isEs ? (
-                <>
-                  Profesional con <strong className="text-white print:text-black font-semibold">+18 años de sólida trayectoria</strong> en negocios, crédito y atención al cliente en los sectores bancario e inmobiliario, en <strong className="text-white print:text-black font-semibold">transición consciente a la tecnología</strong>. Licenciatura en Ciencias Contables (UNIESP), formación en Análisis y Desenvolvimento de Sistemas en curso (UNIPÊ) con participación en la Fábrica de Software y Posgrado en Ingeniería de Datos (UNIESP). No me posiciono como especialista en TI, sino con experiencia de negocios y visión de procesos combinadas con <strong className="text-white print:text-black font-semibold">conocimientos en desarrollo aplicados en proyectos académicos, especialmente en análisis de datos, UX/UI y herramientas digitales</strong> para Customer Success, Operaciones, Procesos y Tecnología.
-                </>
-              ) : (
-                <>
-                  Business and credit professional with <strong className="text-white print:text-black font-semibold">+18 years of career experience</strong> across banking and real estate, in a <strong className="text-white print:text-black font-semibold">conscious transition into technology</strong>. Degree in Accounting Sciences (UNIESP), Systems Analysis & Development undergraduate (UNIPÊ) active in the Software Factory, complemented by an Postgraduate qualification in Data Engineering (UNIESP). Combining business experience and process knowledge with <strong className="text-white print:text-black font-semibold">developing skills applied in academic projects, especially data analysis, UX/UI, and digital tools</strong>, focused on Customer Success, Operations, Processes, and Technology.
-                </>
-              )}
-            </p>
-          </div>
-
-          {/* Experiência Profissional Completa (Valores Aproximados Realistas) */}
-          <div className="space-y-4">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
-              <Briefcase className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Experiência Profissional' : isEs ? 'Experiencia Profesional' : 'Professional Experience'}</span>
-            </h3>
-
-            <div className="space-y-4">
-              {/* Exp 1: Fábrica de Software */}
-              <div className="border-l-2 border-[#FF6B35] pl-4 space-y-1.5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'UX/UI — Projeto de Extensão' : 'UX/UI — University Extension Project'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">
-                    mar/2026 – jul/2026 • {isPt ? 'Híbrido' : 'Hybrid'}
-                  </span>
-                </div>
-                <p className="text-xs text-[#FF6B35] font-mono print:text-neutral-700">
-                  Fábrica de Software UBTech Office / UNIPÊ — João Pessoa/PB
-                </p>
-                <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
-                  <li>
-                    {isPt 
-                      ? 'Atuação em UX/UI no projeto Administração para Todos, com prototipação de interfaces, wireframes, organização de fluxos e experiência dos usuários.' 
-                      : 'UX/UI work for the Administration for All project, including interface prototyping, wireframes, navigation flows, and user experience organization.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Organização de fluxos de navegação para Coordenação, Instrutores e Alunos.' 
-                      : 'Organization of navigation flows for Coordinators, Instructors, and Students.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Colaboração com a equipe de desenvolvimento na apresentação de protótipos e fluxos.' 
-                      : 'Collaboration with the development team to present prototypes and navigation flows.'}
-                  </li>
-                </ul>
-              </div>
-
-              {/* Exp 2: Confiance Transações Financeiras */}
-              <div className="border-l-2 border-[#FF6B35] pl-4 space-y-1.5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Analista de Crédito e Risco | Experiência do Cliente (CX)' : 'Credit & Risk Analyst | Customer Experience (CX)'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">
-                    jul/2018 – dez/2025 • {isPt ? 'Tempo integral' : 'Full-time'}
-                  </span>
-                </div>
-                <p className="text-xs text-[#FF6B35] font-mono print:text-neutral-700">
-                  Confiance Transações Financeiras — João Pessoa/PB
-                </p>
-                <p className="text-xs text-[#d1d5db] font-light print:text-neutral-700">
-                  {isPt 
-                    ? 'Atuação em análise de crédito e validação documental para operações de crédito habitacional, consignado e comercial, com carteira mensal variável de 20 a 40 processos em análise.'
-                    : 'Credit analysis and document validation for mortgage, payroll loan, and commercial operations, with a monthly portfolio of 20 to 40 processes.'}
-                </p>
-                <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
-                  <li>
-                    {isPt 
-                      ? 'Abertura, atualização e acompanhamento de contas de clientes Pessoa Física.' 
-                      : 'Opening, updating, and monitoring Individual (PF) client accounts.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Atendimento e orientação consultiva sobre crédito, financiamentos, produtos e serviços financeiros.' 
-                      : 'Consultative customer service and guidance on credit, financing, financial products, and services.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Identifiquei que a taxa de fechamento de contratos dependia mais de gargalos documentais e de aprovação externa do que do volume de clientes atendidos — percepção que hoje aplico à análise de jornada do cliente e pontos de atrito no processo.' 
-                      : 'Identified that deal closing rates depended more on documentation bottlenecks and external approval workflows than on sheer client volume — insight applied to customer journey mapping and friction reduction.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Suporte à resolução de demandas e conflitos, contribuindo para agilidade operacional e melhoria contínua da experiência do cliente.' 
-                      : 'Support in demand and dispute resolution, contributing to operational agility and enhanced customer experience.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Certificação em Ouvidoria Pública e Privada pela Escola Nacional de Administração Pública (ENAP).' 
-                      : 'Certified in Ombudsman and Sensitive Demands Mediation by ENAP.'}
-                  </li>
-                </ul>
-              </div>
-
-              {/* Exp 3: Confiance Conde */}
-              <div className="border-l-2 border-[#333] pl-4 space-y-1.5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Analista de Negócios Imobiliários' : 'Real Estate Business Analyst'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">
-                    dez/2023 – dez/2024 • {isPt ? 'Remoto (Atuação em paralelo)' : 'Remote (Simultaneous Role)'}
-                  </span>
-                </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">
-                  Confiance Conde — Conde/PB
-                </p>
-                <p className="text-xs text-[#d1d5db] font-light print:text-neutral-700">
-                  {isPt 
-                    ? 'Atuação simultânea, em regime home office, na originação e acompanhamento de financiamentos imobiliários — empresa distinta da Confiance Transações Financeiras, mesmo segmento.'
-                    : 'Simultaneous remote position in originating and monitoring real estate financing — distinct company from Confiance Transações Financeiras in the same segment.'}
-                </p>
-                <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
-                  <li>
-                    {isPt 
-                      ? 'Análise e conferência documental para operações de crédito imobiliário, observando requisitos e procedimentos das instituições financeiras.' 
-                      : 'Document review and verification for mortgage credit operations adhering to financial institution compliance.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Acompanhamento de propostas, pendências e etapas necessárias para aprovação e contratação dos financiamentos.' 
-                      : 'Tracking proposals, pending requirements, and procedural steps for financing approval and closing.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Relacionamento e interface entre clientes, incorporadoras e instituições financeiras, facilitando a comunicação e o andamento dos processos.' 
-                      : 'Relationship management and liaison between clients, developers, and financial institutions, facilitating process flow.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Apoio na resolução de demandas e acompanhamento do cliente ao longo de toda a jornada de financiamento.' 
-                      : 'Hands-on support in resolving inquiries and accompanying clients throughout the entire mortgage journey.'}
-                  </li>
-                </ul>
-              </div>
-
-              {/* Exp 4: GN Imobiliária */}
-              <div className="border-l-2 border-[#333] pl-4 space-y-1.5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Assistente Administrativo | Suporte ao Cliente' : 'Administrative Assistant | Customer Support'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">
-                    dez/2012 – jun/2018 • {isPt ? 'Presencial' : 'On-site'}
-                  </span>
-                </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">
-                  GN Imobiliária — João Pessoa/PB
-                </p>
-                <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
-                  <li>
-                    {isPt 
-                      ? 'Suporte operacional e atendimento administrativo a expressivo fluxo mensal de clientes, mantendo altos padrões de satisfação e fidelização.' 
-                      : 'Operational and administrative customer care for substantial monthly client volumes, sustaining high satisfaction ratings.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Digitalização e organização do acervo documental, reduzindo sensivelmente o tempo de localização e recuperação de contratos.' 
-                      : 'Digitalization and archiving of contractual records, noticeably accelerating information retrieval times.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Resolução ágil de demandas contratuais e mediação de conflitos locatícios, diminuindo expressivamente a reincidência de chamados.' 
-                      : 'Proactive resolution of administrative inquiries and lease disputes, minimizing repeat service tickets.'}
-                  </li>
-                </ul>
-              </div>
-
-              {/* Exp 5: Caixa Econômica Federal */}
-              <div className="border-l-2 border-[#333] pl-4 space-y-1.5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Recepcionista | Atendimento e Operações Bancárias' : 'Front Desk Officer | Banking Operations'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">
-                    abr/2007 – nov/2011 • {isPt ? 'Presencial' : 'On-site'}
-                  </span>
-                </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">
-                  Caixa Econômica Federal — João Pessoa/PB
-                </p>
-                <p className="text-xs text-[#d1d5db] font-light print:text-neutral-700">
-                  {isPt 
-                    ? 'Atuação no atendimento ao cliente e suporte às rotinas bancárias e administrativas, com volume diário superior a 100 atendimentos.'
-                    : 'Customer service and administrative support for banking operations with a daily volume exceeding 100 interactions.'}
-                </p>
-                <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
-                  <li>
-                    {isPt 
-                      ? 'Abertura de contas Pessoa Física, atualização cadastral e conferência de informações e documentos.' 
-                      : 'Opening Individual (PF) checking/savings accounts, customer data updates, and document verification.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Atendimento em processos de inscrição e regularização de CPF e PIS.' 
-                      : 'Customer assistance with CPF and PIS federal registration and regularizations.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Apoio na análise documental relacionada a operações de crédito habitacional e comercial.' 
-                      : 'Support in document audit related to residential and commercial credit applications.'}
-                  </li>
-                  <li>
-                    {isPt 
-                      ? 'Orientação sobre produtos, serviços financeiros e utilização de canais alternativos e digitais de atendimento.' 
-                      : 'Guidance on banking products, financial services, and self-service digital branch channels.'}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Formação Acadêmica & Pós-Graduação */}
-          <div className="space-y-4">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Formação Acadêmica & Especialização' : isEs ? 'Educación y Especialización' : 'Education & Credentials'}</span>
-            </h3>
-
-            <div className="space-y-3">
-              <div className="border-l-2 border-[#FF6B35] pl-4 space-y-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Graduação em Análise e Desenvolvimento de Sistemas (ADS)' : 'Degree in Systems Analysis and Development'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">fev/2025 – jul/2027 • {isPt ? 'Em andamento' : 'In progress'}</span>
-                </div>
-                <p className="text-xs text-[#FF6B35] font-mono print:text-neutral-700">Centro Universitário de João Pessoa (UNIPÊ)</p>
-                <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
-                  {isPt 
-                    ? 'Fundamentos de sistemas, banco de dados e desenvolvimento de software, além da participação prática na Fábrica de Software UBTech Office.' 
-                    : 'Systems fundamentals, databases, and software development, along with practical participation in the UBTech Office Software Factory.'}
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[#333] pl-4 space-y-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Pós-graduação em Engenharia de Dados' : 'Postgraduate qualification in Data Engineering'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">nov/2023 – mar/2024 • {isPt ? 'Concluído' : 'Completed'}</span>
-                </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">UNIESP Centro Universitário</p>
-                <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
-                  {isPt 
-                    ? 'Formação em fundamentos de engenharia de dados, modelagem, integração de informações e Business Intelligence, ampliando o repertório analítico.' 
-                    : 'Postgraduate studies in data engineering fundamentals, modeling, information integration, and Business Intelligence, expanding analytical knowledge.'}
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[#333] pl-4 space-y-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
-                  <span className="font-semibold text-white print:text-black text-sm">
-                    {isPt ? 'Graduação em Ciências Contábeis (Bacharelado)' : 'Bachelor Degree in Accounting Sciences'}
-                  </span>
-                  <span className="font-mono text-[#888] print:text-neutral-600">2009 – 2013 • {isPt ? 'Concluído' : 'Completed'}</span>
-                </div>
-                <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">UNIESP</p>
-                <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
-                  {isPt 
-                    ? 'Formação com sólida base em conformidade contábil, conciliação, auditoria, análise de balanços e operações financeiras. Trabalho de Conclusão de Curso (TCC) voltado a Instituições Financeiras e Sustentabilidade Socioambiental.' 
-                    : 'Comprehensive background in accounting compliance, reconciliation, audit, balance sheet analysis, and financial operations. Capstone thesis on Financial Institutions and Socio-environmental Sustainability.'}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Licenças & Certificações Relevantes */}
-          <div className="space-y-3">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Licenças & Certificações Relevantes' : 'Relevant Certifications'}</span>
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div className="p-3 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1">
-                <span className="font-semibold text-white print:text-black block">
-                  {isPt ? '📊 Dados, BI & Inteligência Artificial' : 'Data, BI & AI'}
-                </span>
-                <ul className="text-[#bbb] print:text-neutral-700 space-y-0.5 font-light">
-                  <li>• Power BI e Copilot para Análise de Dados</li>
-                  <li>• SQL para Ciência de Dados e Banco Relacional</li>
-                  <li>• Microsoft Certified: Azure AI Fundamentals (IA-900)</li>
-                  <li>• Soluções de Inteligência Artificial no GitHub</li>
-                </ul>
-              </div>
-
-              <div className="p-3 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1">
-                <span className="font-semibold text-white print:text-black block">
-                  {isPt ? '🎨 UX/UI, Ouvidoria & Gestão' : 'UX/UI, Ombudsman & Management'}
-                </span>
-                <ul className="text-[#bbb] print:text-neutral-700 space-y-0.5 font-light">
-                  <li>• Ouvidoria Pública e Privada — ENAP</li>
-                  <li>• UX Design: Usabilidade e Melhores Práticas Web</li>
-                  <li>• Liderança no Atendimento e Resolução de Conflitos</li>
-                  <li>• Fundamentos de Finanças e Análise de Risco</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Competências & Ferramentas (Diferenciais) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-1">
-            
-            <div className="p-4 border border-[#333] bg-[#141414] print:border-neutral-300 print:bg-neutral-50 space-y-2">
-              <h4 className="text-xs uppercase font-mono font-bold text-[#FF6B35] print:text-black">
-                {isPt ? 'Core de Negócio & Operações' : 'Core Business & Operations'}
-              </h4>
-              <ul className="text-xs text-[#bbb] print:text-neutral-800 space-y-1">
-                <li>• Customer Success (CS) & Customer Experience (CX)</li>
-                <li>• Análise de Crédito e Gestão de Riscos (+7 anos)</li>
-                <li>• Mapeamento de Jornada do Cliente e Redução de Inadimplência</li>
-                <li>• Ouvidoria e Mediação de Demandas Sensíveis (ENAP)</li>
-                <li>• Otimização Contínua de Processos e KPIs</li>
-              </ul>
-            </div>
-
-            <div className="p-4 border border-[#333] bg-[#141414] print:border-neutral-300 print:bg-neutral-50 space-y-2">
-              <h4 className="text-xs uppercase font-mono font-bold text-[#FF6B35] print:text-black">
-                {isPt ? 'Conhecimentos em desenvolvimento — Dados, UX & Tecnologia' : 'Developing knowledge — Data, UX & Technology'}
-              </h4>
-              <ul className="text-xs text-[#bbb] print:text-neutral-800 space-y-1">
-                <li>• <strong>Dados & BI:</strong> SQL, Power BI e análise de informações aplicados em estudos e projetos</li>
-                <li>• <strong>UX/UI:</strong> Figma, Miro, prototipação e organização de fluxos</li>
-                <li>• <strong>Engenharia de Dados:</strong> conceitos de modelagem e integração de dados estudados na pós-graduação</li>
-                <li>• <strong>Tecnologia:</strong> Git/GitHub, fundamentos de desenvolvimento e IA aplicada a estudos e projetos</li>
-              </ul>
-            </div>
-
-          </div>
-
-          {/* Projetos Técnicos de Destaque com Estrutura Objetivo / Ferramentas / Resultados */}
-          <div className="space-y-3 pt-2">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
-              <Code className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Projetos Acadêmicos em Destaque' : 'Highlighted Academic Projects'}</span>
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-              <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
-                <span className="font-semibold text-white print:text-black block text-sm">ClínicaCare</span>
-                <p className="text-[#FF6B35] text-[11px] font-mono">Dados • SQL • Power BI</p>
-                <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
-                  <strong>Objetivo:</strong> Mapear gargalos e risco de inadimplência em clínica de saúde.<br/>
-                  <strong>Resultados:</strong> Modelagem de dados, análise exploratória e dashboard no Power BI com dados acadêmicos simulados.
-                </p>
-              </div>
-
-              <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
-                <span className="font-semibold text-white print:text-black block text-sm">Adm4All</span>
-                <p className="text-[#FF6B35] text-[11px] font-mono">Figma • UX/UI • Fluxos e Prototipação</p>
-                <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
-                  <strong>Objetivo:</strong> Interface inclusiva de capacitação empreendedora na Fábrica de Software.<br/>
-                  <strong>Resultados:</strong> Prototipação de interfaces no Figma e organização de fluxos para Coordenação, Instrutores e Alunos.
-                </p>
-              </div>
-
-              <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
-                <span className="font-semibold text-white print:text-black block text-sm">PetZona</span>
-                <p className="text-[#FF6B35] text-[11px] font-mono">Figma • Miro • Customer Journey</p>
-                <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
-                  <strong>Objetivo:</strong> Prototipação mobile de agendamento de cuidados e serviços pet.<br/>
-                  <strong>Resultados:</strong> Construção de persona, mapeamento da jornada no Miro e protótipo navegável de serviços pet no Figma.
-                </p>
-              </div>
-            </div>
-          </div>
-
+        <div className="min-h-0 flex-1 bg-[#2a2a2a]">
+          <iframe
+            src="/Curriculo_Priscilla_Cahino.pdf#view=FitH"
+            title={isPt ? 'Currículo de Priscilla Cahino em PDF' : 'Currículum de Priscilla Cahino en PDF'}
+            className="h-full min-h-[70vh] w-full border-0"
+          />
         </div>
-
-        {/* Footer info in modal */}
-        <div className="px-6 py-4 border-t border-[#2e2e2e] bg-[#121212] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#888] print:hidden">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span>{CONTACT_DATA.name} • João Pessoa - PB</span>
-            {viewCount && (
-              <>
-                <span className="hidden sm:inline text-[#555]">•</span>
-                <span className="inline-flex items-center gap-1.5 text-[#FF6B35]">
-                  <Eye className="w-3.5 h-3.5" />
-                  <span>{viewCount} {isPt ? 'visualizações deste currículo' : 'visualizaciones registradas'}</span>
-                </span>
-              </>
-            )}
-          </div>
-          <div className="flex items-center gap-3 flex-wrap justify-center">
-            <button
-              type="button"
-              onClick={handleDownloadPdf}
-              className="text-[#FF6B35] hover:underline flex items-center gap-1 cursor-pointer font-semibold"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Baixar PDF' : isEs ? 'Descargar PDF' : 'Download PDF'}</span>
-            </button>
-            <span>•</span>
-            <button
-              type="button"
-              onClick={handlePrint}
-              className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Imprimir' : isEs ? 'Imprimir' : 'Print'}</span>
-            </button>
-            <span>•</span>
-            <button
-              type="button"
-              onClick={onClose}
-              className="px-3 py-1 bg-[#252525] hover:bg-[#333] text-white border border-[#444] transition-colors cursor-pointer font-sans font-semibold text-xs"
-            >
-              {isPt ? '← Voltar ao Portfólio' : isEs ? '← Volver al Portafolio' : '← Back to Portfolio'}
-            </button>
-          </div>
-        </div>
-
       </div>
     </div>
   );
