@@ -295,20 +295,20 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             
             <div className="p-6 border border-[#333] bg-[#141414] text-[#f5f5f5]">
               <p className="leading-relaxed italic font-serif-artistic text-lg text-center sm:text-left">
-                “Sou uma profissional com mais de dezoito anos de experiência consolidada nos segmentos bancário e imobiliário. Foi nesse ambiente de alta exigência que desenvolvi domínio em atendimento, relacionamento com clientes, esteiras financeiras, crédito e resolução de demandas críticas.”
+                “Sou uma profissional com mais de dezoito anos de experiência nos segmentos bancário e imobiliário. Foi nesse ambiente de alta exigência que desenvolvi experiência em atendimento, relacionamento com clientes, operações financeiras, crédito, análise documental e resolução de demandas complexas.”
               </p>
             </div>
 
             <p>
-              Ao longo dessa vivência, percebi que a tecnologia e a análise de dados oferecem ferramentas poderosas para potencializar aquilo que sempre fiz: aproximar o cliente da solução ideal, simplificar processos burocráticos e eliminar gargalos operacionais.
+              Ao longo dessa trajetória, percebi como processos bem estruturados, informações claras e uma boa compreensão das necessidades das pessoas podem tornar experiências mais simples e eficientes. Com o tempo, passei a enxergar na tecnologia uma forma de ampliar essa visão e buscar novas maneiras de organizar processos, reduzir atritos e apoiar melhores decisões.
             </p>
 
             <p>
-              Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ e participei de projetos na Fábrica de Software. Estou conectando minha experiência em negócios e relacionamento com clientes aos conhecimentos que venho desenvolvendo em tecnologia e análise de dados.
+              Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ e passei a participar de projetos acadêmicos e da Fábrica de Software. Hoje, conecto minha experiência profissional aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI, análise de informações e soluções digitais.
             </p>
 
             <p>
-              Nos projetos acadêmicos, venho praticando SQL, Python e Power BI para organizar e explorar informações, além de Figma e mapeamento de jornadas para estudar a experiência do usuário. Quero ampliar essa prática e contribuir com a visão de processos e de atendimento que construí ao longo da minha trajetória.
+              Nos projetos, tenho contato com ferramentas como SQL, Power BI, Figma, Git/GitHub e linguagens de programação, sempre dentro de um processo contínuo de aprendizado e aplicação prática. Mais do que dominar uma ferramenta específica, busco compreender como diferentes recursos podem contribuir para resolver problemas e melhorar a experiência de quem utiliza uma solução.
             </p>
 
             {/* Sun Tzu Quote Box */}
@@ -330,7 +330,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   Além do trabalho e da tecnologia
                 </h3>
                 <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  Nos momentos de descanso, gosto de aproveitar o mar e a praia em João Pessoa, assistir a um bom filme com pipoca e manter um olhar atento ao comportamento humano. Observar o cotidiano é uma das melhores formas de exercitar a empatia: primeiro ouvir com atenção, compreender as reais necessidades das pessoas e, só então, desenhar soluções funcionais.
+                  Nos momentos de descanso, gosto de aproveitar o mar e a praia em João Pessoa, assistir a filmes e séries, ler e estar com amigos e família. Também gosto de observar o comportamento das pessoas e o cotidiano, porque acredito que ouvir com atenção e compreender diferentes perspectivas ajuda a desenvolver empatia e a pensar soluções mais úteis.
                 </p>
               </div>
             </div>
@@ -342,10 +342,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
               <div>
                 <h3 className="text-sm font-serif-artistic italic text-white mb-1">
-                  Inteligência Artificial como acelerador estratégico
+                  Inteligência Artificial como apoio à evolução e à produtividade
                 </h3>
                 <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  Utilizo ativamente a Inteligência Artificial no meu cotidiano profissional e acadêmico — para sintetizar requisitos, explorar hipóteses analíticas, documentar sistemas e ampliar a produtividade. Vejo a IA não como um atalho, mas como uma alavanca poderosa quando guiada por senso crítico e sólido conhecimento de negócio.
+                  A Inteligência Artificial passou a fazer parte do meu processo de aprendizado e também da forma como estruturo e desenvolvo projetos. Utilizo essas ferramentas para organizar ideias, apoiar pesquisas, estruturar requisitos, documentar soluções, explorar possibilidades, revisar conteúdos e melhorar a produtividade. Também tenho buscado compreender como a IA pode ser aplicada a automações e a diferentes etapas da construção de soluções digitais, sempre combinando seus recursos com análise crítica, validação das informações e compreensão do contexto.
                 </p>
               </div>
             </div>
@@ -353,7 +353,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             {/* Fechamento Conector Solicitado */}
             <div className="p-6 border-l-4 border-l-[#FF6B35] border border-[#2e2e2e] bg-[#161616] space-y-4">
               <p className="text-white font-medium text-base leading-relaxed">
-                “Hoje amplio essa experiência por meio da formação em Análise e Desenvolvimento de Sistemas e de estudos em dados, tecnologia e experiência do usuário. Meu objetivo não é deixar para trás o conhecimento construído anteriormente, mas aprender novas ferramentas e descobrir como essas áreas podem se complementar.”
+                Este espaço reúne um pouco da minha trajetória, dos conhecimentos que venho desenvolvendo e dos projetos que fazem parte da minha transição para tecnologia. Meu objetivo é continuar aprendendo e evoluindo, conectando minha experiência em clientes, operações e processos às novas possibilidades que a tecnologia oferece.
               </p>
               {onOpenResume && (
                 <div className="pt-2 flex items-center justify-between flex-wrap gap-3 border-t border-[#2a2a2a]">
