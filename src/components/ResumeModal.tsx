@@ -266,15 +266,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
             <p className="text-sm text-[#ccc] print:text-neutral-800 leading-relaxed font-light">
               {isPt ? (
                 <>
-                  Profissional com <strong className="text-white print:text-black font-semibold">+18 anos de sólida trajetória</strong> em negócios, crédito e relacionamento com clientes nos setores bancário e imobiliário, em <strong className="text-white print:text-black font-semibold">transição consciente para a área de tecnologia</strong>. Graduação em Ciências Contábeis (UNIESP), graduação em Análise e Desenvolvimento de Sistemas em andamento (UNIPÊ) com vivência prática na Fábrica de Software e Pós-graduação em Engenharia de Dados (UNIESP). Não me posiciono como especialista em TI, mas trago a maturidade e visão de processos sênior somadas a <strong className="text-white print:text-black font-semibold">noções práticas aplicadas em SQL, Python, Power BI e prototipação em Figma</strong>, com foco em Customer Success, Operações, Análise de Dados e UX.
+                  Profissional com <strong className="text-white print:text-black font-semibold">+18 anos de sólida trajetória</strong> em negócios, crédito e relacionamento com clientes nos setores bancário e imobiliário, em <strong className="text-white print:text-black font-semibold">transição consciente para a área de tecnologia</strong>. Graduação em Ciências Contábeis (UNIESP), graduação em Análise e Desenvolvimento de Sistemas em andamento (UNIPÊ) com vivência prática na Fábrica de Software e Pós-graduação em Engenharia de Dados (UNIESP). Não me posiciono como especialista em TI, mas trago maturidade de negócios e visão de processos somadas a <strong className="text-white print:text-black font-semibold">conhecimentos em desenvolvimento aplicados em projetos acadêmicos, especialmente em análise de dados, UX/UI e ferramentas digitais</strong>, com foco em Customer Success, Operações, Processos e Tecnologia.
                 </>
               ) : isEs ? (
                 <>
-                  Profesional con <strong className="text-white print:text-black font-semibold">+18 años de sólida trayectoria</strong> en negocios, crédito y atención al cliente en los sectores bancario e inmobiliario, en <strong className="text-white print:text-black font-semibold">transición consciente a la tecnología</strong>. Licenciatura en Ciencias Contables (UNIESP), formación en Análisis y Desenvolvimento de Sistemas en curso (UNIPÊ) con participación en la Fábrica de Software y Posgrado en Ingeniería de Datos (UNIESP). No me posiciono como especialista en TI, sino con madurez senior en procesos y negocios combinada con <strong className="text-white print:text-black font-semibold">nociones prácticas en SQL, Python, Power BI y Figma</strong> para Customer Success, Operaciones, Análisis de Datos y UX.
+                  Profesional con <strong className="text-white print:text-black font-semibold">+18 años de sólida trayectoria</strong> en negocios, crédito y atención al cliente en los sectores bancario e inmobiliario, en <strong className="text-white print:text-black font-semibold">transición consciente a la tecnología</strong>. Licenciatura en Ciencias Contables (UNIESP), formación en Análisis y Desenvolvimento de Sistemas en curso (UNIPÊ) con participación en la Fábrica de Software y Posgrado en Ingeniería de Datos (UNIESP). No me posiciono como especialista en TI, sino con experiencia de negocios y visión de procesos combinadas con <strong className="text-white print:text-black font-semibold">conocimientos en desarrollo aplicados en proyectos académicos, especialmente en análisis de datos, UX/UI y herramientas digitales</strong> para Customer Success, Operaciones, Procesos y Tecnología.
                 </>
               ) : (
                 <>
-                  Business and credit professional with <strong className="text-white print:text-black font-semibold">+18 years of career experience</strong> across banking and real estate, in a <strong className="text-white print:text-black font-semibold">conscious transition into technology</strong>. Degree in Accounting Sciences (UNIESP), Systems Analysis & Development undergraduate (UNIPÊ) active in the Software Factory, complemented by an Postgraduate qualification in Data Engineering (UNIESP). Blending senior business acumen with <strong className="text-white print:text-black font-semibold">practical application of SQL, Python, Power BI, and Figma</strong> focused on Customer Success, Tech Operations, Data Analysis, and UX.
+                  Business and credit professional with <strong className="text-white print:text-black font-semibold">+18 years of career experience</strong> across banking and real estate, in a <strong className="text-white print:text-black font-semibold">conscious transition into technology</strong>. Degree in Accounting Sciences (UNIESP), Systems Analysis & Development undergraduate (UNIPÊ) active in the Software Factory, complemented by an Postgraduate qualification in Data Engineering (UNIESP). Combining business experience and process knowledge with <strong className="text-white print:text-black font-semibold">developing skills applied in academic projects, especially data analysis, UX/UI, and digital tools</strong>, focused on Customer Success, Operations, Processes, and Technology.
                 </>
               )}
             </p>
@@ -304,8 +304,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                 <ul className="text-xs sm:text-sm text-[#bbb] print:text-neutral-800 space-y-1 list-disc list-inside font-light">
                   <li>
                     {isPt 
-                      ? 'Design de interfaces no projeto Administração para Todos: pesquisa de UX, wireframes, protótipos interativos de alta fidelidade.' 
-                      : 'Interface design for the Administration for All project: UX research, wireframes, interactive high-fidelity prototypes.'}
+                      ? 'Atuação em UX/UI no projeto Administração para Todos, com prototipação de interfaces, wireframes, organização de fluxos e experiência dos usuários.' 
+                      : 'UX/UI work for the Administration for All project, including interface prototyping, wireframes, navigation flows, and user experience organization.'}
                   </li>
                   <li>
                     {isPt 
@@ -503,8 +503,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                 <p className="text-xs text-[#FF6B35] font-mono print:text-neutral-700">Centro Universitário de João Pessoa (UNIPÊ)</p>
                 <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
                   {isPt 
-                    ? 'Lógica de programação, modelagem de banco de dados, engenharia de software e participação prática como estagiária na Fábrica de Software UBTech Office.' 
-                    : 'Programming logic, database modeling, software engineering, and active internship at UBTech Office Software Factory.'}
+                    ? 'Fundamentos de sistemas, banco de dados e desenvolvimento de software, além da participação prática na Fábrica de Software UBTech Office.' 
+                    : 'Systems fundamentals, databases, and software development, along with practical participation in the UBTech Office Software Factory.'}
                 </p>
               </div>
 
@@ -518,8 +518,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
                 <p className="text-xs text-[#aaa] font-mono print:text-neutral-700">UNIESP Centro Universitário</p>
                 <p className="text-xs text-[#bbb] print:text-neutral-700 font-light">
                   {isPt 
-                    ? 'Transformação de grandes volumes de dados em insights estratégicos. SQL, arquiteturas ETL/ELT, modelagem analítica e Business Intelligence.' 
-                    : 'Transforming large data volumes into strategic business insights. SQL, ETL/ELT pipelines, analytical modeling, and Business Intelligence.'}
+                    ? 'Formação em fundamentos de engenharia de dados, modelagem, integração de informações e Business Intelligence, ampliando o repertório analítico.' 
+                    : 'Postgraduate studies in data engineering fundamentals, modeling, information integration, and Business Intelligence, expanding analytical knowledge.'}
                 </p>
               </div>
 
@@ -592,13 +592,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
 
             <div className="p-4 border border-[#333] bg-[#141414] print:border-neutral-300 print:bg-neutral-50 space-y-2">
               <h4 className="text-xs uppercase font-mono font-bold text-[#FF6B35] print:text-black">
-                {isPt ? 'Diferenciais Técnicos em Dados & UX' : 'Technical Highlights in Data & UX'}
+                {isPt ? 'Conhecimentos em desenvolvimento — Dados, UX & Tecnologia' : 'Developing knowledge — Data, UX & Technology'}
               </h4>
               <ul className="text-xs text-[#bbb] print:text-neutral-800 space-y-1">
-                <li>• <strong>Dados & BI:</strong> Power BI, SQL (MySQL), Python (Pandas, Scikit-Learn)</li>
-                <li>• <strong>UX/UI Design:</strong> Figma, Miro, Prototipação Navegável, Design System</li>
-                <li>• <strong>Engenharia de Dados:</strong> Modelagem Relacional, Pipelines e ETL (MBA)</li>
-                <li>• <strong>Tecnologia:</strong> Git & GitHub, Engenharia de Software, IA Aplicada</li>
+                <li>• <strong>Dados & BI:</strong> SQL, Power BI e análise de informações aplicados em estudos e projetos</li>
+                <li>• <strong>UX/UI:</strong> Figma, Miro, prototipação e organização de fluxos</li>
+                <li>• <strong>Engenharia de Dados:</strong> conceitos de modelagem e integração de dados estudados na pós-graduação</li>
+                <li>• <strong>Tecnologia:</strong> Git/GitHub, fundamentos de desenvolvimento e IA aplicada a estudos e projetos</li>
               </ul>
             </div>
 
@@ -608,22 +608,22 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
           <div className="space-y-3 pt-2">
             <h3 className="text-xs uppercase tracking-widest font-bold text-[#FF6B35] print:text-black flex items-center gap-2">
               <Code className="w-3.5 h-3.5" />
-              <span>{isPt ? 'Projetos Técnicos de Destaque' : 'Highlighted Projects'}</span>
+              <span>{isPt ? 'Projetos Acadêmicos em Destaque' : 'Highlighted Academic Projects'}</span>
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
               <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
                 <span className="font-semibold text-white print:text-black block text-sm">ClínicaCare</span>
-                <p className="text-[#FF6B35] text-[11px] font-mono">Power BI • SQL • Python</p>
+                <p className="text-[#FF6B35] text-[11px] font-mono">Dados • SQL • Power BI</p>
                 <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
                   <strong>Objetivo:</strong> Mapear gargalos e risco de inadimplência em clínica de saúde.<br/>
-                  <strong>Resultados:</strong> Modelagem MySQL, análise exploratória em Python e dashboard no Power BI com dados acadêmicos simulados.
+                  <strong>Resultados:</strong> Modelagem de dados, análise exploratória e dashboard no Power BI com dados acadêmicos simulados.
                 </p>
               </div>
 
               <div className="p-3.5 border border-[#2e2e2e] print:border-neutral-300 bg-[#141414] print:bg-transparent space-y-1.5">
                 <span className="font-semibold text-white print:text-black block text-sm">Adm4All</span>
-                <p className="text-[#FF6B35] text-[11px] font-mono">Figma • UX/UI • Design System</p>
+                <p className="text-[#FF6B35] text-[11px] font-mono">Figma • UX/UI • Fluxos e Prototipação</p>
                 <p className="text-[#ccc] print:text-neutral-700 text-xs leading-relaxed font-light">
                   <strong>Objetivo:</strong> Interface inclusiva de capacitação empreendedora na Fábrica de Software.<br/>
                   <strong>Resultados:</strong> Prototipação de interfaces no Figma e organização de fluxos para Coordenação, Instrutores e Alunos.
