@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageType, Language, AcademicProject } from '../types';
 import { CONTACT_DATA, ACADEMIC_PROJECTS } from '../data/portfolioData';
+import { TRANSLATIONS } from '../data/translations';
 import { SUSTAINABILITY_ARTICLE } from '../data/articleData';
 import { OriginalResearchModal } from './OriginalResearchModal';
 import { PetzoneWireframeViewer } from './PetzoneWireframeViewer';
@@ -68,8 +69,166 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     }
   };
 
-  const dataProjects = ACADEMIC_PROJECTS.filter(p => p.category === 'data');
-  const uxProjects = ACADEMIC_PROJECTS.filter(p => p.category === 'ux-ui');
+  const isPt = currentLanguage === 'pt';
+  const localizedProjects = isPt ? ACADEMIC_PROJECTS : TRANSLATIONS.es.projectsData;
+  const dataProjects = localizedProjects.filter(p => p.category === 'data');
+  const uxProjects = localizedProjects.filter(p => p.category === 'ux-ui');
+
+  const t = isPt ? {
+    location: '{t.location}',
+    identityRole: '{t.identityRole}',
+    educationLine: '{t.educationLine}',
+    knowJourney: 'Conheça minha trajetória',
+    viewProjects: 'Ver projetos',
+    downloadResume: 'Baixar currículo',
+    positioning: '{t.positioning}',
+    heroQuote: '{t.heroQuote}',
+    heroP1: '{t.heroP1}',
+    heroP2: 'Essa vivência me ensinou que processos eficientes nascem da escuta ativa e da precisão das informações. Hoje, conecto essa bagagem de negócios aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI e análise de informações, buscando compreender como essas ferramentas podem apoiar processos e decisões.',
+    copyEmail: 'Copiar E-mail',
+    copied: 'Copiado!',
+    storyEyebrow: '{t.storyEyebrow}',
+    aboutMe: '{t.aboutMe}',
+    storyBadge: '{t.storyBadge}',
+    storyHighlight: '{t.storyHighlight}',
+    storyP1: '{t.storyP1}',
+    storyP2: '{t.storyP2}',
+    storyP3: '{t.storyP3}',
+    principle: '{t.principle}',
+    quote: '{t.quote}',
+    quoteAuthor: '{t.quoteAuthor}',
+    personalTitle: '{t.personalTitle}',
+    personalText: '{t.personalText}',
+    aiTitle: '{t.aiTitle}',
+    aiText: '{t.aiText}',
+    closing: '{t.closing}',
+    fullHistory: '{t.fullHistory}',
+    viewFullHistory: 'Ver histórico profissional completo em PDF →',
+    knowledgeEyebrow: '{t.knowledgeEyebrow}',
+    knowledgeTitle: '{t.knowledgeTitle}',
+    knowledgeSubtitle: '{t.knowledgeSubtitle}',
+    expKnowledge: '{t.expKnowledge}',
+    consolidated: '{t.consolidated}',
+    cxTitle: '{t.cxTitle}',
+    cxDesc: '{t.cxDesc}',
+    financeTitle: '{t.financeTitle}',
+    financeDesc: '{t.financeDesc}',
+    processTitle: '{t.processTitle}',
+    processDesc: '{t.processDesc}',
+    devKnowledge: '{t.devKnowledge}',
+    learning: '{t.learning}',
+    data: 'Dados',
+    development: 'Desenvolvimento',
+    projectsEyebrow: '{t.projectsEyebrow}',
+    projectsTitle: 'Projetos',
+    projectsSubtitle: '{t.projectsSubtitle}',
+    viewGithub: 'Ver repositórios no GitHub →',
+    dataBI: '{t.dataBI}',
+    academicData: '{t.academicData}',
+    knowProject: 'Conhecer projeto',
+    uxArea: '{t.uxArea}',
+    extensionProject: '{t.extensionProject}',
+    admSummary: '{t.admSummary}',
+    viewProject: 'Ver projeto',
+    testWireframe: 'Testar Wireframe',
+    articlesEyebrow: '{t.articlesEyebrow}',
+    articlesTitle: '{t.articlesTitle}',
+    articlesSubtitle: '{t.articlesSubtitle}',
+    readArticle: 'Ler artigo completo',
+    originalResearch: 'Sobre a pesquisa original',
+    certEyebrow: '{t.certEyebrow}',
+    certTitle: '{t.certTitle}',
+    certSubtitle: '{t.certSubtitle}',
+    toolsEyebrow: '{t.toolsEyebrow}',
+    toolsTitle: '{t.toolsTitle}',
+    toolsSubtitle: '{t.toolsSubtitle}',
+    resumeEyebrow: '{t.resumeEyebrow}',
+    resumeTitle: 'Currículo',
+    resumeDesc: '{t.resumeDesc}',
+    viewBrowser: 'Visualizar no Navegador',
+    downloadPdf: 'Baixar currículo em PDF',
+    contactEyebrow: '{t.contactEyebrow}',
+    contactQuote: '{t.contactQuote}',
+    email: 'E-mail',
+    close: 'Fechar'
+  } : {
+    location: '{t.location}',
+    identityRole: 'Customer Experience (CX/CS) • Análisis de Datos • Tecnología',
+    educationLine: 'Ciencias Contables | Estudiante de Análisis y Desarrollo de Sistemas',
+    knowJourney: 'Conoce mi trayectoria',
+    viewProjects: 'Ver proyectos',
+    downloadResume: 'Descargar currículum',
+    positioning: 'Posicionamiento & Conexión',
+    heroQuote: '“Conectando experiencia en relación con clientes, operaciones financieras y procesos con nuevos conocimientos en tecnología y análisis de datos.”',
+    heroP1: 'Cuento con más de dieciocho años de experiencia práctica en los sectores bancario e inmobiliario, con actuación directa en procesos de crédito, análisis documental, cumplimiento normativo y resolución de situaciones operativas complejas con fuerte enfoque en el cliente.',
+    heroP2: 'Esta experiencia me enseñó que los procesos eficientes nacen de la escucha activa y de la precisión de la información. Hoy conecto esta trayectoria de negocios con los conocimientos que vengo desarrollando en tecnología, UX/UI y análisis de información, buscando comprender cómo estas herramientas pueden apoyar procesos y decisiones.',
+    copyEmail: 'Copiar correo',
+    copied: '¡Copiado!',
+    storyEyebrow: 'Trayectoria & Contexto Profesional',
+    aboutMe: 'Sobre mí',
+    storyBadge: 'Priscilla Cahino • Experiencia, Negocios & Tecnología',
+    storyHighlight: '“Soy una profesional con más de dieciocho años de experiencia en los sectores bancario e inmobiliario. Fue en este entorno de alta exigencia donde desarrollé experiencia en atención, relación con clientes, operaciones financieras, crédito, análisis documental y resolución de demandas complejas.”',
+    storyP1: 'A lo largo de esta trayectoria, comprendí cómo los procesos bien estructurados, la información clara y una buena comprensión de las necesidades de las personas pueden hacer que las experiencias sean más simples y eficientes. Con el tiempo, empecé a ver la tecnología como una forma de ampliar esta visión y buscar nuevas maneras de organizar procesos, reducir fricciones y apoyar mejores decisiones.',
+    storyP2: 'Por eso inicié mi formación en Análisis y Desarrollo de Sistemas (ADS) en UNIPÊ y comencé a participar en proyectos académicos y de la Fábrica de Software. Hoy conecto mi experiencia profesional con los conocimientos que vengo desarrollando en tecnología, UX/UI, análisis de información y soluciones digitales.',
+    storyP3: 'En los proyectos tengo contacto con herramientas como SQL, Power BI, Figma, Git/GitHub y lenguajes de programación, siempre dentro de un proceso continuo de aprendizaje y aplicación práctica. Más que dominar una herramienta específica, busco comprender cómo diferentes recursos pueden contribuir a resolver problemas y mejorar la experiencia de quienes utilizan una solución.',
+    principle: 'Principio de Acción',
+    quote: '“Las oportunidades se multiplican a medida que se aprovechan.”',
+    quoteAuthor: 'Sun Tzu — El Arte de la Guerra',
+    personalTitle: 'Más allá del trabajo y la tecnología',
+    personalText: 'En mis momentos de descanso disfruto del mar y de la playa en João Pessoa, ver películas y series, leer y compartir con amigos y familia. También me gusta observar el comportamiento de las personas y la vida cotidiana, porque creo que escuchar con atención y comprender diferentes perspectivas ayuda a desarrollar empatía y pensar soluciones más útiles.',
+    aiTitle: 'Inteligencia Artificial como apoyo a la evolución y la productividad',
+    aiText: 'La Inteligencia Artificial pasó a formar parte de mi proceso de aprendizaje y también de la forma en que estructuro y desarrollo proyectos. Utilizo estas herramientas para organizar ideas, apoyar investigaciones, estructurar requisitos, documentar soluciones, explorar posibilidades, revisar contenidos y mejorar la productividad. También busco comprender cómo la IA puede aplicarse a automatizaciones y a diferentes etapas de la construcción de soluciones digitales, combinando siempre sus recursos con análisis crítico, validación de la información y comprensión del contexto.',
+    closing: 'Este espacio reúne parte de mi trayectoria, de los conocimientos que vengo desarrollando y de los proyectos que forman parte de mi transición hacia la tecnología. Mi objetivo es seguir aprendiendo y evolucionando, conectando mi experiencia en clientes, operaciones y procesos con las nuevas posibilidades que ofrece la tecnología.',
+    fullHistory: 'Historial profesional detallado (+18 años), empresas y funciones disponibles en el documento oficial.',
+    viewFullHistory: 'Ver historial profesional completo en PDF →',
+    knowledgeEyebrow: 'Estructura de Competencias',
+    knowledgeTitle: 'Áreas de conocimiento',
+    knowledgeSubtitle: 'Diferenciación clara entre experiencia profesional consolidada y conocimientos en desarrollo.',
+    expKnowledge: 'Experiencia y conocimientos profesionales',
+    consolidated: '18+ años de experiencia consolidada',
+    cxTitle: 'Customer Experience y Customer Success',
+    cxDesc: 'Relación con clientes, atención, jornada, resolución de demandas y mejora de procesos.',
+    financeTitle: 'Operaciones Financieras y Crédito',
+    financeDesc: 'Análisis de crédito y riesgo, financiación, operaciones bancarias, procesos inmobiliarios y cumplimiento.',
+    processTitle: 'Procesos y Negocios',
+    processDesc: 'Organización de procesos, análisis de requisitos, relación entre áreas e identificación de oportunidades de mejora.',
+    devKnowledge: 'Conocimientos en desarrollo',
+    learning: 'En formación práctica y aprendizaje continuo',
+    data: 'Datos',
+    development: 'Desarrollo',
+    projectsEyebrow: 'Portafolio Técnico & Aplicación',
+    projectsTitle: 'Proyectos',
+    projectsSubtitle: 'Proyectos académicos, de práctica y extensión comunitaria con enfoque en Datos, BI y UX/UI.',
+    viewGithub: 'Ver repositorios en GitHub →',
+    dataBI: 'Datos & Business Intelligence',
+    academicData: 'Proyecto Académico de Análisis de Datos',
+    knowProject: 'Conocer proyecto',
+    uxArea: 'Diseño UX/UI & Experiencia de Usuario',
+    extensionProject: 'Proyecto de Extensión Comunitaria',
+    admSummary: 'Proyecto de extensión relacionado con la gestión y el seguimiento de la jornada de los alumnos en la Fábrica de Software de UNIPÊ.',
+    viewProject: 'Ver proyecto',
+    testWireframe: 'Probar Wireframe',
+    articlesEyebrow: 'Producción & Análisis',
+    articlesTitle: 'Artículos y Estudios',
+    articlesSubtitle: '“Producciones académicas y reflexiones que conectan mi formación en Ciencias Contables, experiencia profesional y los conocimientos que vengo desarrollando en tecnología, datos y experiencia del cliente.”',
+    readArticle: 'Leer artículo completo',
+    originalResearch: 'Sobre la investigación original',
+    certEyebrow: 'Cualificaciones Estratégicas',
+    certTitle: 'Cursos y certificaciones',
+    certSubtitle: 'Prioridad para certificaciones y formaciones que acompañan la transición hacia la tecnología.',
+    toolsEyebrow: 'Práctica & Herramientas',
+    toolsTitle: 'Herramientas que utilizo en estudios y proyectos',
+    toolsSubtitle: 'Recursos aplicados en proyectos académicos, análisis de datos e interfaces digitales.',
+    resumeEyebrow: '{t.resumeEyebrow}',
+    resumeTitle: 'Currículum',
+    resumeDesc: 'Toda mi trayectoria profesional detallada (+18 años en negocios, crédito y relación bancaria e inmobiliaria), formación académica completa (Ciencias Contables, ADS y Posgrado en Ingeniería de Datos) y certificaciones están reunidas en el documento oficial en PDF.',
+    viewBrowser: 'Visualizar en el navegador',
+    downloadPdf: 'Descargar currículum en PDF',
+    contactEyebrow: 'Contacto & Conexiones',
+    contactQuote: '“Busco oportunidades que me permitan aplicar mi experiencia profesional, seguir aprendiendo y desarrollar mi trayectoria en tecnología, datos, Customer Experience y áreas relacionadas.”',
+    email: 'Correo',
+    close: 'Cerrar'
+  };
 
   return (
     <div className="space-y-20 sm:space-y-28 pb-20">
@@ -87,12 +246,12 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <span className="w-2 h-2 bg-[#FF6B35]"></span>
                 <span className="text-xs uppercase tracking-[0.2em] font-mono text-[#FF6B35] font-semibold">
                   {currentLanguage === 'pt' 
-                    ? 'Customer Experience (CX/CS) • Análise de Dados • Tecnologia'
+                    ? '{t.identityRole}'
                     : 'Customer Experience (CX/CS) • Análisis de Datos • Tecnología'}
                 </span>
               </div>
               <span className="text-xs uppercase font-mono tracking-widest text-[#9ca3af] hidden sm:block">
-                João Pessoa - PB, Brasil
+                {t.location}
               </span>
             </div>
 
@@ -137,10 +296,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <div className="space-y-1.5 text-xs font-mono uppercase tracking-wider text-[#d1d5db]">
                       <p className="text-white font-semibold flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-[#FF6B35] shrink-0"></span>
-                        Customer Experience (CX/CS) • Análise de Dados • Tecnologia
+                        {t.identityRole}
                       </p>
                       <p className="text-[#9ca3af]">
-                        Ciências Contábeis | Estudante de Análise e Desenvolvimento de Sistemas
+                        {t.educationLine}
                       </p>
                     </div>
                   </div>
@@ -154,7 +313,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       onClick={() => scrollToSection('sobre')}
                       className="flex items-center justify-center gap-2 px-4 py-3.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-[#121212] font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md"
                     >
-                      <span>Conheça minha trajetória</span>
+                      <span>{t.knowJourney}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
 
@@ -163,7 +322,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       onClick={() => scrollToSection('projetos')}
                       className="flex items-center justify-center gap-2 px-4 py-3.5 border border-[#333] hover:border-[#FF6B35] bg-[#1f1f1f] text-white hover:text-[#FF6B35] font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer"
                     >
-                      <span>Ver projetos</span>
+                      <span>{t.viewProjects}</span>
                     </button>
                   </div>
 
@@ -175,7 +334,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                         className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Baixar currículo</span>
+                        <span>{t.downloadResume}</span>
                       </button>
                     ) : (
                       <a
@@ -185,7 +344,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                         className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Baixar currículo</span>
+                        <span>{t.downloadResume}</span>
                       </a>
                     )}
 
@@ -208,20 +367,20 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2">
                     <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold font-mono">
-                      Posicionamento & Conexão
+                      {t.positioning}
                     </span>
                   </div>
 
                   <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-serif-artistic italic text-white leading-snug">
-                    “Conectando experiência em relacionamento com clientes, operações financeiras e processos a novos conhecimentos em tecnologia e análise de dados.”
+                    {t.heroQuote}
                   </blockquote>
 
                   <div className="space-y-4 text-[#d1d5db] text-base sm:text-lg leading-relaxed font-light">
                     <p>
-                      Com mais de dezoito anos de experiência prática nos setores bancário e imobiliário, atuei diretamente em esteiras de crédito, análise documental, conformidade regulatória e resolução de atritos operacionais complexos com alto foco no cliente.
+                      {t.heroP1}
                     </p>
                     <p>
-                      Essa vivência me ensinou que processos eficientes nascem da escuta ativa e da precisão das informações. Hoje, integro essa bagagem de negócios com ferramentas analíticas e desenvolvimento de software, construindo soluções funcionais que simplificam rotinas e apoiam decisões seguras.
+                      {t.heroP2}
                     </p>
                   </div>
                 </div>
@@ -240,11 +399,11 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     >
                       {copiedEmail ? (
                         <span className="text-[#FF6B35] flex items-center gap-1 font-semibold">
-                          <Check className="w-3.5 h-3.5" /> Copiado!
+                          <Check className="w-3.5 h-3.5" /> {t.copied}
                         </span>
                       ) : (
                         <span className="flex items-center gap-1 font-mono text-xs uppercase tracking-wider">
-                          <Copy className="w-3.5 h-3.5" /> Copiar E-mail
+                          <Copy className="w-3.5 h-3.5" /> {t.copyEmail}
                         </span>
                       )}
                     </button>
@@ -277,15 +436,15 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           
           <div className="text-center max-w-2xl mx-auto border-b border-[#2e2e2e] pb-6">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-              Trajetória & Contexto Profissional
+              {t.storyEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal mb-3">
-              Sobre mim
+              {t.aboutMe}
             </h2>
             <div className="inline-block h-[1px] w-16 bg-[#FF6B35] mb-3"></div>
             <div>
               <span className="text-xs uppercase tracking-widest text-[#9ca3af] font-mono font-medium">
-                Priscilla Cahino • Experiência, Negócios & Tecnologia
+                {t.storyBadge}
               </span>
             </div>
           </div>
@@ -295,29 +454,29 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             
             <div className="p-6 border border-[#333] bg-[#141414] text-[#f5f5f5]">
               <p className="leading-relaxed italic font-serif-artistic text-lg text-center sm:text-left">
-                “Sou uma profissional com mais de dezoito anos de experiência nos segmentos bancário e imobiliário. Foi nesse ambiente de alta exigência que desenvolvi experiência em atendimento, relacionamento com clientes, operações financeiras, crédito, análise documental e resolução de demandas complexas.”
+                {t.storyHighlight}
               </p>
             </div>
 
             <p>
-              Ao longo dessa trajetória, percebi como processos bem estruturados, informações claras e uma boa compreensão das necessidades das pessoas podem tornar experiências mais simples e eficientes. Com o tempo, passei a enxergar na tecnologia uma forma de ampliar essa visão e buscar novas maneiras de organizar processos, reduzir atritos e apoiar melhores decisões.
+              {t.storyP1}
             </p>
 
             <p>
-              Por isso, iniciei minha formação em Análise e Desenvolvimento de Sistemas (ADS) no UNIPÊ e passei a participar de projetos acadêmicos e da Fábrica de Software. Hoje, conecto minha experiência profissional aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI, análise de informações e soluções digitais.
+              {t.storyP2}
             </p>
 
             <p>
-              Nos projetos, tenho contato com ferramentas como SQL, Power BI, Figma, Git/GitHub e linguagens de programação, sempre dentro de um processo contínuo de aprendizado e aplicação prática. Mais do que dominar uma ferramenta específica, busco compreender como diferentes recursos podem contribuir para resolver problemas e melhorar a experiência de quem utiliza uma solução.
+              {t.storyP3}
             </p>
 
             {/* Sun Tzu Quote Box */}
             <div className="p-5 border border-[#333] hover:border-[#FF6B35] bg-[#141414] transition-colors space-y-1">
-              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF6B35]">Princípio de Ação</span>
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF6B35]">{t.principle}</span>
               <p className="text-white font-serif-artistic italic text-lg">
-                “Oportunidades multiplicam-se à medida que são agarradas.”
+                {t.quote}
               </p>
-              <p className="text-xs text-[#999] font-mono">Sun Tzu — A Arte da Guerra</p>
+              <p className="text-xs text-[#999] font-mono">{t.quoteAuthor}</p>
             </div>
 
             {/* O lado pessoal / humano */}
@@ -327,10 +486,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
               <div>
                 <h3 className="text-sm font-serif-artistic italic text-white mb-1">
-                  Além do trabalho e da tecnologia
+                  {t.personalTitle}
                 </h3>
                 <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  Nos momentos de descanso, gosto de aproveitar o mar e a praia em João Pessoa, assistir a filmes e séries, ler e estar com amigos e família. Também gosto de observar o comportamento das pessoas e o cotidiano, porque acredito que ouvir com atenção e compreender diferentes perspectivas ajuda a desenvolver empatia e a pensar soluções mais úteis.
+                  {t.personalText}
                 </p>
               </div>
             </div>
@@ -342,10 +501,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
               <div>
                 <h3 className="text-sm font-serif-artistic italic text-white mb-1">
-                  Inteligência Artificial como apoio à evolução e à produtividade
+                  {t.aiTitle}
                 </h3>
                 <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  A Inteligência Artificial passou a fazer parte do meu processo de aprendizado e também da forma como estruturo e desenvolvo projetos. Utilizo essas ferramentas para organizar ideias, apoiar pesquisas, estruturar requisitos, documentar soluções, explorar possibilidades, revisar conteúdos e melhorar a produtividade. Também tenho buscado compreender como a IA pode ser aplicada a automações e a diferentes etapas da construção de soluções digitais, sempre combinando seus recursos com análise crítica, validação das informações e compreensão do contexto.
+                  {t.aiText}
                 </p>
               </div>
             </div>
@@ -353,19 +512,19 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             {/* Fechamento Conector Solicitado */}
             <div className="p-6 border-l-4 border-l-[#FF6B35] border border-[#2e2e2e] bg-[#161616] space-y-4">
               <p className="text-white font-medium text-base leading-relaxed">
-                Este espaço reúne um pouco da minha trajetória, dos conhecimentos que venho desenvolvendo e dos projetos que fazem parte da minha transição para tecnologia. Meu objetivo é continuar aprendendo e evoluindo, conectando minha experiência em clientes, operações e processos às novas possibilidades que a tecnologia oferece.
+                {t.closing}
               </p>
               {onOpenResume && (
                 <div className="pt-2 flex items-center justify-between flex-wrap gap-3 border-t border-[#2a2a2a]">
                   <span className="text-xs text-[#888] font-mono">
-                    Histórico profissional detalhado (+18 anos), empresas e atribuições disponíveis no documento oficial.
+                    {t.fullHistory}
                   </span>
                   <button
                     onClick={onOpenResume}
                     className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer font-semibold"
                   >
                     <FileText className="w-3.5 h-3.5" />
-                    <span>Ver histórico profissional completo em PDF →</span>
+                    <span>{t.viewFullHistory}</span>
                   </button>
                 </div>
               )}
@@ -386,29 +545,29 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           
           <div className="border-b border-[#2e2e2e] pb-4">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-              Estrutura de Competências
+              {t.knowledgeEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
-              Áreas de conhecimento
+              {t.knowledgeTitle}
             </h2>
             <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-              Diferenciação clara entre experiência profissional consolidada e conhecimentos em desenvolvimento.
+              {t.knowledgeSubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Bloco 1: Experiência e conhecimentos profissionais */}
+            {/* Bloco 1: {t.expKnowledge} */}
             <div className="border border-[#333] bg-[#181818] p-6 sm:p-7 space-y-6">
               <div className="border-b border-[#2a2a2a] pb-3">
                 <div className="flex items-center gap-2 mb-1">
                   <Briefcase className="w-4 h-4 text-[#FF6B35]" />
                   <h3 className="text-base font-serif-artistic italic text-white">
-                    Experiência e conhecimentos profissionais
+                    {t.expKnowledge}
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-[#FF6B35] uppercase tracking-wider">
-                  18+ anos de atuação consolidada
+                  {t.consolidated}
                 </span>
               </div>
 
@@ -417,47 +576,47 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35]" />
-                    Customer Experience e Customer Success
+                    {t.cxTitle}
                   </h4>
                   <p className="text-[#bbb] font-light leading-relaxed pl-5">
-                    Relacionamento com clientes, atendimento, jornada, resolução de demandas e melhoria de processos.
+                    {t.cxDesc}
                   </p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35]" />
-                    Operações Financeiras e Crédito
+                    {t.financeTitle}
                   </h4>
                   <p className="text-[#bbb] font-light leading-relaxed pl-5">
-                    Análise de crédito e risco, financiamento, operações bancárias, processos imobiliários e conformidade.
+                    {t.financeDesc}
                   </p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35]" />
-                    Processos e Negócios
+                    {t.processTitle}
                   </h4>
                   <p className="text-[#bbb] font-light leading-relaxed pl-5">
-                    Organização de processos, análise de requisitos, relacionamento entre áreas e identificação de oportunidades de melhoria.
+                    {t.processDesc}
                   </p>
                 </div>
 
               </div>
             </div>
 
-            {/* Bloco 2: Conhecimentos em desenvolvimento */}
+            {/* Bloco 2: {t.devKnowledge} */}
             <div className="border border-[#333] bg-[#181818] p-6 sm:p-7 space-y-6">
               <div className="border-b border-[#2a2a2a] pb-3">
                 <div className="flex items-center gap-2 mb-1">
                   <Code2 className="w-4 h-4 text-[#FF6B35]" />
                   <h3 className="text-base font-serif-artistic italic text-white">
-                    Conhecimentos em desenvolvimento
+                    {t.devKnowledge}
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-[#FF6B35] uppercase tracking-wider">
-                  Em formação prática e estudos contínuos
+                  {t.learning}
                 </span>
               </div>
 
@@ -466,7 +625,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <div className="space-y-1.5">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <Database className="w-3.5 h-3.5 text-[#FF6B35]" />
-                    Dados
+                    {t.data}
                   </h4>
                   <div className="flex flex-wrap gap-1.5 pl-5">
                     {['SQL', 'Power BI', 'Banco de Dados', 'Python aplicado a estudos'].map((item, idx) => (
@@ -480,7 +639,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <div className="space-y-1.5">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <Code2 className="w-3.5 h-3.5 text-[#FF6B35]" />
-                    Desenvolvimento
+                    {t.development}
                   </h4>
                   <div className="flex flex-wrap gap-1.5 pl-5">
                     {['HTML', 'CSS', 'Kotlin', 'Git/GitHub'].map((item, idx) => (
@@ -524,13 +683,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           <div className="border-b border-[#2e2e2e] pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-                Portfólio Técnico & Aplicação
+                {t.projectsEyebrow}
               </span>
               <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
-                Projetos
+                {t.projectsTitle}
               </h2>
               <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-                Projetos acadêmicos, de estudo prático e extensão comunitária com foco em Dados, BI e UX/UI.
+                {t.projectsSubtitle}
               </p>
             </div>
 
@@ -541,7 +700,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-[#FF6B35] hover:underline"
             >
               <Github className="w-4 h-4" />
-              <span>Ver repositórios no GitHub →</span>
+              <span>{t.viewGithub}</span>
             </a>
           </div>
 
@@ -549,7 +708,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
-                Dados & Business Intelligence
+                {t.dataBI}
               </span>
               <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
             </div>
@@ -562,7 +721,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block mb-1">
-                      Projeto Acadêmico de Análise de Dados
+                      {t.academicData}
                     </span>
                     <div className="flex items-center gap-3">
                       <img
@@ -599,7 +758,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     onClick={() => setActiveProjectModal(project)}
                     className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
-                    <span>Conhecer projeto</span>
+                    <span>{t.knowProject}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 
@@ -621,7 +780,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
-                UX/UI Design & Experiência do Usuário
+                {t.uxArea}
               </span>
               <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
             </div>
@@ -636,7 +795,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 >
                   <div className="space-y-3">
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block">
-                      Projeto de Extensão Comunitária
+                      {t.extensionProject}
                     </span>
                     <div className="flex items-center gap-3">
                       <img
@@ -650,7 +809,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       </h3>
                     </div>
                     <p className="text-xs text-[#ccc] font-light leading-relaxed">
-                      Projeto de extensão relacionado à gestão e acompanhamento da jornada dos alunos na Fábrica de Software do UNIPÊ.
+                      {t.admSummary}
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
                       {['Figma', 'UX/UI', 'Fluxos', 'Prototipação'].map((tag, idx) => (
@@ -666,7 +825,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       onClick={() => setActiveProjectModal(project)}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                     >
-                      <span>Ver projeto</span>
+                      <span>{t.viewProject}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
 
@@ -723,7 +882,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       onClick={() => setActiveProjectModal(project)}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                     >
-                      <span>Ver projeto</span>
+                      <span>{t.viewProject}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
 
@@ -732,7 +891,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-black font-semibold text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
                     >
                       <Smartphone className="w-3.5 h-3.5" />
-                      <span>Testar Wireframe</span>
+                      <span>{t.testWireframe}</span>
                     </button>
                   </div>
                 </div>
@@ -753,13 +912,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           
           <div className="space-y-3">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold block font-mono">
-              Produção & Análise
+              {t.articlesEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
-              Artigos e Estudos
+              {t.articlesTitle}
             </h2>
             <p className="text-sm sm:text-base text-[#d1d5db] font-light leading-relaxed max-w-3xl">
-              “Produções acadêmicas e reflexões que conectam minha formação em Ciências Contábeis, experiência profissional e os conhecimentos que venho desenvolvendo em tecnologia, dados e experiência do cliente.”
+              {t.articlesSubtitle}
             </p>
           </div>
 
@@ -810,7 +969,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 onClick={onOpenArticle}
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
               >
-                <span>Ler artigo completo</span>
+                <span>{t.readArticle}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -820,7 +979,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 className="inline-flex items-center gap-2 px-4 py-2.5 border border-[#333] hover:border-[#FF6B35] bg-[#1e1e1e] text-[#ccc] hover:text-white text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
               >
                 <BookOpen className="w-3.5 h-3.5 text-[#FF6B35]" />
-                <span>Sobre a pesquisa original</span>
+                <span>{t.originalResearch}</span>
               </button>
             </div>
 
@@ -839,13 +998,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           <div className="border-b border-[#2e2e2e] pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-                Qualificações Estratégicas
+                {t.certEyebrow}
               </span>
               <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
-                Cursos e certificações
+                {t.certTitle}
               </h2>
               <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-                Prioridade para certificações e formações que sustentam a transição para tecnologia.
+                {t.certSubtitle}
               </p>
             </div>
 
@@ -928,13 +1087,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         <div className="p-6 sm:p-8 border border-[#333] bg-[#181818] space-y-5">
           <div>
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-1 font-bold block font-mono">
-              Prática & Ferramental
+              {t.toolsEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-2xl sm:text-3xl text-white font-normal">
-              Ferramentas que utilizo em estudos e projetos
+              {t.toolsTitle}
             </h2>
             <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-              Instrumentos aplicados no desenvolvimento de projetos acadêmicos, análises de dados e interfaces digitais.
+              {t.toolsSubtitle}
             </p>
           </div>
 
@@ -969,13 +1128,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         <div className="p-8 sm:p-10 border border-[#333] bg-[#161616] flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center sm:text-left">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold block font-mono">
-              Documento Oficial
+              {t.resumeEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-2xl sm:text-3xl text-white font-normal">
-              Currículo
+              {t.resumeTitle}
             </h2>
             <p className="text-sm text-[#d1d5db] font-light max-w-xl leading-relaxed">
-              Toda a minha trajetória profissional detalhada (+18 anos em negócios, crédito e relacionamento bancário e imobiliário), formação acadêmica completa (graduação em Ciências Contábeis, ADS e Pós-graduação em Engenharia de Dados) e certificações estão consolidadas no documento oficial em PDF.
+              {t.resumeDesc}
             </p>
           </div>
 
@@ -986,7 +1145,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 border border-[#333] hover:border-[#FF6B35] bg-[#1f1f1f] text-white text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
               >
                 <FileText className="w-4 h-4 text-[#FF6B35]" />
-                <span>Visualizar no Navegador</span>
+                <span>{t.viewBrowser}</span>
               </button>
             )}
 
@@ -996,7 +1155,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-bold text-xs uppercase tracking-wider transition-colors"
             >
               <Download className="w-4 h-4" />
-              <span>Baixar currículo em PDF</span>
+              <span>{t.downloadPdf}</span>
             </a>
           </div>
         </div>
@@ -1010,13 +1169,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         <div className="border border-[#333] bg-[#181818] p-8 sm:p-12 space-y-6">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold block font-mono">
-              Contato & Conexões
+              {t.contactEyebrow}
             </span>
             <h2 className="font-serif-artistic italic text-3xl text-white font-normal">
               Priscilla Cahino
             </h2>
             <blockquote className="text-[#d1d5db] text-base leading-relaxed font-light max-w-3xl pt-1">
-              “Estou em busca de oportunidades que me permitam aplicar minha experiência profissional, continuar aprendendo e desenvolver minha trajetória em tecnologia, dados, Customer Experience e áreas relacionadas.”
+              {t.contactQuote}
             </blockquote>
           </div>
 
@@ -1047,7 +1206,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               className="p-3 bg-[#141414] border border-[#2e2e2e] hover:border-[#FF6B35] flex items-center justify-center gap-2 text-xs font-mono uppercase tracking-wider text-white transition-colors"
             >
               <Mail className="w-4 h-4 text-[#FF6B35]" />
-              <span>E-mail</span>
+              <span>{t.email}</span>
             </a>
 
             <a
@@ -1164,7 +1323,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   onClick={() => setActiveProjectModal(null)}
                   className="px-3 py-1.5 border border-[#333] text-xs uppercase tracking-wider text-[#ccc] hover:text-white"
                 >
-                  Fechar
+                  {t.close}
                 </button>
               </div>
             </div>
