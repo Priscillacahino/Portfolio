@@ -645,7 +645,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     UX/UI
                   </h4>
                   <div className="flex flex-wrap gap-1.5 pl-5">
-                    {['Figma', 'Fluxos de usuário', 'Prototipação', 'Heurísticas de Nielsen'].map((item, idx) => (
+                    {(isPt ? ['Figma', 'Fluxos de usuário', 'Prototipação', 'Heurísticas de Nielsen'] : ['Figma', 'Flujos de usuario', 'Prototipado', 'Heurísticas de Nielsen']).map((item, idx) => (
                       <span key={idx} className="text-[11px] font-mono bg-[#141414] border border-[#2e2e2e] px-2 py-0.5 text-[#ccc]">
                         {item}
                       </span>
@@ -715,7 +715,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <div className="flex items-center gap-3">
                       <img
                         src={project.image}
-                        alt={`${project.title} — prévia do projeto`}
+                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
                         className="w-12 h-12 sm:w-14 sm:h-14 object-cover border border-[#333] bg-[#111] shrink-0"
                         loading="lazy"
                       />
@@ -735,7 +735,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {['SQL', 'Python', 'Power BI', 'Análise de Dados', 'MySQL', 'Pandas'].map((tag, idx) => (
+                  {(isPt ? ['SQL', 'Python', 'Power BI', 'Análise de Dados', 'MySQL', 'Pandas'] : ['SQL', 'Python', 'Power BI', 'Análisis de Datos', 'MySQL', 'Pandas']).map((tag, idx) => (
                     <span key={idx} className="text-xs font-mono bg-[#141414] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
                       {tag}
                     </span>
@@ -789,7 +789,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <div className="flex items-center gap-3">
                       <img
                         src={project.image}
-                        alt={`${project.title} — prévia do projeto`}
+                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
                         className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
                         loading="lazy"
                       />
@@ -801,7 +801,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                       {t.admSummary}
                     </p>
                     <div className="flex flex-wrap gap-1.5 pt-1">
-                      {['Figma', 'UX/UI', 'Fluxos', 'Prototipação'].map((tag, idx) => (
+                      {(isPt ? ['Figma', 'UX/UI', 'Fluxos', 'Prototipação'] : ['Figma', 'UX/UI', 'Flujos', 'Prototipado']).map((tag, idx) => (
                         <span key={idx} className="text-[11px] font-mono bg-[#141414] text-[#aaa] px-2 py-0.5 border border-[#2a2a2a]">
                           {tag}
                         </span>
@@ -841,12 +841,12 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 >
                   <div className="space-y-3">
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] block">
-                      {project.subtitle || "UX/UI com visão de Customer Experience — projeto acadêmico em evolução"}
+                      {project.subtitle || (isPt ? 'UX/UI com visão de Customer Experience — projeto acadêmico em evolução' : 'UX/UI con visión de Customer Experience — proyecto académico en evolución')}
                     </span>
                     <div className="flex items-center gap-3">
                       <img
                         src={project.image}
-                        alt={`${project.title} — prévia do projeto`}
+                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
                         className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
                         loading="lazy"
                       />
@@ -921,10 +921,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 </span>
                 <div>
                   <span className="text-xs font-mono uppercase tracking-wider text-[#FF6B35] font-semibold">
-                    Releitura Profissional • 2013 → Revisitado em 2026
+                    {isPt ? 'Releitura Profissional • 2013 → Revisitado em 2026' : 'Relectura Profesional • 2013 → Revisado en 2026'}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-serif-artistic italic text-white">
-                    📄 Instituições financeiras e sustentabilidade
+                    {isPt ? '📄 Instituições financeiras e sustentabilidade' : '📄 Instituciones financieras y sostenibilidad'}
                   </h3>
                 </div>
               </div>
@@ -935,16 +935,16 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </div>
 
             <p className="text-sm sm:text-base text-white font-serif-artistic italic">
-              Uma reflexão sobre dados, clientes e decisões responsáveis
+              {isPt ? 'Uma reflexão sobre dados, clientes e decisões responsáveis' : 'Una reflexión sobre datos, clientes y decisiones responsables'}
             </p>
 
             <p className="text-xs sm:text-sm text-[#ccc] font-light leading-relaxed">
-              Releitura profissional de uma pesquisa desenvolvida durante minha graduação em Ciências Contábeis, analisando sustentabilidade no setor financeiro e sua relação com clientes, financiamento e tomada de decisão. A pesquisa original utilizou pesquisa documental, questionário e entrevista como instrumentos de investigação.
+              {isPt ? 'Releitura profissional de uma pesquisa desenvolvida durante minha graduação em Ciências Contábeis, analisando sustentabilidade no setor financeiro e sua relação com clientes, financiamento e tomada de decisão. A pesquisa original utilizou pesquisa documental, questionário e entrevista como instrumentos de investigação.' : 'Relectura profesional de una investigación desarrollada durante mi carrera de Ciencias Contables, analizando la sostenibilidad en el sector financiero y su relación con clientes, financiación y toma de decisiones. La investigación original utilizó análisis documental, cuestionario y entrevista como instrumentos de investigación.'}
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              {['Finanças', 'Sustentabilidade', 'Clientes', 'Dados', 'Tomada de decisão'].map((tag, idx) => (
+              {(isPt ? ['Finanças', 'Sustentabilidade', 'Clientes', 'Dados', 'Tomada de decisão'] : ['Finanzas', 'Sostenibilidad', 'Clientes', 'Datos', 'Toma de decisiones']).map((tag, idx) => (
                 <span key={idx} className="text-xs font-mono bg-[#1a1a1a] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
                   #{tag}
                 </span>
@@ -1002,7 +1002,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 onClick={onOpenResume}
                 className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer"
               >
-                <span>Ver mais certificações no currículo →</span>
+                <span>{isPt ? 'Ver mais certificações no currículo →' : 'Ver más certificaciones en el currículum →'}</span>
               </button>
             )}
           </div>
@@ -1015,7 +1015,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <span>Microsoft AI-900</span>
               </div>
               <p className="text-[#999] font-mono text-[11px]">IA / Microsoft Learn</p>
-              <p className="text-[#bbb] font-light">Fundamentos e aplicações de Inteligência Artificial na nuvem.</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Fundamentos e aplicações de Inteligência Artificial na nuvem.' : 'Fundamentos y aplicaciones de Inteligencia Artificial en la nube.'}</p>
             </div>
 
             <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
@@ -1023,8 +1023,8 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <Database className="w-4 h-4 text-[#FF6B35]" />
                 <span>Dados / SQL / Power BI</span>
               </div>
-              <p className="text-[#999] font-mono text-[11px]">Workshop & Projetos Práticos</p>
-              <p className="text-[#bbb] font-light">Modelagem relacional, consultas estruturadas e dashboards executivos.</p>
+              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'Workshop & Projetos Práticos' : 'Workshop & Proyectos Prácticos'}</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Modelagem relacional, consultas estruturadas e dashboards executivos.' : 'Modelado relacional, consultas estructuradas y dashboards ejecutivos.'}</p>
             </div>
 
             <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
@@ -1033,34 +1033,34 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <span>UX/UI Design</span>
               </div>
               <p className="text-[#999] font-mono text-[11px]">Fábrica de Software UBTech Office</p>
-              <p className="text-[#bbb] font-light">Pesquisa com usuários, personas, mapeamento de jornada e prototipação.</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Pesquisa com usuários, personas, mapeamento de jornada e prototipação.' : 'Investigación con usuarios, personas, mapeo de jornada y prototipado.'}</p>
             </div>
 
             <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <CheckCircle2 className="w-4 h-4 text-[#FF6B35]" />
-                <span>Agilidade (Scrum Fundamentals)</span>
+                <span>{isPt ? 'Agilidade (Scrum Fundamentals)' : 'Agilidad (Scrum Fundamentals)'}</span>
               </div>
-              <p className="text-[#999] font-mono text-[11px]">SFPC / Metodologias Ágeis</p>
-              <p className="text-[#bbb] font-light">Sprints, rituais ágeis e colaboração contínua em equipes de produto.</p>
+              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'SFPC / Metodologias Ágeis' : 'SFPC / Metodologías Ágiles'}</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Sprints, rituais ágeis e colaboração contínua em equipes de produto.' : 'Sprints, rituales ágiles y colaboración continua en equipos de producto.'}</p>
             </div>
 
             <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <Code2 className="w-4 h-4 text-[#FF6B35]" />
-                <span>Tecnologia e Desenvolvimento</span>
+                <span>{isPt ? 'Tecnologia e Desenvolvimento' : 'Tecnología y Desarrollo'}</span>
               </div>
               <p className="text-[#999] font-mono text-[11px]">Alura & UNIPÊ</p>
-              <p className="text-[#bbb] font-light">Lógica de programação, Git/GitHub, introdução a Kotlin e interfaces web.</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Lógica de programação, Git/GitHub, introdução a Kotlin e interfaces web.' : 'Lógica de programación, Git/GitHub, introducción a Kotlin e interfaces web.'}</p>
             </div>
 
             <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <ShieldCheck className="w-4 h-4 text-[#FF6B35]" />
-                <span>Ouvidoria e Conflitos</span>
+                <span>{isPt ? 'Ouvidoria e Conflitos' : 'Atención de Reclamos y Conflictos'}</span>
               </div>
               <p className="text-[#999] font-mono text-[11px]">ENAP — Escola Nacional de Adm. Pública</p>
-              <p className="text-[#bbb] font-light">Mediação de atritos críticos, escuta qualificada e conformidade com o cliente.</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Mediação de atritos críticos, escuta qualificada e conformidade com o cliente.' : 'Mediación de situaciones críticas, escucha cualificada y cumplimiento orientado al cliente.'}</p>
             </div>
 
           </div>
@@ -1240,7 +1240,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               <button
                 onClick={() => setActiveProjectModal(null)}
                 className="p-1 text-[#aaa] hover:text-white border border-[#333] transition-colors cursor-pointer"
-                aria-label="Fechar modal"
+                aria-label={isPt ? 'Fechar modal' : 'Cerrar modal'}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -1249,7 +1249,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             <div className="space-y-4 text-xs sm:text-sm text-[#ddd] font-light leading-relaxed">
               <div className="space-y-1">
                 <h4 className="font-semibold text-white font-mono uppercase text-xs text-[#FF6B35]">
-                  Descrição do Projeto:
+                  {isPt ? 'Descrição do Projeto:' : 'Descripción del Proyecto:'}
                 </h4>
                 <p>{activeProjectModal.description}</p>
               </div>
@@ -1257,7 +1257,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               {activeProjectModal.objective && (
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white font-mono uppercase text-xs text-[#FF6B35]">
-                    Objetivo Principal:
+                    {isPt ? 'Objetivo Principal:' : 'Objetivo Principal:'}
                   </h4>
                   <p>{activeProjectModal.objective}</p>
                 </div>
@@ -1266,7 +1266,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               {activeProjectModal.highlights && activeProjectModal.highlights.length > 0 && (
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white font-mono uppercase text-xs text-[#FF6B35]">
-                    Destaques & Entregas:
+                    {isPt ? 'Destaques & Entregas:' : 'Aspectos Destacados & Entregables:'}
                   </h4>
                   <ul className="space-y-1 list-disc list-inside text-[#bbb]">
                     {activeProjectModal.highlights.map((h, i) => (
@@ -1281,7 +1281,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   <div className="flex items-center gap-2">
                     <Smartphone className="w-4 h-4 text-[#FF6B35]" />
                     <h4 className="text-xs uppercase tracking-wider font-bold text-white">
-                      Simulador de Wireframe & Diretrizes Figma
+                      {isPt ? 'Simulador de Wireframe & Diretrizes Figma' : 'Simulador de Wireframe & Directrices Figma'}
                     </h4>
                   </div>
                   <PetzoneWireframeViewer />
