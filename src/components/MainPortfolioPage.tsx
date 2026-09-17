@@ -327,26 +327,15 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   </div>
 
                   <div className="grid grid-cols-2 gap-2.5">
-                    {onOpenResume ? (
-                      <button
-                        id="hero-btn-resume"
-                        onClick={onOpenResume}
-                        className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>{t.downloadResume}</span>
-                      </button>
-                    ) : (
-                      <a
-                        id="hero-btn-resume-pdf"
-                        href="/Curriculo_Priscilla_Cahino.pdf"
-                        download
-                        className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>{t.downloadResume}</span>
-                      </a>
-                    )}
+                    <a
+                      id="hero-btn-resume-pdf"
+                      href="/Curriculo_Priscilla_Cahino.pdf"
+                      download="Curriculo_Priscilla_Cahino.pdf"
+                      className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>{t.downloadResume}</span>
+                    </a>
 
                     <a
                       id="hero-btn-linkedin"
