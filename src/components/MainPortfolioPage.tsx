@@ -564,9 +564,17 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block mb-1">
                       Projeto Acadêmico de Análise de Dados
                     </span>
-                    <h3 className="text-2xl font-serif-artistic italic text-white">
-                      📊 {project.title}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} — prévia do projeto`}
+                        className="w-12 h-12 sm:w-14 sm:h-14 object-cover border border-[#333] bg-[#111] shrink-0"
+                        loading="lazy"
+                      />
+                      <h3 className="text-2xl font-serif-artistic italic text-white">
+                        📊 {project.title}
+                      </h3>
+                    </div>
                   </div>
 
                   <span className="text-xs font-mono px-2.5 py-1 bg-[#141414] text-[#ccc] border border-[#2a2a2a]">
@@ -630,9 +638,17 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block">
                       Projeto de Extensão Comunitária
                     </span>
-                    <h3 className="text-xl font-serif-artistic italic text-white">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} — prévia do projeto`}
+                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
+                        loading="lazy"
+                      />
+                      <h3 className="text-xl font-serif-artistic italic text-white">
+                        {project.title}
+                      </h3>
+                    </div>
                     <p className="text-xs text-[#ccc] font-light leading-relaxed">
                       Projeto de extensão relacionado à gestão e acompanhamento da jornada dos alunos na Fábrica de Software do UNIPÊ.
                     </p>
@@ -679,9 +695,17 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] block">
                       {project.subtitle || "UX/UI com visão de Customer Experience — projeto acadêmico em evolução"}
                     </span>
-                    <h3 className="text-xl font-serif-artistic italic text-white">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} — prévia do projeto`}
+                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
+                        loading="lazy"
+                      />
+                      <h3 className="text-xl font-serif-artistic italic text-white">
+                        {project.title}
+                      </h3>
+                    </div>
                     <p className="text-xs text-[#ccc] font-light leading-relaxed">
                       {project.summary}
                     </p>
