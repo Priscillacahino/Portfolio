@@ -1,45 +1,60 @@
 # 💼 Portfólio Profissional — Priscilla Cahino
 
-Repositório do meu **portfólio profissional**, criado para reunir minha trajetória, experiências, projetos e conhecimentos em um único espaço.
+Este repositório contém o código do meu **portfólio profissional**, criado para reunir minha trajetória, experiências, projetos e evolução na área de tecnologia.
 
 🌐 **[Acessar o portfólio publicado](https://portfoliopriscilla.vercel.app/)**
 
 ---
 
-## 👩‍💻 Sobre o portfólio
+## 👩‍💻 Sobre mim
 
-O projeto foi desenvolvido para apresentar minha trajetória de transição para tecnologia, conectando minha experiência profissional em **relacionamento com clientes, operações e processos** aos conhecimentos que venho desenvolvendo em **Análise e Desenvolvimento de Sistemas, dados, UX/UI e soluções digitais**.
+Sou estudante de **Análise e Desenvolvimento de Sistemas (ADS)**, em processo de transição para tecnologia após uma trajetória profissional construída principalmente nas áreas de **relacionamento com clientes, atendimento, operações, processos e setor financeiro**.
 
-O portfólio funciona como ponto central para consulta do meu perfil profissional e dos projetos que venho desenvolvendo.
+Minha formação em tecnologia vem sendo desenvolvida por meio da graduação, cursos, certificações e da construção de projetos acadêmicos e pessoais.
+
+Tenho interesse especial na conexão entre **pessoas, processos, experiência e tecnologia**.
 
 ---
 
-## 📌 Conteúdos apresentados
+## 🎯 Áreas de interesse
 
-- apresentação profissional;
-- trajetória e experiências;
-- formação acadêmica;
-- cursos e certificações;
+- Customer Experience (CX) e Customer Success (CS);
+- relacionamento com clientes;
+- processos, operações e melhoria contínua;
+- UX/UI e experiência do usuário;
+- análise de negócios;
+- dados;
+- tecnologia aplicada a problemas reais.
+
+---
+
+## 🚀 O que você encontrará no portfólio
+
+O site reúne:
+
+- trajetória e experiências profissionais;
+- formação acadêmica, cursos e certificações;
 - competências;
 - projetos acadêmicos e pessoais;
+- experiências em UX/UI, CX e processos;
+- projetos envolvendo desenvolvimento e dados;
+- currículo;
 - links para GitHub e LinkedIn;
-- currículo para download;
 - formas de contato.
 
 ---
 
-## 🚀 Projetos apresentados
+## 💡 Projetos e áreas exploradas
 
-Entre os projetos disponíveis no portfólio estão cases relacionados a:
+Meu portfólio acompanha a evolução dos projetos que desenvolvo durante minha formação.
 
-- Customer Experience e experiência do usuário;
-- UX/UI;
-- análise de dados;
-- desenvolvimento de sistemas;
-- processos;
-- projetos acadêmicos e extensionistas.
+**UX/UI e CX** — PetZona e Adm4All.  
+**Tecnologia social** — Padrinhos da Rua.  
+**Segurança e experimentação tecnológica** — AlcoLock e UniGuard.  
+**Aplicações e produtos digitais** — Guia de Lugares PB e outros projetos pessoais.  
+**Dados** — projetos acadêmicos utilizando SQL, Python, Power BI e conceitos de análise de dados.
 
-Os projetos são atualizados conforme minha evolução acadêmica e profissional.
+Cada projeto representa uma etapa diferente do meu aprendizado e procura registrar não apenas o resultado, mas também o **problema, as decisões, as limitações e a evolução da solução**.
 
 ---
 
@@ -69,27 +84,11 @@ npm run build
 
 ---
 
-## 📂 Estrutura principal
+## 🔄 Projeto em evolução
 
-```text
-Portfolio/
-├── public/
-├── scripts/
-├── src/
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
+Este portfólio é um **projeto vivo**, atualizado conforme surgem novos projetos, conhecimentos e experiências.
 
----
-
-## 🔄 Status
-
-O portfólio é um **projeto vivo**, atualizado conforme surgem novos projetos, aprendizados e experiências.
-
-As informações publicadas buscam manter coerência entre **GitHub, LinkedIn, currículo e portfólio**.
+Procuro manter coerência entre as informações apresentadas no **portfólio, GitHub, LinkedIn e currículo**, sem apresentar projetos experimentais ou acadêmicos como produtos profissionais concluídos.
 
 ---
 
