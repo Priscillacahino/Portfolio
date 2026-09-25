@@ -13,6 +13,10 @@ async function generateResumePdf() {
   const helveticaBold = await doc.embedFont(StandardFonts.HelveticaBold);
   const helveticaOblique = await doc.embedFont(StandardFonts.HelveticaOblique);
 
+  const profileImagePath = path.join(process.cwd(), 'public', 'priscilla-cahino-perfil.jpg');
+  const profileImageBytes = fs.readFileSync(profileImagePath);
+  const profileImage = await doc.embedJpg(profileImageBytes);
+
   const primaryColor = rgb(0.12, 0.12, 0.12);
   const secondaryColor = rgb(0.32, 0.32, 0.32);
   const accentColor = rgb(0.85, 0.32, 0.12); // #D9521E - high contrast rust/orange
@@ -55,75 +59,111 @@ async function generateResumePdf() {
   let page = doc.addPage([pageWidth, pageHeight]);
   let y = pageHeight - 38;
 
-  // Header Name
+  // Header with compact portrait on the left and identity/contact block on the right
+  const photoX = marginX;
+  const photoW = 72;
+  const photoH = 96;
+  const photoY = pageHeight - 38 - photoH + 2;
+  const textX = photoX + photoW + 18;
+  const textWidth = pageWidth - marginX - textX;
+
+  page.drawImage(profileImage, {
+    x: photoX,
+    y: photoY,
+    width: photoW,
+    height: photoH,
+  });
+
+  // Name
   page.drawText(clean('PRISCILLA SANTOS CAHINO'), {
-    x: marginX,
+    x: textX,
     y,
     font: helveticaBold,
-    size: 20,
+    size: 18.5,
     color: primaryColor,
   });
-  y -= 19;
+  y -= 18;
 
-  // Title
-  page.drawText(clean('Customer Experience | Análise de Dados | Estudante de ADS'), {
-    x: marginX,
+  // Professional positioning
+  page.drawText(clean('Customer Experience (CX/CS) | Análise de Dados | Tecnologia'), {
+    x: textX,
     y,
     font: helveticaBold,
-    size: 11,
+    size: 9.6,
     color: accentColor,
   });
-  y -= 15;
+  y -= 14;
 
-  // Subtitle
-  page.drawText(clean('Unindo Negócios, Experiência do Usuário e Tecnologia | +18 anos de trajetória'), {
-    x: marginX,
+  page.drawText(clean('Estudante de Análise e Desenvolvimento de Sistemas | +18 anos em clientes, crédito e processos'), {
+    x: textX,
     y,
     font: helveticaOblique,
-    size: 9.5,
+    size: 8.2,
     color: secondaryColor,
   });
-  y -= 15;
+  y -= 13;
 
-  // Contact Row
-  const contactText = clean('João Pessoa - PB | (83) 99955-3329 | priscilla_cahino@hotmail.com');
-  page.drawText(contactText, {
-    x: marginX,
+  // Contact lines
+  page.drawText(clean('João Pessoa - PB | (83) 99955-3329 | priscilla_cahino@hotmail.com'), {
+    x: textX,
     y,
     font: helvetica,
-    size: 8.5,
+    size: 8.0,
     color: secondaryColor,
   });
-  y -= 13;
+  y -= 12;
 
-  // Links Row
-  const linksText = clean('LinkedIn: linkedin.com/in/priscilla-cahino | GitHub: github.com/Priscillacahino | Portfólio: portfoliopriscilla.vercel.app');
-  page.drawText(linksText, {
-    x: marginX,
-    y,
-    font: helveticaBold,
-    size: 8,
-    color: accentColor,
-  });
-  const contactLinks = [
-    ['LinkedIn: linkedin.com/in/priscilla-cahino', 'https://www.linkedin.com/in/priscilla-cahino/'],
-    ['GitHub: github.com/Priscillacahino', 'https://github.com/Priscillacahino'],
-    ['Portfólio: portfoliopriscilla.vercel.app', 'https://portfoliopriscilla.vercel.app/'],
+  const linkRows = [
+    [
+      ['LinkedIn: linkedin.com/in/priscilla-cahino', 'https://www.linkedin.com/in/priscilla-cahino/'],
+      ['GitHub: github.com/Priscillacahino', 'https://github.com/Priscillacahino'],
+    ],
+    [
+      ['Portfólio: portfoliopriscilla.vercel.app', 'https://portfoliopriscilla.vercel.app/'],
+    ],
   ];
-  let linkX = marginX;
-  const annotations = contactLinks.map(([label, url]) => {
-    const width = helveticaBold.widthOfTextAtSize(clean(label), 8);
-    const annotation = doc.context.register(doc.context.obj({
-      Type: 'Annot', Subtype: 'Link', Rect: [linkX, y - 2, linkX + width, y + 9],
-      Border: [0, 0, 0], A: { Type: 'Action', S: 'URI', URI: PDFString.of(url) },
-    }));
-    linkX += width + helveticaBold.widthOfTextAtSize(' | ', 8);
-    return annotation;
-  });
-  page.node.set(PDFName.of('Annots'), doc.context.obj(annotations));
-  y -= 13;
 
-  // Divider
+  const headerAnnotations: any[] = [];
+  for (const row of linkRows) {
+    let linkX = textX;
+    for (let i = 0; i < row.length; i++) {
+      const [label, url] = row[i];
+      page.drawText(clean(label), {
+        x: linkX,
+        y,
+        font: helveticaBold,
+        size: 7.7,
+        color: accentColor,
+      });
+      const width = helveticaBold.widthOfTextAtSize(clean(label), 7.7);
+      const annotation = doc.context.register(doc.context.obj({
+        Type: 'Annot',
+        Subtype: 'Link',
+        Rect: [linkX, y - 2, linkX + width, y + 8],
+        Border: [0, 0, 0],
+        A: { Type: 'Action', S: 'URI', URI: PDFString.of(url) },
+      }));
+      headerAnnotations.push(annotation);
+      linkX += width;
+      if (i < row.length - 1) {
+        const sep = ' | ';
+        page.drawText(sep, {
+          x: linkX,
+          y,
+          font: helveticaBold,
+          size: 7.7,
+          color: accentColor,
+        });
+        linkX += helveticaBold.widthOfTextAtSize(sep, 7.7);
+      }
+    }
+    y -= 11;
+  }
+  page.node.set(PDFName.of('Annots'), doc.context.obj(headerAnnotations));
+
+  // Move below the portrait before starting the body.
+  y = Math.min(y, photoY - 10);
+
   page.drawLine({
     start: { x: marginX, y },
     end: { x: marginX + contentWidth, y },
@@ -394,16 +434,16 @@ async function generateResumePdf() {
   drawSectionHeader('Certificações & Licenças');
   const certColWidth = (contentWidth - 18) / 2;
   const certsLeft = [
-    'Power BI e Copilot para Análise de Dados',
-    'SQL para Ciência de Dados e Banco Relacional',
-    'Microsoft Certified: Azure AI Fundamentals (IA-900)',
-    'Soluções de Inteligência Artificial no GitHub',
+    'Microsoft Certified: Azure AI Fundamentals (AI-900) - 2026',
+    'HP LIFE - Gestão Ágil - 2026',
+    'Sou CS e Agora? - Customer Success - 2026',
+    'IA aplicada com n8n e LangChain - 2026',
   ];
   const certsRight = [
-    'Ouvidoria: Gestão e Mediação de Demandas (ENAP)',
-    'UX Design: Usabilidade e Melhores Práticas Web',
-    'Liderança no Atendimento e Resolução de Problemas',
-    'Fundamentos de Finanças e Análise de Risco',
+    'ENAP - Ouvidoria - 20h',
+    'Power BI e Copilot para Análise de Dados',
+    'UX/UI: Usabilidade, Figma e Prototipação',
+    'Git/GitHub e fundamentos de desenvolvimento',
   ];
 
   const certStartY = y;
@@ -421,46 +461,57 @@ async function generateResumePdf() {
   }
   y = Math.min(c1Y, c2Y) - 10;
 
-  // 6. PROJETOS PRÁTICOS DE DESTAQUE
-  drawSectionHeader('Projetos Técnicos de Destaque');
+  // 6. PROJETOS ACADÊMICOS E PESSOAIS DE DESTAQUE
+  drawSectionHeader('Projetos Acadêmicos e Pessoais de Destaque');
 
-  function drawProject(name: string, subtitle: string, obj: string, tools: string, results: string) {
-    page.drawText(clean(name), { x: marginX, y, font: helveticaBold, size: 9.5, color: primaryColor });
-    const nameWidth = helveticaBold.widthOfTextAtSize(clean(name), 9.5);
-    page.drawText(clean(` - ${subtitle}`), { x: marginX + nameWidth, y, font: helveticaOblique, size: 8.5, color: accentColor });
-    y -= 11;
+  function drawProject(name: string, subtitle: string, text: string) {
+    page.drawText(clean(name), { x: marginX, y, font: helveticaBold, size: 9.2, color: primaryColor });
+    const nameWidth = helveticaBold.widthOfTextAtSize(clean(name), 9.2);
+    page.drawText(clean(` - ${subtitle}`), { x: marginX + nameWidth, y, font: helveticaOblique, size: 8.1, color: accentColor });
+    y -= 10.5;
 
-    const fullText = `Objetivo: ${obj} | Ferramentas: ${tools} | Resultados: ${results}`;
-    const pLines = wrapText(fullText, contentWidth, helvetica, 8);
+    const pLines = wrapText(text, contentWidth, helvetica, 7.9);
     for (const pl of pLines) {
-      page.drawText(pl, { x: marginX, y, font: helvetica, size: 8, color: secondaryColor });
-      y -= 10.5;
+      page.drawText(pl, { x: marginX, y, font: helvetica, size: 7.9, color: secondaryColor });
+      y -= 9.8;
     }
-    y -= 5;
+    y -= 4;
   }
 
   drawProject(
-    'ClínicaCare',
-    'Análise de Dados, SQL, Python & Power BI',
-    'Identificar gargalos operacionais e padrões de inadimplência em clínica de saúde.',
-    'Power BI, MySQL (SQL), Python (Pandas), Scikit-Learn.',
-    'Modelagem relacional, análise exploratória em Python e dashboard no Power BI com dados acadêmicos simulados.'
-  );
-
-  drawProject(
     'Adm4All (Administração para Todos)',
-    'Interface UX/UI & Inclusão Digital (Fábrica de Software UNIPÊ)',
-    'Criar interface acessível de capacitação para microempreendedores.',
-    'Figma, Design System, Heurísticas de Usabilidade, Métodos Ágeis.',
-    'Prototipação de interfaces no Figma e organização de fluxos para Coordenação, Instrutores e Alunos.'
+    'UX/UI e Projeto de Extensão',
+    'Figma, arquitetura da informação, acessibilidade e organização de fluxos para Coordenação, Instrutores e Alunos.'
   );
 
   drawProject(
     'PetZona',
-    'Experiência Mobile & Jornada do Cliente',
-    'Protótipo mobile para agendamento de cuidados e serviços pet.',
-    'Figma, Miro, Customer Journey Mapping, Personas.',
-    'Construção de persona, jornada no Miro e protótipo navegável de serviços pet no Figma.'
+    'UX/UI e Customer Experience',
+    'Jornada do usuário, proto-persona, wireframes e prototipação mobile para produtos e serviços pet.'
+  );
+
+  drawProject(
+    'ClínicaCare',
+    'Dados e Business Intelligence',
+    'Projeto acadêmico com modelagem relacional, SQL, Python/Pandas e dashboard no Power BI.'
+  );
+
+  drawProject(
+    'UniGuard',
+    'Segurança no campus - protótipo acadêmico',
+    'Estudo em Android/Kotlin com fluxo de SOS e localização, considerando governança, acesso, privacidade e LGPD.'
+  );
+
+  drawProject(
+    'AlcoLock',
+    'Conceito de segurança veicular',
+    'Pesquisa e prototipação de solução antiálcool com bloqueio preventivo, ajuda e nova validação.'
+  );
+
+  drawProject(
+    'Padrinhos da Rua',
+    'Tecnologia social e extensão',
+    'PWA de demonstração para apoio a pontos comunitários de água, comida e casinhas, com foco em uso simples e acessível.'
   );
 
   // Footer page 2
