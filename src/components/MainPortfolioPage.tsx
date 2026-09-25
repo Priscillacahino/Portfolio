@@ -246,7 +246,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 <span className="w-2 h-2 bg-[#FF6B35]"></span>
                 <span className="text-xs uppercase tracking-[0.2em] font-mono text-[#FF6B35] font-semibold">
                   {currentLanguage === 'pt' 
-                    ? '{t.identityRole}'
+                    ? t.identityRole
                     : 'Customer Experience (CX/CS) • Análisis de Datos • Tecnología'}
                 </span>
               </div>
