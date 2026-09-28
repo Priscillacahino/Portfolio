@@ -1,123 +1,209 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%ASCII
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R
->>
+<< /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
 endobj
 3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 5 0 R /FB 6 0 R /FI 7 0 R >> /XObject << /Im1 8 0 R >> >> /Contents 9 0 R /Annots [11 0 R 12 0 R 13 0 R] >>
 endobj
 4 0 obj
-<<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 5 0 R /FB 6 0 R /FI 7 0 R >> /XObject << /Im1 8 0 R >> >> /Contents 10 0 R >>
 endobj
 5 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://www.linkedin.com/in/priscilla-cahino)
->> /Border [ 0 0 0 ] /Rect [ 51.35433 717.114 190.4985 726.474 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/Priscillacahino)
->> /Border [ 0 0 0 ] /Rect [ 196.8633 717.114 315.6339 726.474 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 7 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://portfoliopriscilla.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 321.9987 717.114 446.8377 726.474 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
 endobj
 8 0 obj
-<<
-/Annots [ 5 0 R 6 0 R 7 0 R ] /Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
+<< /Type /XObject /Subtype /Image /Width 144 /Height 192 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter [/ASCIIHexDecode /DCTDecode] /Length 6482 >>
+stream
+FFD8FFE000104A46494600010100000100010000FFDB0043000A07080908060A0908090C0B0A0C0F1A110F0E0E0F1F1618131A2521272624212423292E3B32292C382C2324334634383D3F4243422831484D48404D3B41423FFFDB0043010B0C0C0F0D0F1E11111E3F2A242A3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3F3FFFC000110800C0009003012200021101031101FFC4001C0000010403010000000000000000000000000102030405060708FFC4003710000103020403080103030305000000000100020304110521314112517106132232617381C1331442911562B12352A1075382D1F1FFC4001801000301010000000000000000000000000001030402FFC4001F1101010002030101000300000000000000000102110321311241135171FFDA000C03010002110311003F00E4F4FA4DEDFDA4DD2D3E937B7F69374049B37A211B37A21002136524332CB350F1BB9A02C2157E3773471BB9A7A0B0855F8DD6D52091DCD1A0B2855CBDDCD1C6EE68D05842AED7B8902EAC52D354D5C9C3046E90DEDE109787A0859C83B2989C8039E0309D8ECAB57767F14A5E2E1A591EC6EE1B72573F52931885148C9A3C9E0B4FF704D0F7735D0494FA4DEDFDA4DD2D3E937B7F69374049B37A211B37A2100C9BF1FC855C6EAC4DF8FE42839A70C2125F24260BB24D928D1204814A42870CD5AC3E26C9297C8D2E8D9991CFD11B0BF86E1D0B295B5B88BCC70BCD9918F3BFD40E4B6AC2AA67A867050431D2C60F8470E67D56BB533C61CD9673C75245ADB306C07452C5DA69A8DA5B4605F4B91928672E4EE69BB328B1C0048EAF0D00F9434116597A5A98E50239DD1878163C24E6B9FE1BDB7AF86A2F2C313E371F15867F0B748AAE87B414625A5735B30D2F9169F558F399E37B524962F55E09418840F8E7A7638385B89A3303D173BED376366C2D92545334BE000B870FED1BDFD56D94B535F84D606BF8E6613622FAF3B745B9D2FE9716A3D0398F1722CB4F1677CA9658EBB8F3BD3E937B7F69374B4FA4DEDFDA4DD69709366F442366F44201937E3F950053CBE4F95068E4E184873295214028D1204E1A268D500AE598A5985250358D03BC7789C6D9F45890D6B8F889F8595A768AA94B002E24E4EE412C8E7A861A59EB25273739F9859EA6EC5D6CB0F78E6F09272072BADB7B2580C71C6C966602765BDB626B981A5A2C07250B9DBE2D30FEDC870FECB37BF74154D731C4647D5136198860754D929EE035DE2237E41750C4285AD0D95A05DA754D9A8E2ACA3F1019B7F852FACAF555D63EC62294C78B618C95C07EA58CB7A83FFA56FB36D34AC741DE13331DC52B1C73613B7A85837B66C2ABDB50D078586CF68FDCD0345B761F0D355CB1575311796316737F7B0EC7D42784994E90CE5C2BCF34FA4DEDFDA4DD2D3E937B7F69375AD149B37A211B37A2100C97C9F2A0DD4F2F93E541BA700414239266064526E9C354D482465EEB66ECA4227AF6476E27F2D87AAD6E101C1D73C96F5FF4EE9CBAB24980B86E5753E4BA8EF8E76E8D41108636B00B582CAC4745522665EAADC43459E34D3A76F1D3B85B654A809B398ED96488F05B9AC740DEEEA88E69D9DECA78C576829C79AD9385B254FB1B89320ADFE913B8005C5F4F2723BB56731B8CBA9865A15CE7156C90CC668C9648C376B86441E6A532F8E47770FE4E3D341A7D26F6FED26E969F49BDBFB49BADEC09366F442366F4420192F93E540A69BC9F2A129C0446C828D8266509374A3541489353DC719DB8574FEC6361C3F038A69DC19DEF8C93BAE5D15ECE0464E16BAEAB8744C69A715201A7A68DA003A0245CDD47957E28CEB7B51874594A5EDE566EAB2B458B51D6B38E9A76B872BE6169D897687B3CF6F74F80BC8366BDADC8FA8546866A78E46CB4ED2D04E4E1A152B7515C66EBA7896EDC9549DE1B330DED925C3D8E7D2B5C4EA1603B4D505AEEE7BD2CCAE4B75B2E6E5D3A93774CCE27574DFA57779511B481A172D0B17960A9E2EE246BCEA402A38297099891598A1638ECE76A8C470286968C54E1D50498F3B6A1C1739C97B3C2D974E794FA4DEDFDA4DD2D3E937B7F69375B98126CDE8846CDE8840473FE3F90A1D829A7FC7F21407409C054244BB2600D507540F3041482EE19019EBE08FF00EE48D6FF002575EC53B38FAA82D04BDDF805C0DCD9727ECFBC371CA0074FD430FF00CAEFB49207050E49BBDAFC5BD39ED1F651E4470D410E2D71B92DCF3DBE16DEDC128DB1B4F766C22EEF80E848D1DD42CFF083980AB561E1680332573F8A7F89681BDDD3068D85960BB43857EACB9ED258F75BC635006AB61A70453FAD930B04808DF65CE8DCD314EC9BAA24351139A5C1ADFF004DB9036D5632823AFA333C53870A671F0B49BF0AEAED823E22D7B466B0B88E14D6C52460785E789A7D57395BAD1CF76E1D4FA4DEDFDA4DD2D3E937B7F69375B18926CDE8846CDE8840473FE3F90A2FDAA69BF19EA143FB4A7013608B786E8FDA8FDA53041A84E76E9A354E3AA449E825EE711A69B68E46B8FC15DEB0A9DB244D73730402B8245117BD8C191715D83B3953C30B584E80051E5EB4D3C3FB1BAB1C2CB0B8DE2D050F1BA4E27705810C1739ABF14B76DD63ABB0B86AE774A5E5AE71CF928DB75D2F8EB7DAC53E354E283BD7C8D0CB5C92ACD057415B089699E1EDE6B174B8146D90F7EE6C915B260391EAB2F4545051C6F6C2DE10E3A7244FAFD3CA633C5B2C6C8DCF5546B9B785D1BB51E5729C4C1A4827455EAE66988E69DF1CC79DA9F49BDBFB49BA5A7D26F6FED26EB530A4D9BD108D9BD108064DF88F5508D14B3FE23D542340BA807ED295BE529362959BA01A9F7F104C4A5225EA285F254C66E002ED495D3BB2FC32444DEE5AF36F55CCB0FA3A99DCDEE184127CE797A2E87D9E6BE8628DAF26D6CCA8F2F6B715D56EAF2E8E0258D2E36D01D56B6EABC4AB67746EB4001B084EA7A95B047289182C6E2CA39E983FC5DD713B62322A166E3770678E196F28C542313B884C2E0D61243B8B2F8591A2C4AB9B20A69E95D2FF00B5ED70BFCA56472170686BC10B234B4ED845F86C4EE513168E6E6E3CB1D68E11BA6F116961DC12A0A98811C0E75AFA9BE8AFF180DB9580C6ABD91F8322E7E41A74B7AAEAEA3076E1D4FA4DEDFDA4DD2D3E937B7F69375A98D26CDE8846CDE8840473FE23D5436C87A29A7FC7F2A2BF853808342861F125DCA46EA98075296C481604A7471F1C841D0665593934656CB24133FD93739CF6D3B9E4FF0065B4E8B74A82C89BE21C26D66B09CD72933399E261734F306CA676255AE86C677DADADF352CB1DBBC6E9D6F02C422A92F8048D749164E00E8B6882C40BAE07D97C427A2C763958E243BC2F17D42EC586E2F13D8039C0151B3E6E9A70BF536D95BC36D9452582A3FD4226B7CE3F9542BB160585B09BBCFF00C2371D6AA7ACAD00F7719BBCE4B56C53C58906CA6F768B9E40EEB3F87D2BB3964CDCEE6B41C4B1D84F6BEA1EF3C5461BDC1B6840D4FF002B8F9B98B94C5A653E937B7F69374B4FA4DEDFDA4DD6C6249B37A211B37A21011CFF008FE545FB02966FC7F21429C05DCF44D6EA9C75F84B0B38E403F94C96386D1B236B7C521BB89D829A519B46DA28DB774C5C3469B0536444F17241AA4E0778D68EA50F168D3D8DE22E79DCE48945E205012E091892B8B6F675AE16F946EBC4C2351915A47671AD7E2C01D4B0F0ADDA963731E5A7759397D6AE1F190638B8E6B214505DC0B87842AB4B1873F3D372B24C78045B26852916B4BDA0C45B85E033D4036938785801CF88E4171A9C5F371F113727993AADBFB6F8A0AAAB8A8E337643E279FEED96A320E2216BE3C7ADB1F265BBA57A7D26F6FED26E969F49BDBFB49BAED349B37A211B37A2100C9BF1FC855D5897F19EAAB95D4079D7E13A036738F4FF29BB7C27C20F7723B959142D462CDFF00C935E6D0BBA94F04168237CD31C2F1B799CCA0185C238BA05044F7CB23B88E5C27252BE273CD9C470F20A36B7BB24B750905EC0DDDC6354C4FEE770FF392E90602C9065A2E6503AF345337C258E0E5D869228E7A76497E271682A1C91A38AEA22A784B45ADAEA9B8B554787615254BF502CD6FFB8F24EADC468F0CA53356CA23032B6EE2B9E7693B46FC5A2FF42D1C31BFC2C3E62B9C70D9E79E98E9A574B23E590DDF21E22A360BDC94C64826607016E639296DC2CB2D519BD53A7D26F6FED26E969F49BDBFB49BAE424D9BD108D9BD10806C9F8CF5558AB2FF002155D39E038797E158A76DE985F726EABB736DB75722B3210D70BF34C18D75996DC295C34511038DA5A6F7362AC3F54032D9285ECCCFA853848F192021A5901062391D8AEA5D9EAE12E191C8EC8F08CAFA7A2E51247C12DDB903FE56DFD98AF0DA1735E784324BB89F5FFE29724E95E2BDE9176E1DFA8C69AE7921AD8EC05D6ABDDB5FE41617C964B1DAD6E278CCF2C5710E4D69E76CAFF2AAC62C0DB4192EF1F13BEA06DE19091E5FF2AD97B5D182D370537841162AB96BE27780E4765D13FFD9>
+endstream
 endobj
 9 0 obj
-<<
-/Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 9251 >>
+stream
+0.850 0.320 0.120 RG 1.20 w 42.00 715.89 66.00 88.00 re S
+q 64.00 0 0 86.00 43.00 716.89 cm /Im1 Do Q
+BT /FB 17.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 122.00 801.89 Tm (PRISCILLA SANTOS CAHINO) Tj ET
+BT /FB 9.20 Tf 0.850 0.320 0.120 rg 1 0 0 1 122.00 783.89 Tm (Customer Experience \(CX/CS\) | Opera\347\365es e Processos | Tecnologia) Tj ET
+BT /FI 7.40 Tf 0.360 0.380 0.400 rg 1 0 0 1 122.00 770.89 Tm (FinOps em constru\347\343o | Estudante de ADS | +18 anos em clientes, cr\351dito e opera\347\365es financeiras) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 122.00 757.89 Tm (Jo\343o Pessoa - PB | \(83\) 99955-3329 | priscilla_cahino@hotmail.com) Tj ET
+BT /FR 7.20 Tf 0.850 0.320 0.120 rg 1 0 0 1 122.00 745.89 Tm (LinkedIn   |   GitHub   |   Portf\363lio) Tj ET
+0.850 0.320 0.120 RG 1.20 w 42.00 708.89 m 553.28 708.89 l S
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 691.89 Tm (RESUMO PROFISSIONAL & POSICIONAMENTO) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 684.89 m 553.28 684.89 l S
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 671.89 Tm (Profissional com mais de 18 anos de trajet\363ria nos setores banc\341rio e imobili\341rio, com atua\347\343o em atendimento consultivo, an\341lise de cr\351dito e risco,) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 661.89 Tm (opera\347\365es financeiras, conformidade documental, relacionamento com clientes e acompanhamento de processos. Em transi\347\343o para tecnologia,) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 651.89 Tm (busco oportunidades em CX/CS, Atendimento, Opera\347\365es e An\341lise de Neg\363cios, conectando essa experi\352ncia aos conhecimentos que venho) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 641.89 Tm (desenvolvendo em ADS, dados e produtos digitais.) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 628.89 Tm (Sou graduada em Ci\352ncias Cont\341beis, p\363s-graduada em Engenharia de Dados e estudante de An\341lise e Desenvolvimento de Sistemas. FinOps \351) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 618.89 Tm (uma dire\347\343o profissional em constru\347\343o: uma forma de aproximar minha base financeira de tecnologia, custos, governan\347a, m\351tricas e gera\347\343o de) Tj ET
+BT /FR 7.70 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 608.89 Tm (valor, sem me posicionar ainda como especialista na \341rea.) Tj ET
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 590.89 Tm (COMPET\312NCIAS & CONHECIMENTOS) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 583.89 m 553.28 583.89 l S
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 42.00 535.89 251.64 40.00 re B
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 301.64 535.89 251.64 40.00 re B
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 569.89 Tm (Customer Experience e Customer Success) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 557.89 Tm (Atendimento consultivo, relacionamento, jornada, reten\347\343o e resolu\347\343o de) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 549.59 Tm (demandas.) Tj ET
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 569.89 Tm (Dados e BI - em desenvolvimento) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 557.89 Tm (SQL, Power BI, Python/Pandas e indicadores em projetos acad\352micos.) Tj ET
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 42.00 493.89 251.64 40.00 re B
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 301.64 493.89 251.64 40.00 re B
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 527.89 Tm (Opera\347\365es financeiras, cr\351dito e risco) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 515.89 Tm (An\341lise documental, financiamentos, processos PF/PJ, conformidade e) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 507.59 Tm (acompanhamento.) Tj ET
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 527.89 Tm (UX/UI - pr\341tica acad\352mica) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 515.89 Tm (Figma, jornadas, wireframes, heur\355sticas, usabilidade e acessibilidade.) Tj ET
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 42.00 451.89 251.64 40.00 re B
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 301.64 451.89 251.64 40.00 re B
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 485.89 Tm (Processos e An\341lise de Neg\363cios) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 473.89 Tm (Levantamento de necessidades, identifica\347\343o de gargalos, prioriza\347\343o e) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 465.59 Tm (melhoria cont\355nua.) Tj ET
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 485.89 Tm (Tecnologia - em desenvolvimento) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 473.89 Tm (Git/GitHub, HTML/CSS/JS, Kotlin/Android e fundamentos de banco de dados.) Tj ET
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 42.00 409.89 251.64 40.00 re B
+0.953 0.957 0.965 rg 0.910 0.910 0.910 RG 0.30 w 301.64 409.89 251.64 40.00 re B
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 443.89 Tm (Governan\347a e qualidade operacional) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 48.00 431.89 Tm (Registro, rastreabilidade, an\341lise de riscos e vis\343o de p\363s-entrega.) Tj ET
+BT /FB 7.30 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 443.89 Tm (FinOps - em constru\347\343o) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 431.89 Tm (Custos, TCO, indicadores, governan\347a, efici\352ncia e an\341lise de valor aplicada a) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 307.64 423.59 Tm (estudos.) Tj ET
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 397.89 Tm (EXPERI\312NCIA PROFISSIONAL) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 390.89 m 553.28 390.89 l S
+BT /FB 8.50 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 377.89 Tm (UX/UI \227 Projeto de Extens\343o) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 365.88 377.89 Tm (mar/2026 - jul/2026 | H\355brido - Jo\343o Pessoa/PB) Tj ET
+BT /FI 7.60 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 365.89 Tm (F\341brica de Software UBTech Office / UNIP\312) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 354.89 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 354.89 Tm (Concep\347\343o de interfaces do projeto Administra\347\343o para Todos, com organiza\347\343o de fluxos, arquitetura da informa\347\343o, wireframes, prot\363tipos e aten\347\343o \340) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 345.69 Tm (acessibilidade.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 336.49 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 336.49 Tm (Estrutura\347\343o da experi\352ncia para Coordena\347\343o, Instrutores e Alunos e colabora\347\343o com a equipe de desenvolvimento na apresenta\347\343o das telas e fluxos.) Tj ET
+BT /FB 8.50 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 322.29 Tm (Analista de Cr\351dito e Risco | Experi\352ncia do Cliente \(CX\)) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 351.03 322.29 Tm (jul/2018 - dez/2025 | Tempo integral - Jo\343o Pessoa/PB) Tj ET
+BT /FI 7.60 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 310.29 Tm (Confiance Transa\347\365es Financeiras) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 299.29 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 299.29 Tm (An\341lise de cr\351dito e valida\347\343o documental em opera\347\365es habitacionais, consignadas e comerciais, com acompanhamento de pend\352ncias e etapas de contrata\347\343o.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 290.09 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 290.09 Tm (Atendimento consultivo, atualiza\347\343o cadastral e suporte \340 resolu\347\343o de demandas, conciliando clareza para o cliente, requisitos banc\341rios e qualidade do processo.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 280.89 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 280.89 Tm (Identifica\347\343o de gargalos documentais e operacionais, acompanhamento de riscos e interface com diferentes participantes da jornada.) Tj ET
+BT /FB 8.50 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 266.69 Tm (Analista de Neg\363cios Imobili\341rios | Gest\343o de Relacionamento) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 376.60 266.69 Tm (dez/2023 - dez/2024 | Remoto - Conde/PB) Tj ET
+BT /FI 7.60 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 254.69 Tm (Confiance Conde \(atua\347\343o simult\342nea\)) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 243.69 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 243.69 Tm (Origina\347\343o e acompanhamento de financiamentos imobili\341rios, an\341lise documental e controle das etapas necess\341rias para aprova\347\343o e contrata\347\343o.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 234.49 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 234.49 Tm (Relacionamento entre clientes, incorporadoras e institui\347\365es financeiras, facilitando o fluxo de informa\347\365es e pend\352ncias.) Tj ET
+BT /FR 6.40 Tf 0.360 0.380 0.400 rg 1 0 0 1 42.00 22.00 Tm (Priscilla Santos Cahino | Curr\355culo Profissional | P\341gina 1 de 2) Tj ET
+endstream
 endobj
 10 0 obj
-<<
-/PageMode /UseNone /Pages 12 0 R /Type /Catalog
->>
+<< /Length 7818 >>
+stream
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 799.89 Tm (EXPERI\312NCIA PROFISSIONAL - CONTINUA\307\303O) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 792.89 m 553.28 792.89 l S
+BT /FB 8.50 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 779.89 Tm (Assistente Administrativo | Suporte ao Cliente) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 390.52 779.89 Tm (dez/2012 - jun/2018 | Presencial - Jo\343o Pessoa/PB) Tj ET
+BT /FI 7.60 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 767.89 Tm (GN Imobili\341ria) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 756.89 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 756.89 Tm (Atendimento administrativo e suporte operacional a clientes, organiza\347\343o de contratos e acompanhamento de demandas do setor imobili\341rio.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 747.69 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 747.69 Tm (Digitaliza\347\343o e estrutura\347\343o de acervo documental, facilitando localiza\347\343o, recupera\347\343o e rastreabilidade de informa\347\365es.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 738.49 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 738.49 Tm (Apoio \340 resolu\347\343o de demandas contratuais e media\347\343o de situa\347\365es operacionais.) Tj ET
+BT /FB 8.50 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 724.29 Tm (Recepcionista | Atendimento e Opera\347\365es Banc\341rias) Tj ET
+BT /FR 7.20 Tf 0.360 0.380 0.400 rg 1 0 0 1 389.72 724.29 Tm (abr/2007 - nov/2011 | Presencial - Jo\343o Pessoa/PB) Tj ET
+BT /FI 7.60 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 712.29 Tm (Caixa Econ\364mica Federal) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 701.29 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 701.29 Tm (Atendimento ao cliente e suporte a rotinas banc\341rias e administrativas, abertura de contas, atualiza\347\343o cadastral e confer\352ncia documental.) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 46.00 692.09 Tm (\225) Tj ET
+BT /FR 7.20 Tf 0.120 0.120 0.120 rg 1 0 0 1 56.00 692.09 Tm (Orienta\347\343o sobre produtos, servi\347os financeiros e canais de atendimento, al\351m de apoio documental em opera\347\365es de cr\351dito.) Tj ET
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 675.89 Tm (FORMA\307\303O ACAD\312MICA & P\323S-GRADUA\307\303O) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 668.89 m 553.28 668.89 l S
+BT /FB 8.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 655.89 Tm (Gradua\347\343o em An\341lise e Desenvolvimento de Sistemas \(ADS\)) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 442.39 655.89 Tm (fev/2025 - jul/2027 \(em andamento\)) Tj ET
+BT /FI 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 644.89 Tm (Centro Universit\341rio de Jo\343o Pessoa \(UNIP\312\)) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 634.89 Tm (L\363gica de programa\347\343o, banco de dados, engenharia de software, desenvolvimento e participa\347\343o na F\341brica de Software UBTech Office.) Tj ET
+BT /FB 8.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 622.89 Tm (P\363s-gradua\347\343o em Engenharia de Dados) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 452.12 622.89 Tm (nov/2023 - mar/2024 \(conclu\355da\)) Tj ET
+BT /FI 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 611.89 Tm (UNIESP Centro Universit\341rio) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 601.89 Tm (Fundamentos de dados, SQL, arquiteturas ETL/ELT, modelagem anal\355tica e Business Intelligence.) Tj ET
+BT /FB 8.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 589.89 Tm (Gradua\347\343o em Ci\352ncias Cont\341beis - Bacharelado) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 479.35 589.89 Tm (2009 - 2013 \(conclu\355da\)) Tj ET
+BT /FI 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 46.00 578.89 Tm (UNIESP) Tj ET
+BT /FR 7.00 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 568.89 Tm (Forma\347\343o em contabilidade, finan\347as, auditoria e conformidade. TCC sobre sustentabilidade em institui\347\365es financeiras.) Tj ET
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 554.89 Tm (CERTIFICA\307\325ES & QUALIFICA\307\325ES) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 547.89 m 553.28 547.89 l S
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 534.89 Tm (\225 Microsoft Certified: Azure AI Fundamentals \(AI-900\) - 2026) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 304.00 534.89 Tm (\225 ENAP - Ouvidoria - 20h) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 521.89 Tm (\225 HP LIFE - Gest\343o \301gil - 2026) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 304.00 521.89 Tm (\225 Power BI e Copilot para An\341lise de Dados) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 508.89 Tm (\225 Sou CS e Agora? - Customer Success - 2026) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 304.00 508.89 Tm (\225 UX/UI: Usabilidade, Figma e Prototipa\347\343o) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 495.89 Tm (\225 IA aplicada com n8n e LangChain - 2026) Tj ET
+BT /FR 6.90 Tf 0.360 0.380 0.400 rg 1 0 0 1 304.00 495.89 Tm (\225 Git/GitHub e fundamentos de desenvolvimento) Tj ET
+BT /FB 10.00 Tf 0.850 0.320 0.120 rg 1 0 0 1 42.00 478.89 Tm (PROJETOS ACAD\312MICOS E PESSOAIS DE DESTAQUE) Tj ET
+0.840 0.850 0.860 RG 0.50 w 42.00 471.89 m 553.28 471.89 l S
+BT /FB 7.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 458.89 Tm (Legado Urbano JP - ) Tj ET
+BT /FB 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 113.96 458.89 Tm (An\341lise de Neg\363cios, Processos e FinOps em constru\347\343o) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 448.89 Tm (Estudo de caso sobre reabilita\347\343o urbana e moradia, com an\341lise de custos, TCO, riscos, governan\347a, sustentabilidade e valor ao longo do ciclo de vida.) Tj ET
+BT /FB 7.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 438.49 Tm (Jornada360 - ) Tj ET
+BT /FB 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 89.71 438.49 Tm (Customer Success, Health Score e Prioriza\347\343o) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 428.49 Tm (MVP local voltado \340 leitura da jornada do cliente, Health Score e organiza\347\343o de prioridades, com regras e cen\341rios de teste documentados.) Tj ET
+BT /FB 7.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 418.09 Tm (Adm4All - Administra\347\343o para Todos - ) Tj ET
+BT /FB 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 178.52 418.09 Tm (UX/UI e Projeto de Extens\343o) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 408.09 Tm (Figma, arquitetura da informa\347\343o, acessibilidade e organiza\347\343o de fluxos para Coordena\347\343o, Instrutores e Alunos.) Tj ET
+BT /FB 7.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 397.69 Tm (Cl\355nicaCare - ) Tj ET
+BT /FB 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 89.29 397.69 Tm (Dados e Business Intelligence) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 387.69 Tm (Projeto acad\352mico com modelagem relacional, SQL, Python/Pandas e dashboard no Power BI para explora\347\343o de indicadores operacionais.) Tj ET
+BT /FB 7.40 Tf 0.120 0.120 0.120 rg 1 0 0 1 42.00 377.29 Tm (UniGuard - ) Tj ET
+BT /FB 7.40 Tf 0.850 0.320 0.120 rg 1 0 0 1 82.29 377.29 Tm (Governan\347a, Risco e Privacidade) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 367.29 Tm (Estudo acad\352mico de solu\347\343o de seguran\347a no campus, considerando fluxos de acesso, privacidade, LGPD, governan\347a e requisitos de uso.) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 356.89 Tm (Outros projetos e estudos est\343o dispon\355veis no portf\363lio e no GitHub, incluindo AlcoLock, PetZona, Padrinhos da Rua, Conta Certa, Casa de Praia V\352nus, Temporada) Tj ET
+BT /FR 6.70 Tf 0.360 0.380 0.400 rg 1 0 0 1 46.00 348.49 Tm (PB e Guia de Lugares PB.) Tj ET
+BT /FR 6.40 Tf 0.360 0.380 0.400 rg 1 0 0 1 42.00 22.00 Tm (Priscilla Santos Cahino | Curr\355culo Profissional | P\341gina 2 de 2) Tj ET
+endstream
 endobj
 11 0 obj
-<<
-/Author (Priscilla Santos Cahino) /CreationDate (D:20260917214308+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260917214308+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Curr\355culo - Priscilla Santos Cahino) /Trapped /False
->>
+<< /Type /Annot /Subtype /Link /Rect [122 738 164 751] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/priscilla-cahino/) >> >>
 endobj
 12 0 obj
-<<
-/Count 2 /Kids [ 8 0 R 9 0 R ] /Type /Pages
->>
+<< /Type /Annot /Subtype /Link /Rect [170 738 207 751] /Border [0 0 0] /A << /S /URI /URI (https://github.com/Priscillacahino) >> >>
 endobj
 13 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3419
->>
-stream
-Gb!#^CNJ4N')eD/0qYnE?!Gl!.A&4936RV)Lr!*e5h3!A1uQK@1dhj%Q-,0F1SY0f"p8",GEYW1HCjQhmW5sn6$3#^eGhg.aSQjc]J>:OP1bF([Ut`V2&X]rI!np6EA^N5nhe7d%V_7*6T.0XV7agH*ah'ujk/4&R[W!s)*Ka5ak7s$=hpegOss+GOc]ZmjG>!Dae22R\`Ge:&IC3a`I__?(C?)XP1^X,qcuCrFaHXIBtiUf)n2GD[^"m"`>KgDB'\/H0WDV8W3GqW6h>U^4Fs8r;;&;GfsM4f1e0aro#`54-aso1e>7'lUSjNoC#YXc#V^Itl!SU]h'^\Nm;+m2KDqL<gMr5;U3jJ'\/hA\[6XT"iO];aDE>3:N9/YcN1/Wh1c.S%XXPEb%>l\Q0h]XXqhh5?,lrYiqh]E"`%rarp47s#R@e#Wj[Fu:;EOatVB'SmLMHQe:_/EskteVgCE^i"YSkTSBD2^.6:#MBEc/Eg^dWEQ_+()b8\cdkiVT^<i);66,;U)\+qdNgqFUZ?4@0^K!r.%5^T^u"-fst#6S)0BO#P!/%5CDW1rM'=l0L&(L_f!=AXT4PJkY#'hu(^)k&6+Fqi5`+=f.7.X#`QG)lV!Uc_JQkas/JLnH#j+;FV+B>L<58,ltCrmL1LaG0Q6NZ#Gr?,E^^>M*u@*PKO0l7>Xnc3s5D$j!2nM/0<Z1--mZk#B`n-pffD=LbrJ[`JM*L7oo2M^h30Tm>7Y?M_r"K*T@4&G/DhjY4'*kUbYqLo&sY6^Ykp"iUm+]9I=uDX3l#M)W17la_t]FSrO$GbKUTt^CtZe,[DL+l5>$cE1Wj%*pJ+rg(K\(^1ire$D=L]Y3V8Z^###0ZM=BXY3oT8VCM!03rQZJ<$s0c.V)m$[d>.-r!)!N'C65,!t2)>BoZ,)N2P?(RJYFof9.W7*'b'%"DON,Gun#[(6bP".fr9j7`]XR),c4AP;eC;Le$8TLf"+lQ4\DON9)8&p&e$@VOl9FGK+._^a!/+31#]CZ]e)Nl'8e"L]kODDb*ncV'KE7,5JHs#_]jl.DXCV#Z)#VaVYbPQM5A>L)oV`N@W^?Y/g`^DkMfa>2p3Hd$;Ba3)dj(!RDH6NSIKnl]lo$Li0mJ[/G*%P_4N"1<g3<[L]1V6^Yn14D=-%oh1`+Br"e*6+'==Zq`fFYUjELV$[=L=V>b_#29&UG'rW+j6C,H_h*Um>R$1STgV;39<UH3N\sq=Z]al9E$'u1rTsme_D(.k9D:R=Ve1ohWOt'CBB8kB*au$q_nO%HXRY56H9s+-CH6/[(ATnHoY#_b!dc3Q"al8Ea[ubYG#<ioq](Y6-;0Xe;Ao0;@k3AQl"'co,Icd&1%$2?/d#IF0uC426A&b7F+n`pH:Ni4Z2I%[2h8-)8b,s+='6a]8gKJ-=KS0P,MIu!Sh*8JG=$R!^*2"`O3Yl>e+G`3s*T)V_C_td18a5f7PaIBH0p3[WCfn=$)8*\.H8Ojci$h^+"p8R*V!*HUb]0'^_+)k8ceXV"[sq<EG(a3-]Wjgfce2@YNe,2ZPB&2Qq7MBS&oUr,OBS-l;,5?Zf0hcHp.IbDu2!%EP_SpLuMc5+cbkFkdJ@;HN;I/hh,<b]hU[_lYTc*;q&o9W:F7I6<stB(D<eN=?m($7s/^6BIqEdo?J)u$#FaF.9W7l^eRNa3i.'X,k)2Nl6k^`Y=H%cp\EM#1NXmh`\$c&FT/^<lL*jmFCP-oi26VR!nDZdNG1pOnI>R!;6n[pW1hVP';<.6.on)&@/ETmM.-lKc?Y?me"ONb9lDLRPfDY7Ie8Aq*S#BUJUUjsapBANa:36<([hSE94H)c<&'Ts4G!%\q;H1?EerKC;u)qPNs^!N`/^#qMVKO1.<5)e`=4:3[h$"5R%!8Bc>+5TFj#&:naLH3cWs)!"P9m=8OQ?#D=4JD%D3>iO#7lOZ%`GhQ/Z@O10FWHYS#L5kkng!T<OhN7K@BY63P.<mVQK_":5VgRm?S)Ag-@s6`D,9*f.]C3+6AqU%,9d5W:fZfEU&7jF#LDG`_`#[N&2I*/scJ2$H/AA_G\%m7jDfc\[2I:HGb5J7<6$cI-[6+V2$B<(5rA#YGpG(:AbLA][[NA@m:8E42A=gXcer^d2=S(g0GSC=5'=4;m"8C,srb;!]!^[bZQ]m(*-k0kg`&NG^h*bL,Y\rXiW1W3DKB[qkI0eX3a^1M[>bXF%eB\ej/4!g[D5[c_'VEPGSD5/oFm1j(@j"o2%ajlTA0VkdG%U587GdN).j:>S2;\9fr(?.7E!EbO+6B"hjrCo9WI4$)Cp;E*Y5gGmB#1iJBBd"8"Pni[]kOfk1Nk@!J^>4$K'-DD@]oY[%Dkdf0n@9#g1+tQsaGT.)?)U;KsTE3eNCU^e/hg!9ZZCe;rG;US^S]duMNUgZaY"S,(Kj8TDWiBqA[)\K1CVAd,HE`.[B'LQi^6^`'oSG.YI5qi_%9^!nI?&UaT,2c!FS\jchEou;6>IO:(d":J!tiocd1-I?FsH?h_,mXDg/*iNKHuC'PCo$YB=a"+Hg2G@:!J!`UuF\/o.)-;e#ZV$Wr8_3>]$$8b#_Wi7]075:c6All`P\IeMVLah6PHI*f=aSI`S8L!8iaS/"ojeR6kpNKsqqErB^On9M[HNY5k?p>&YtS$8X^$DN?r`GTm[>B(piP?s%8P3:0tE1[9IaZA>p:6Ni)]/Oj<>&0')gme)X&h0IOLW0(`4QV".X"$'U`>&f"'l:BE&'UIS>ALt_OS%h*KktJjeZ<l?U%kPt`<"<+'c2J2(!,GUlH!H8LfNO;Bf5F-Y(RA-#.qIRKfrIC6;u'b.29K!<.O&P95o+U)La*neZ[RU$%cHPCp$[6I;+CnY[52>D=LNZ7+=RuIr7#m3Ug0A8qF*Y,i3,1<>0ig"CJj1oftc1FNb=?ifp?a3F8uE4Nd"*=RMPH_XJB#Jq+O1Fa*1rT78e-3Lq)f[7;Dt%E[OZY6_WArX3:rR"IDZ1dJ.+YRuRcH%QD'b9s\ptGZ``>Z9a<?b_Ja&r.3_f:GN&R/>?Y\<l2mo4ee%QUY$an>;rM$E5rg!CZ\:6D45o(\c+8,:n+puK68s7]N3i_.];Kf.TX"/"DrdamoTu1Nd[S:O<)<XVI;Crl;`+35s]%'Ru<6GW4:J<'1Q>*2@VjfpR=E."l&B58(=2L$*GD3TMQiT/e3R=q'1BloeJ1cN5B<%hQcr1?;@XHW_fB#?&13fQ15IN@sE0$4e5EHP_G9sX]!d$,qT_W[8C4c*`)cm!NeYbC+Us47p*NdD>eG4#i0F/r^g,DZc*&\F=>KRO:iS"KnFEW_FDD<TIN[P=65l`r*,<lh<9I%O`H*k*:&hUCfIn5c[U_%s3e=3P(WQqUu5N=Ro`ADBOH*ln<RBdXC_/e_/0c4V'6RagNSV4HD;TH]ch=n#,rf\70~>endstream
+<< /Type /Annot /Subtype /Link /Rect [214 738 262 751] /Border [0 0 0] /A << /S /URI /URI (https://portfoliopriscilla.vercel.app/) >> >>
 endobj
 14 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 3224
->>
-stream
-Gb!#^?$"`@&q/*0kbhYO(0:'a`4fXg.CN]T27RPhQ=%Y[J0uXWaGf2U;Z#KmpIGR@+lM#09bI\8)NB'S:S0g6@g?iJl^7_4%,cLCn&Gnt0$G-ipm)H^O"d$;qspo(e$C70'j4;8^1DTP&+"bF,sC;<0CT(e$[fVR\lLHmSIjp$FJ_[o=JRBu)9WDe@E9KX0&^_N8Q@<P.cb>-`-UJok,H=#/%kn[]^pMH_N\gf)4\P8r&:!mLAC:K;sVDR*ErCa$?fa7:HM431N4Mri3o6U$Q%P[m*o'+[V\I,O$;9I5E*8Jr@dW@^?tQ>%XPu$r'"4Xp#EJJnB20[QM4l**1OZL(r(QRcKN`!F>LK!*;=2-)8Pn,H9@V?-J)=OO)W\g?=1r)=1<fDcOTKg]>"/ZbP\f"NSD?)ZD,G)f+pilh2bt@"7=;%+fjLE*Ogfao<"\;lbf.(^8*_>IXc""\Z=6tYh0oD[s`1iGB&>EARCC5qqW(^)XI*d+%2FNR"*&+c1<gpeZ5&'eF;8hHl<`L*L4A#R!DDF0J!=.Ke@UVE#9jgaRKMS$LpZ3SX"k1%SX_n'f>&\9KWjW.Z.JpEb*ip$%uY\AXER.Q%])c4Z`uMrnb&&q.K3-bj!jf/Xe/lGod?Ziq5?<ei%ZN[!BEO1mO>]A)q,$D%Le=`nedN9HhSr)u\_&-CML_WM!3iJfXL8`W@MSa#+X&'[VZQk63H`"dKf4=`N$161Y4?G>8u50pF2k==e!CY/?')`"S8A80tM-YVY4p<p4-i5:k7RRfj_/nM0*h\:T;"6AF9MF5ZhX3,Z\JFm&E!Y%a9CWUte9'>fXS)W7]6>DRs1iqm>DFkg!1^2LQ#kc,#q'F!6s$=1Wu1M'F`ejWbbbgdqd(RO2OQ?JB]P4H4-QQS]DHT]PH>"L,e[Z]^<<5q_r=$/)a2Qc5kcSDDCTOXU=DP^l;5hDoY/@8UioD0N?iEE,?`q$,0)5JMt&X"i]?:r<B/dA#6LaPi$Uk4n)hC7m*+@);<_@W=`09&=<7'at3%)"!L"qhpC&fm?r*a$DpWHTAk6,#>#B>'lOreS"04r3%*S$m6[bZD/"9O*=j3+sTpL[,DB9M1n_4K]Pns)Sn"mM5<$*?nMHnrY?UGlnEBH*.mp*eb,mpr6]pW'oP=R>;`>H%PHX:OnH=rX>,tmV1A*N\Qj\RYroU]&n80V6*&*!]?X*qc;(#o%Q!>nhPhfbh`bL[4YODB&`Tb0Z+mbDO62SlI7`j^^[_fH#Mo$H`i0cf0"n*W<Mm\a?sIY\j1qTc*T2m2T"!Cq'42DWZdF*M1V%qc(#tb8<pU3LGq?q*&e!tpbV$sB@+FMBZ`ZL"H@3NXtn0UASTC53,ghtj3?h!p5ER:Y3!=TZ;qTXLcl0i$'_F9]N&N_*GNLS$'(rP9e0%n#R[Vr?pT>KG)u=/d6%\ZCpoFLT!?ihr0dD,l<:A+AT0.D>2EaNJtYl\JkD\*O^Z+_@9m8=k:md16iiO+89]\(1FdAiaLKBPQo!)HW^[ig[.=#Q:@Rrm`7=q_a8dl,#(5+Y037bOh)-6!Ep/IcD_<u.+q03Y$Yh1F-c5u_#I"SZ^"M(oS&%OoSNPb&#+gfD@a"O>2Nr\22:h.R+8Z>Q1&i,k`-sR<nj0OVChqc6#+Hn#E']1"9?q%l=pW1eoq!$Vpg%NO1&F8_O,HF)JQfq,QTe3:=M4h5AALj%@'3CcRF8Pfg+ga#KW?hIO$SOGKN0\Zi9/'?"Q-C.gud6[-nU=!Kgr!-C_PWIDQbBcb((T/Y;+K:C"&b1o;*@D>crKT21B[1]1.2cCD5.W?/YOAk7:[G9T@SC;1)r4:pFK0&@#>S!s^jU1TrLL^EICWl:u5S]^OW+&nV9>ogH:PEumP&6LoH-&2?C8me`^8pg\5Oq)o8]jhI6d(u1^\c^%AuCUE3RMg#!hO/,UKlWk$"-tB(H?(X%HA0+ZR(^.se;TSSWPSUHg6C8O`fb=p,dL":igic,2Z*SUoV3MX?9C4Pr,>d5M><;pmaCKl(BShl7E*d:A,6bjcLS^ucfhOp4Yu9T]P,2\;ep:U(!mH>fSdR"gk6u]e;MKPWp6PKop(kh9?u,)A"S]*(3\&o,#D2]]V;Rk@Q-W-FKaj83&>L-V3i:.V]GRDQD>.Q+(^dq#8lG"U.N"jPj-[8_4ri"@2dEOsXr2)YRX&NYFZmq97F`13L!o<sDarfWXcC[Pf7bVFd:sE9CH9X7fbEue</K0+n&U$Pf5gSC2=PR,1S9V'nQ$"K%7W/'^)n`?d1oq)b`3';Cm-E^+81.X_<^pq`k)-2]8dUak!+KpLu$pdTps3.>f$4=nMla`Oii::%;X/Fh(jDWrGo0BE[*5^965#9OX:mfr"$;SjVEVESj#]!=Y`uf39i:Fh>d'C@n,584`=isV22DL7Ce0W*>RU$nDk)sHnQ(_K*aBBQ)1@GR%3hdHc*Zi^&3%sIh]8:=:lJ4EbD:nG6]/E5?78<,nYR\gWq@Zce4[6+%8M<r!.W-\l`kp>s?rS^KBsqA)DAcQp/FHDe8d*a;SuS#qfUI%r\[1a[67S-77>^G\@$VgM7DMMpKYG2qNP>k1;C+?,FQo2BVj>4$$.)DEkEN3s^:0Ed.Do`k)*N,2;Z,o=&(8fi>Sa[3E.4ZM^_1*^gZ`#"dqfdZhhHfa6PDg!K@r+u.[dVNn<^m@_Cu07'+3*A5XHTAJI'%?P>Ho%dS4F/5gU`^>`%h96rW-#O8r_'[/TeSiq8/bc#6$S5EBDul7V2INf6<X_'WH8gVqB;s+p/:%n1>36G$gn<<InWe1ZoO0;:)=.:K9?l]K*IAR-f\.Z+)r1[!$Pmeh7;sZO8pK31R7R4SZ7tAK)5&bN"Qt*05@,.W;dTAtk3UXV2+5PZHeL1M7]//orgg8Ga1'jU#7ZTZ3K23NCnf,qgL[LFZ!-VpdG]AYl(b[A!sM,mCS:2t.)&N6/;i,Pcsn)ud=Z:hXt"7n3CYPYC8MBk37Pot'ahP]o?9P&9/<33gt/&#+[4U!mjDM^l%`=7b#i)/');X_c/>IH3G@P;c=JJl\3MXjkpp[1frB.t&!KdkDWp)<?6)@:<]%2$n=M]RU(\]4d6Rs<Us,<V*'so4:5^]u_.]m4+oTb3=-@0#o1U)71imlu(1a^Z*^Xo(IbQ>`3WI<l9l,P0^80Y;OU<jMmEq4;q0>Wd<PMg;iHl`K1f=0D.C:da4Vd($pVFOc"Es8NB&MMF!DjamZN~>endstream
+<< /Title (Curr\355culo Profissional - Priscilla Santos Cahino) /Author (Priscilla Santos Cahino) /Subject (Customer Experience | Opera\347\365es e Processos | Tecnologia | FinOps em constru\347\343o) /Keywords (Customer Success, Customer Experience, Opera\347\365es, Processos, An\341lise de Neg\363cios, FinOps, Cr\351dito, Risco, ADS, Ci\352ncias Cont\341beis, Tecnologia) >>
 endobj
 xref
 0 15
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000446 00000 n 
-0000000640 00000 n 
-0000000824 00000 n 
-0000001012 00000 n 
-0000001247 00000 n 
-0000001452 00000 n 
-000001522 00000 n 
-0000001838 00000 n 
-000001904 00000 n 
-0000005415 00000 n 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000128 00000 n 
+0000000337 00000 n 
+0000000516 00000 n 
+0000000613 00000 n 
+0000000715 00000 n 
+0000000820 00000 n 
+0000007487 00000 n 
+0000016789 00000 n 
+0000024659 00000 n 
+0000024819 00000 n 
+0000024968 00000 n 
+0000025121 00000 n 
 trailer
-<<
-/ID 
-[<7245f69e7fc72fa5000017970f90cff7><7245f69e7fc72fa5000017970f90cff7>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 11 0 R
-/Root 10 0 R
-/Size 15
->>
+<< /Size 15 /Root 1 0 R /Info 14 0 R >>
 startxref
-8731
+25516
 %%EOF
