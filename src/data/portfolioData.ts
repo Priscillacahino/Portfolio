@@ -16,31 +16,32 @@ export const CONTACT_DATA: ContactInfo = {
 
 export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
-    id: "clinicacare",
-    title: "ClínicaCare — Análise de Dados",
-    subtitle: "Projeto acadêmico envolvendo banco de dados e análise de informações",
-    category: "data",
-    categoryLabel: "Projeto Acadêmico de Análise de Dados",
-    summary: "Projeto acadêmico envolvendo banco de dados relacional, manipulação com SQL, análise exploratória em Python e dashboard executivo no Power BI para suporte a decisões de uma clínica de saúde.",
-    description: "Projeto acadêmico desenvolvido como desafio técnico final de workshop, simulando o cenário de uma clínica de saúde que precisa organizar e analisar seus dados operacionais. O trabalho reúne etapas de modelagem de banco de dados no MySQL, criação e manipulação com SQL, análise exploratória e introdução a Machine Learning em Python, e construção de dashboard de indicadores no Power BI.",
-    objective: "Praticar modelagem relacional, consultas SQL, análise exploratória e visualização de indicadores de uma clínica fictícia.",
-    tools: ["SQL (MySQL)", "Python (Pandas)", "Power BI", "Modelagem Relacional", "Machine Learning (Scikit-Learn)"],
+    id: "jornada360",
+    title: "Jornada360",
+    subtitle: "Customer Experience e Customer Success aplicados à jornada de financiamento habitacional",
+    category: "dev",
+    categoryLabel: "CX/CS, Operações & Produto",
+    summary: "MVP funcional que transforma uma jornada operacional complexa em uma experiência mais clara e acompanhável, reunindo Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT e Voz do Cliente.",
+    description: "Projeto independente de portfólio inspirado em experiência profissional real no acompanhamento da jornada habitacional e reinterpretado sob a perspectiva de CX, CS, operações, processos e tecnologia. O MVP utiliza dados fictícios e organiza a visão do profissional e do cliente, com indicadores, histórico de interações, checklist documental, timeline, prioridades e satisfação.",
+    objective: "Demonstrar como conhecimento de negócio e atendimento pode ser transformado em uma solução digital para organizar jornadas, antecipar pontos de atrito e orientar o próximo passo sem interferir em decisões de crédito.",
+    tools: ["HTML", "CSS", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "CX/CS"],
     results: [
-      "Estruturação e modelagem relacional completa em MySQL com scripts padronizados de DDL e DML",
-      "Análise exploratória com Python/Pandas de consultas e pagamentos em uma base acadêmica simulada",
-      "Dashboard executivo no Power BI com acompanhamento dinâmico de faturamento, especialidades e inadimplência",
-      "Geração de insights para tomada de decisão preventiva sobre agendamentos e cobrança"
+      "MVP funcional com 24 clientes fictícios, busca, filtros, Cliente 360º e timeline",
+      "Journey Health Score automático e explicável, sem relação com score de crédito",
+      "Central de Prioridades dinâmica para organizar jornadas que precisam de acompanhamento",
+      "CSAT, NPS e Voz do Cliente integrados ao acompanhamento da experiência",
+      "Testes automatizados e workflow de validação no GitHub Actions"
     ],
-    image: "/projects/clinicacare.webp",
-    technologies: ["SQL", "Python", "Power BI", "Análise de Dados", "MySQL", "Pandas"],
+    image: "https://raw.githubusercontent.com/Priscillacahino/Jornada360/main/demonstracoes/produto_frames/01_dashboard.png",
+    technologies: ["Customer Experience", "Customer Success", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "Processos"],
     highlights: [
-      "Modelagem lógica e scripts estruturados de criação e manipulação em banco MySQL",
-      "Análise de volume de consultas por especialidade, faltas e status de pagamento",
-      "Análise exploratória em Python (Pandas) para identificação de padrões associados à inadimplência",
-      "Dashboard executivo no Power BI para acompanhamento de métricas operacionais da clínica",
-      "Base de dados desenvolvida para fins de estudo acadêmico e tomada de decisão"
+      "Transformação de experiência profissional em um case independente de produto e tecnologia",
+      "Visão integrada da jornada com Cliente 360º, checklist, timeline e próxima ação",
+      "Health Score transparente voltado à saúde do acompanhamento, não à concessão de crédito",
+      "Priorização operacional baseada em sinais objetivos da própria jornada",
+      "Dados integralmente fictícios e limites de privacidade claramente documentados"
     ],
-    githubUrl: "https://github.com/Priscillacahino/Desafio_Final_Workshop_26.2_ClinicaCare",
+    githubUrl: "https://github.com/Priscillacahino/Jornada360",
     featured: true
   },
   {
