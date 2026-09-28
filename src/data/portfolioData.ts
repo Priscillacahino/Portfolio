@@ -11,7 +11,7 @@ export const CONTACT_DATA: ContactInfo = {
   github: "https://github.com/Priscillacahino",
   whatsappUrl: "https://wa.me/5583999553329?text=Ol%C3%A1%20Priscilla!%20Vi%20seu%20portf%C3%B3lio%20profissional.",
   location: "João Pessoa - PB, Brasil",
-  resumePdfUrl: "/Curriculo_Priscilla_Cahino.pdf"
+  resumePdfUrl: "/Curriculo_Priscilla_Cahino.pdf?v=20260928-2"
 };
 
 export const ACADEMIC_PROJECTS: AcademicProject[] = [
