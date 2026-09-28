@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { X, Download, ExternalLink } from 'lucide-react';
 import { Language } from '../types';
 
+const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-2';
+
 interface ResumeModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -58,7 +60,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
 
           <div className="flex flex-wrap items-center gap-2">
             <a
-              href="/Curriculo_Priscilla_Cahino.pdf"
+              href={RESUME_PDF_URL}
               download="Curriculo_Priscilla_Cahino.pdf"
               className="inline-flex items-center gap-1.5 bg-[#FF6B35] px-3 py-2 text-xs font-bold uppercase tracking-wider text-[#121212] transition-colors hover:bg-[#ff7f4d]"
             >
@@ -67,7 +69,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
             </a>
 
             <a
-              href="/Curriculo_Priscilla_Cahino.pdf"
+              href={RESUME_PDF_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 border border-[#444] bg-[#1d1d1d] px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:border-[#FF6B35]"
@@ -91,7 +93,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose, curre
 
         <div className="min-h-0 flex-1 bg-[#2a2a2a]">
           <iframe
-            src="/Curriculo_Priscilla_Cahino.pdf#view=FitH"
+            src={`${RESUME_PDF_URL}#view=FitH`}
             title={isPt ? 'Currículo de Priscilla Cahino em PDF' : 'Currículum de Priscilla Cahino en PDF'}
             className="h-full min-h-[70vh] w-full border-0"
           />
