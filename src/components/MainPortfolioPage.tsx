@@ -911,6 +911,62 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </p>
           </div>
 
+          {/* Legado Urbano JP — Estudo de Caso */}
+          <div className="border border-[#3a3a3a] hover:border-[#FF6B35] bg-[#151515] p-6 sm:p-8 space-y-5 transition-colors">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#252525] pb-4">
+              <div className="flex items-center gap-2">
+                <span className="p-2 bg-[#222] border border-[#333] text-[#FF6B35]">
+                  <Building2 className="w-5 h-5" />
+                </span>
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#FF6B35] font-semibold">
+                    {isPt ? 'Estudo de Caso • João Pessoa • 2026' : 'Estudio de Caso • João Pessoa • 2026'}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-serif-artistic italic text-white">
+                    Legado Urbano JP
+                  </h3>
+                </div>
+              </div>
+
+              <span className="text-xs font-mono px-2.5 py-1 bg-[#17221e] text-[#a8d8c5] border border-[#294238]">
+                {isPt ? 'Artigo de Portfólio' : 'Artículo de Portafolio'}
+              </span>
+            </div>
+
+            <p className="text-sm sm:text-base text-white font-serif-artistic italic">
+              {isPt
+                ? 'Patrimônio, moradia, autonomia e sustentabilidade ao longo do tempo'
+                : 'Patrimonio, vivienda, autonomía y sostenibilidad a lo largo del tiempo'}
+            </p>
+
+            <p className="text-xs sm:text-sm text-[#ccc] font-light leading-relaxed">
+              {isPt
+                ? 'Estudo de caso que parte de iniciativas reais de revitalização do Centro de João Pessoa para analisar uma camada complementar de gestão: o que acontece depois da entrega da obra. O artigo conecta Análise de Negócios, Processos, FinOps, dados, riscos, manutenção, autonomia, energia e impacto econômico territorial.'
+                : 'Estudio de caso basado en iniciativas reales de revitalización del Centro de João Pessoa para analizar una capa complementaria de gestión: qué sucede después de la entrega de la obra. El artículo conecta Análisis de Negocios, Procesos, FinOps, datos, riesgos, mantenimiento, autonomía, energía e impacto económico territorial.'}
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {(isPt
+                ? ['Análise de Negócios', 'Processos', 'FinOps', 'Sustentabilidade', 'Riscos']
+                : ['Análisis de Negocios', 'Procesos', 'FinOps', 'Sostenibilidad', 'Riesgos']).map((tag, idx) => (
+                <span key={idx} className="text-xs font-mono bg-[#1a1a1a] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <button
+                id="btn-ler-legado-urbano"
+                onClick={() => { window.location.hash = '#/artigos/legado-urbano-jp'; }}
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                <span>{isPt ? 'Ler estudo completo' : 'Leer estudio completo'}</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
           {/* Featured Article Card */}
           <div className="border border-[#3a3a3a] hover:border-[#FF6B35] bg-[#151515] p-6 sm:p-8 space-y-5 transition-colors">
             
