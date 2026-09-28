@@ -44,6 +44,8 @@ interface MainPortfolioPageProps {
   onSelectProject?: (projectId: string) => void;
 }
 
+const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-2';
+
 export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
   onSelectPage,
   currentLanguage,
@@ -329,7 +331,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   <div className="grid grid-cols-2 gap-2.5">
                     <a
                       id="hero-btn-resume-pdf"
-                      href="/Curriculo_Priscilla_Cahino.pdf"
+                      href={RESUME_PDF_URL}
                       download="Curriculo_Priscilla_Cahino.pdf"
                       className="flex items-center justify-center gap-2 px-4 py-3 border border-[#FF6B35]/70 text-[#FF6B35] bg-[#1e1e1e] hover:bg-[#FF6B35] hover:text-[#121212] font-semibold text-xs uppercase tracking-wider transition-colors"
                     >
@@ -1195,7 +1197,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             )}
 
             <a
-              href="/Curriculo_Priscilla_Cahino.pdf"
+              href={RESUME_PDF_URL}
               download="Curriculo_Priscilla_Cahino.pdf"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-bold text-xs uppercase tracking-wider transition-colors"
             >
