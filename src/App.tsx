@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { AboutPage } from './components/AboutPage';
 import { ProjectsPage } from './components/ProjectsPage';
 import { ArticlePage } from './components/ArticlePage';
+import { LegadoUrbanoArticlePage } from './components/LegadoUrbanoArticlePage';
 import { ResumeModal } from './components/ResumeModal';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('pt');
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
+  const [activeArticleId, setActiveArticleId] = useState<string>('instituicoes-financeiras-sustentabilidade');
 
   // Parse URL hash to determine page and active project
   const handleHashChange = useCallback(() => {
@@ -25,6 +27,8 @@ export default function App() {
     if (hash.startsWith('#/artigo')) {
       setCurrentPage('article');
       setActiveProjectId(null);
+      const parts = hash.split('/');
+      setActiveArticleId(parts.length >= 3 && parts[2] ? parts[2] : 'instituicoes-financeiras-sustentabilidade');
     } else if (hash.startsWith('#/projetos')) {
       setCurrentPage('projects');
       const parts = hash.split('/');
@@ -52,6 +56,7 @@ export default function App() {
     setCurrentPage(page);
     setActiveProjectId(null);
     if (page === 'article') {
+      setActiveArticleId('instituicoes-financeiras-sustentabilidade');
       window.location.hash = '#/artigos/instituicoes-financeiras-sustentabilidade';
     } else if (page === 'projects') {
       window.location.hash = '#/projetos';
@@ -79,7 +84,7 @@ export default function App() {
     setIsResumeOpen(false);
     if (window.location.hash === '#/curriculo' || window.location.hash === '#/cv') {
       if (currentPage === 'article') {
-        window.location.hash = '#/artigos/instituicoes-financeiras-sustentabilidade';
+        window.location.hash = `#/artigos/${activeArticleId}`;
       } else if (currentPage === 'projects') {
         window.location.hash = '#/projetos';
       } else {
@@ -105,8 +110,12 @@ export default function App() {
     };
 
     const currentTitles = titles[currentLanguage];
-    document.title = currentTitles[currentPage] || currentTitles.about;
-  }, [currentPage, currentLanguage]);
+    if (currentPage === 'article' && activeArticleId === 'legado-urbano-jp') {
+      document.title = 'Legado Urbano JP | Priscilla Cahino';
+    } else {
+      document.title = currentTitles[currentPage] || currentTitles.about;
+    }
+  }, [currentPage, currentLanguage, activeArticleId]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#121212] text-[#f5f5f5] selection:bg-[#FF6B35]/30 selection:text-[#FF6B35]">
@@ -122,11 +131,18 @@ export default function App() {
       {/* Main Dynamic Content */}
       <main className="flex-1">
         {currentPage === 'article' ? (
-          <ArticlePage
-            onBackToHome={() => handleSelectPage('about')}
-            currentLanguage={currentLanguage}
-            onOpenResume={handleOpenResume}
-          />
+          activeArticleId === 'legado-urbano-jp' ? (
+            <LegadoUrbanoArticlePage
+              onBackToHome={() => handleSelectPage('about')}
+              onOpenResume={handleOpenResume}
+            />
+          ) : (
+            <ArticlePage
+              onBackToHome={() => handleSelectPage('about')}
+              currentLanguage={currentLanguage}
+              onOpenResume={handleOpenResume}
+            />
+          )
         ) : currentPage === 'projects' ? (
           <ProjectsPage 
             onSelectPage={handleSelectPage} 
