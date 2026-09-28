@@ -107,31 +107,32 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     },
     projectsData: [
       {
-        id: "clinicacare",
-        title: "ClínicaCare",
-        subtitle: "Análise de Dados, SQL, Python & Dashboard Power BI",
-        category: "data",
-        categoryLabel: "Análise de Dados & BI",
-        summary: "Projeto desenvolvido como desafio de workshop simulando o cenário de uma clínica de saúde para análise de indicadores de consultas, pacientes e estudo exploratório sobre risco de inadimplência.",
-        description: "Projeto acadêmico desenvolvido como desafio técnico final de workshop, simulando o cenário de uma clínica de saúde que precisa organizar e analisar seus dados operacionais. O trabalho reúne etapas de modelagem de banco de dados no MySQL, criação e manipulação com SQL, análise exploratória e introdução a Machine Learning em Python, e construção de dashboard de indicadores no Power BI.",
-        objective: "Identificar gargalos na jornada operacional de consultas e pagamentos de uma clínica de saúde, estruturando banco relacional e propondo melhorias preditivas para redução de inadimplência com dados.",
-        tools: ["Power BI", "SQL (MySQL)", "Python (Pandas)", "Machine Learning (Scikit-Learn)", "Modelagem Relacional"],
+        id: "jornada360",
+        title: "Jornada360",
+        subtitle: "Customer Experience e Customer Success aplicados à jornada habitacional",
+        category: "dev",
+        categoryLabel: "CX/CS, Operações & Produto",
+        summary: "MVP funcional que organiza a jornada de financiamento habitacional com Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT e Voz do Cliente.",
+        description: "Projeto independente de portfólio inspirado em experiência profissional real no acompanhamento da jornada habitacional e reinterpretado sob a perspectiva de CX, CS, operações, processos e tecnologia. O MVP utiliza dados fictícios e reúne visão do profissional e do cliente, histórico de interações, checklist documental, timeline, prioridades e satisfação.",
+        objective: "Transformar uma jornada operacional complexa em uma experiência mais clara, acompanhável e orientada ao próximo passo, sem interferir em decisões de crédito.",
+        tools: ["HTML", "CSS", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "CX/CS"],
         results: [
-          "Estruturação e modelagem relacional completa em MySQL com scripts padronizados de DDL e DML",
-          "Análise exploratória com Python/Pandas de consultas e pagamentos em uma base acadêmica simulada",
-          "Dashboard executivo no Power BI com acompanhamento dinâmico de faturamento, especialidades e inadimplência",
-          "Geração de insights para tomada de decisão preventiva sobre agendamentos e cobrança"
+          "MVP funcional com 24 clientes fictícios, busca, filtros, Cliente 360º e timeline",
+          "Journey Health Score automático e explicável, sem relação com score de crédito",
+          "Central de Prioridades dinâmica para organizar jornadas que precisam de acompanhamento",
+          "CSAT, NPS e Voz do Cliente integrados ao acompanhamento da experiência",
+          "Testes automatizados e workflow de validação no GitHub Actions"
         ],
-        image: "/projects/clinicacare.webp",
-        technologies: ["SQL", "MySQL", "Python", "Pandas", "Machine Learning", "Power BI", "Modelagem de Banco de Dados"],
+        image: "https://raw.githubusercontent.com/Priscillacahino/Jornada360/main/demonstracoes/produto_frames/01_dashboard.png",
+        technologies: ["Customer Experience", "Customer Success", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "Processos"],
         highlights: [
-          "Modelagem lógica e scripts estruturados de criação e manipulação em banco MySQL",
-          "Análise de volume de consultas por especialidade, faltas e status de pagamento",
-          "Análise exploratória em Python (Pandas) para identificação de padrões associados à inadimplência",
-          "Dashboard executivo no Power BI para acompanhamento de métricas operacionais da clínica",
-          "Base de dados desenvolvida para fins de estudo acadêmico e tomada de decisão"
+          "Experiência profissional transformada em case independente de produto e tecnologia",
+          "Cliente 360º com checklist, timeline, histórico e próxima ação",
+          "Health Score transparente voltado à saúde da jornada de acompanhamento",
+          "Central de Prioridades baseada em sinais objetivos da própria jornada",
+          "Dados fictícios e limites de privacidade claramente documentados"
         ],
-        githubUrl: "https://github.com/Priscillacahino/Desafio_Final_Workshop_26.2_ClinicaCare",
+        githubUrl: "https://github.com/Priscillacahino/Jornada360",
         featured: true
       },
       {
@@ -300,31 +301,32 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     },
     projectsData: [
       {
-        id: "clinicacare",
-        title: "ClínicaCare",
-        subtitle: "Análisis de Datos, SQL, Python y Dashboard en Power BI",
-        category: "data",
-        categoryLabel: "Análisis de Datos & BI",
-        summary: "Proyecto académico que simula el escenario de una clínica de salud para analizar indicadores de consultas, pacientes y estudio exploratorio sobre riesgo de morosidad.",
-        description: "Proyecto académico desarrollado como desafío técnico de taller, simulando el escenario de una clínica que necesita organizar y analizar sus datos operativos. Reúne etapas de modelado relacional en MySQL, creación y consultas en SQL, análisis exploratorio con Python/Pandas e introducción a Machine Learning, y tablero ejecutivo en Power BI.",
-        objective: "Practicar modelado relacional, consultas SQL, análisis exploratorio y visualización de indicadores de una clínica ficticia.",
-        tools: ["Power BI", "SQL (MySQL)", "Python (Pandas)", "Machine Learning", "Modelado de Base de Datos"],
+        id: "jornada360",
+        title: "Jornada360",
+        subtitle: "Customer Experience y Customer Success aplicados a la jornada de financiación de vivienda",
+        category: "dev",
+        categoryLabel: "CX/CS, Operaciones & Producto",
+        summary: "MVP funcional que organiza la jornada de financiación de vivienda con Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT y Voz del Cliente.",
+        description: "Proyecto independiente de portafolio inspirado en experiencia profesional real en el acompañamiento de la jornada de financiación de vivienda y reinterpretado desde la perspectiva de CX, CS, operaciones, procesos y tecnología. El MVP utiliza datos ficticios e integra la visión del profesional y del cliente, historial de interacciones, checklist documental, timeline, prioridades y satisfacción.",
+        objective: "Transformar una jornada operativa compleja en una experiencia más clara, trazable y orientada al siguiente paso, sin intervenir en decisiones de crédito.",
+        tools: ["HTML", "CSS", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "CX/CS"],
         results: [
-          "Modelado relacional estructurado en MySQL con scripts optimizados de creación y consulta",
-          "Análisis exploratorio con Python/Pandas de citas y pagos en una base académica simulada",
-          "Dashboard ejecutivo en Power BI con filtros dinámicos por especialidad, pagos y asistencia",
-          "Generación de información procesable para gestión operativa preventiva"
+          "MVP funcional con 24 clientes ficticios, búsqueda, filtros, Cliente 360º y timeline",
+          "Journey Health Score automático y explicable, sin relación con score de crédito",
+          "Central de Prioridades dinámica para organizar jornadas que requieren seguimiento",
+          "CSAT, NPS y Voz del Cliente integrados al seguimiento de la experiencia",
+          "Pruebas automatizadas y workflow de validación en GitHub Actions"
         ],
-        image: "/projects/clinicacare.webp",
-        technologies: ["SQL", "MySQL", "Python", "Pandas", "Machine Learning", "Power BI", "Modelado de Base de Datos"],
+        image: "https://raw.githubusercontent.com/Priscillacahino/Jornada360/main/demonstracoes/produto_frames/01_dashboard.png",
+        technologies: ["Customer Experience", "Customer Success", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "Procesos"],
         highlights: [
-          "Modelado lógico y scripts estructurados en base de datos relacional MySQL",
-          "Análisis de volumen de consultas por especialidad, ausencias y estado de pago",
-          "Análisis exploratorio en Python (Pandas) para estudiar patrones de morosidad",
-          "Dashboard ejecutivo en Power BI para monitoreo de métricas operativas de la clínica",
-          "Base de datos diseñada para fines académicos y soporte a la toma de decisiones"
+          "Experiencia profesional transformada en un case independiente de producto y tecnología",
+          "Cliente 360º con checklist, timeline, historial y próxima acción",
+          "Health Score transparente orientado a la salud de la jornada de seguimiento",
+          "Central de Prioridades basada en señales objetivas de la propia jornada",
+          "Datos ficticios y límites de privacidad claramente documentados"
         ],
-        githubUrl: "https://github.com/Priscillacahino/Desafio_Final_Workshop_26.2_ClinicaCare",
+        githubUrl: "https://github.com/Priscillacahino/Jornada360",
         featured: true
       },
       {
