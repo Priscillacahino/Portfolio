@@ -44,7 +44,7 @@ interface MainPortfolioPageProps {
   onSelectProject?: (projectId: string) => void;
 }
 
-const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-2';
+const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-3';
 
 export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
   onSelectPage,
@@ -73,7 +73,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
   const isPt = currentLanguage === 'pt';
   const localizedProjects = isPt ? ACADEMIC_PROJECTS : TRANSLATIONS.es.projectsData;
-  const dataProjects = localizedProjects.filter(p => p.category === 'data');
+  const featuredProjects = localizedProjects.filter(p => p.id === 'jornada360');
   const uxProjects = localizedProjects.filter(p => p.category === 'ux-ui');
 
   const t = isPt ? {
@@ -123,10 +123,10 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     development: 'Desenvolvimento',
     projectsEyebrow: 'Portfólio Técnico & Aplicação',
     projectsTitle: 'Projetos',
-    projectsSubtitle: 'Projetos acadêmicos, de estudo prático e extensão comunitária com foco em Dados, BI e UX/UI.',
+    projectsSubtitle: 'Projetos acadêmicos e práticos com foco em CX/CS, operações, processos, produto e UX/UI.',
     viewGithub: 'Ver repositórios no GitHub →',
-    dataBI: 'Dados & Business Intelligence',
-    academicData: 'Projeto Acadêmico de Análise de Dados',
+    dataBI: 'CX/CS, Operações & Produto',
+    academicData: 'Projeto de Customer Experience e Customer Success',
     knowProject: 'Conhecer projeto',
     uxArea: 'UX/UI Design & Experiência do Usuário',
     extensionProject: 'Projeto de Extensão Comunitária',
@@ -202,8 +202,8 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     projectsTitle: 'Proyectos',
     projectsSubtitle: 'Proyectos académicos, de práctica y extensión comunitaria con enfoque en Datos, BI y UX/UI.',
     viewGithub: 'Ver repositorios en GitHub →',
-    dataBI: 'Datos & Business Intelligence',
-    academicData: 'Proyecto Académico de Análisis de Datos',
+    dataBI: 'CX/CS, Operaciones & Producto',
+    academicData: 'Proyecto de Customer Experience y Customer Success',
     knowProject: 'Conocer proyecto',
     uxArea: 'Diseño UX/UI & Experiencia de Usuario',
     extensionProject: 'Proyecto de Extensión Comunitaria',
@@ -695,7 +695,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </a>
           </div>
 
-          {/* Subcategoria 1: DADOS — ClínicaCare */}
+          {/* Subcategoria 1: DESTAQUE — Jornada360 */}
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
@@ -704,7 +704,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
             </div>
 
-            {dataProjects.map((project) => (
+            {featuredProjects.map((project) => (
               <div 
                 key={project.id}
                 className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 sm:p-7 space-y-4 transition-colors"
@@ -722,13 +722,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                         loading="lazy"
                       />
                       <h3 className="text-2xl font-serif-artistic italic text-white">
-                        📊 {project.title}
+                        {project.title}
                       </h3>
                     </div>
                   </div>
 
                   <span className="text-xs font-mono px-2.5 py-1 bg-[#141414] text-[#ccc] border border-[#2a2a2a]">
-                    SQL • Python • Power BI
+                    {project.categoryLabel}
                   </span>
                 </div>
 
@@ -737,7 +737,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                 </p>
 
                 <div className="flex flex-wrap gap-2">
-                  {(isPt ? ['SQL', 'Python', 'Power BI', 'Análise de Dados', 'MySQL', 'Pandas'] : ['SQL', 'Python', 'Power BI', 'Análisis de Datos', 'MySQL', 'Pandas']).map((tag, idx) => (
+                  {project.technologies.slice(0, 7).map((tag, idx) => (
                     <span key={idx} className="text-xs font-mono bg-[#141414] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
                       {tag}
                     </span>
