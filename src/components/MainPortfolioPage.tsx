@@ -44,7 +44,7 @@ interface MainPortfolioPageProps {
   onSelectProject?: (projectId: string) => void;
 }
 
-const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-5';
+const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-6';
 
 export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
   onSelectPage,
