@@ -107,6 +107,8 @@ def on_page(canv: canvas.Canvas, doc):
     canv.setFont(REG, 6.4)
     canv.setFillColor(MUTED)
     page_no = canv.getPageNumber()
+    if page_no == 1:
+        canv.drawImage(PROFILE_IMAGE, 42, PAGE_H - 132, width=72, height=96, preserveAspectRatio=False, mask='auto')
     canv.drawString(MARGIN, 7*mm, f'Priscilla Santos Cahino | Currículo Profissional | Página {page_no} de 2')
     canv.restoreState()
 
@@ -120,7 +122,7 @@ if not os.path.exists(PROFILE_IMAGE):
 
 # Mesma foto, proporção e enquadramento do currículo de referência anexado.
 # A imagem no arquivo de referência ocupa exatamente 72 x 96 pt (proporção 3:4).
-profile = Image(PROFILE_IMAGE, width=72, height=96)
+profile = Spacer(72, 96)
 profile_box = Table([[profile]], colWidths=[72], rowHeights=[96], hAlign='LEFT')
 profile_box.setStyle(TableStyle([
     ('VALIGN',(0,0),(-1,-1),'TOP'),
