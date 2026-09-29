@@ -117,12 +117,20 @@ story=[]
 
 if not os.path.exists(PROFILE_IMAGE):
     raise FileNotFoundError(f'Foto de perfil não encontrada: {PROFILE_IMAGE}')
-profile = Image(PROFILE_IMAGE, width=21.75*mm, height=29*mm)
-profile_box = Table([[profile]], colWidths=[23*mm], rowHeights=[29*mm])
-profile_box.setStyle(TableStyle([('BOX',(0,0),(-1,-1),0.8,ACCENT),('VALIGN',(0,0),(-1,-1),'MIDDLE'),
-                                 ('ALIGN',(0,0),(-1,-1),'CENTER'),('LEFTPADDING',(0,0),(-1,-1),0),
-                                 ('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),
-                                 ('BOTTOMPADDING',(0,0),(-1,-1),0)]))
+
+# Mesma foto, proporção e enquadramento do currículo de referência anexado.
+# A imagem no arquivo de referência ocupa exatamente 72 x 96 pt (proporção 3:4).
+profile = Image(PROFILE_IMAGE, width=72, height=96)
+profile_box = Table([[profile]], colWidths=[72], rowHeights=[96], hAlign='LEFT')
+profile_box.setStyle(TableStyle([
+    ('VALIGN',(0,0),(-1,-1),'TOP'),
+    ('ALIGN',(0,0),(-1,-1),'LEFT'),
+    ('LEFTPADDING',(0,0),(-1,-1),0),
+    ('RIGHTPADDING',(0,0),(-1,-1),0),
+    ('TOPPADDING',(0,0),(-1,-1),0),
+    ('BOTTOMPADDING',(0,0),(-1,-1),0)
+]))
+
 header_text = [
     Paragraph('PRISCILLA SANTOS CAHINO', styles['NameX']),
     Paragraph('Customer Experience (CX/CS) | Operações e Processos | Tecnologia', styles['PositionX']),
@@ -130,12 +138,24 @@ header_text = [
     Paragraph('João Pessoa - PB | (83) 99955-3329 | priscilla_cahino@hotmail.com', styles['ContactX']),
     Paragraph(f'{link("LinkedIn", "https://www.linkedin.com/in/priscilla-cahino/")} &nbsp;&nbsp;|&nbsp;&nbsp; {link("GitHub", "https://github.com/Priscillacahino")} &nbsp;&nbsp;|&nbsp;&nbsp; {link("Portfólio", "https://portfoliopriscilla.vercel.app/")}', styles['ContactX'])
 ]
-ht = Table([[profile_box, header_text]], colWidths=[27*mm, 154*mm])
-ht.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),
-                         ('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),
-                         ('BOTTOMPADDING',(0,0),(-1,-1),0)]))
+
+# 18 pt de respiro após a foto, reproduzindo a posição do arquivo de referência.
+header = Table(
+    [[profile_box, header_text]],
+    colWidths=[90, (PAGE_W - 2*MARGIN) - 90],
+    rowHeights=[96],
+    hAlign='CENTER'
+)
+header.setStyle(TableStyle([
+    ('VALIGN',(0,0),(-1,-1),'TOP'),
+    ('LEFTPADDING',(0,0),(-1,-1),0),
+    ('RIGHTPADDING',(0,0),(-1,-1),0),
+    ('TOPPADDING',(0,0),(-1,-1),0),
+    ('BOTTOMPADDING',(0,0),(-1,-1),0)
+]))
+
 story += [
-    ht, Spacer(1,4),
+    header, Spacer(1,4),
     Table([['']], colWidths=[181*mm], rowHeights=[0.9],
           style=[('BACKGROUND',(0,0),(-1,-1),ACCENT),('LINEBELOW',(0,0),(-1,-1),0.9,ACCENT),
                  ('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]),
