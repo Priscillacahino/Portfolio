@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { X, Download, ExternalLink } from 'lucide-react';
 import { Language } from '../types';
 
-const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-5';
+const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-6';
 
 interface ResumeModalProps {
   isOpen: boolean;
