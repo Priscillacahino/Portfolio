@@ -75,7 +75,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     projects: {
       eyebrow: "Portfólio Técnico & GitHub",
       title: "Projetos Acadêmicos & GitHub",
-      subtitle: "Projetos desenvolvidos durante a graduação em ADS, na Fábrica de Software da UNIPÊ e em workshops técnicos de dados e interface.",
+      subtitle: "Projetos acadêmicos e práticos em diferentes contextos, nos quais aplico tecnologia, experiência do usuário, dados e visão de processos para compreender problemas e desenvolver soluções.",
       filterLabel: "Filtrar por área:",
       filters: {
         all: "Todos",
@@ -112,7 +112,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         subtitle: "Customer Experience e Customer Success aplicados à jornada habitacional",
         category: "dev",
         categoryLabel: "CX/CS, Operações & Produto",
-        summary: "MVP funcional que organiza a jornada de financiamento habitacional com Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT e Voz do Cliente.",
+        summary: "MVP funcional criado a partir de uma jornada operacional real, reunindo Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT e Voz do Cliente para organizar informações, reduzir pontos de atrito e apoiar o acompanhamento.",
         description: "Projeto independente de portfólio inspirado em experiência profissional real no acompanhamento da jornada habitacional e reinterpretado sob a perspectiva de CX, CS, operações, processos e tecnologia. O MVP utiliza dados fictícios e reúne visão do profissional e do cliente, histórico de interações, checklist documental, timeline, prioridades e satisfação.",
         objective: "Transformar uma jornada operacional complexa em uma experiência mais clara, acompanhável e orientada ao próximo passo, sem interferir em decisões de crédito.",
         tools: ["HTML", "CSS", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "CX/CS"],
@@ -136,12 +136,39 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         featured: true
       },
       {
+        id: "aldrin-torneios",
+        title: "Aldrin Torneios",
+        subtitle: "Automação de uma rotina real de organização de campeonatos",
+        category: "dev",
+        categoryLabel: "Processos, Automação & Produto Digital",
+        summary: "Aplicação criada a partir de uma necessidade real na organização de torneios de futebol. O projeto busca reduzir tarefas manuais e retrabalho na montagem de jogos, horários e campos, além de centralizar informações para facilitar o acompanhamento por pais e responsáveis.",
+        description: "Projeto pessoal desenvolvido a partir da observação da rotina de um professor de futebol na preparação de torneios. A solução organiza partidas, horários, campos e classificações, reduz a dependência de controles manuais e facilita o acesso às informações do campeonato.",
+        objective: "Entender um processo real, identificar pontos de retrabalho e usar tecnologia para tornar a organização dos torneios mais simples, centralizada e eficiente.",
+        tools: ["React", "TypeScript", "Vite", "Processos", "Automação", "Git/GitHub"],
+        results: [
+          "Centralização de jogos, horários, campos e classificações em uma única aplicação",
+          "Redução de tarefas repetitivas na preparação e atualização dos torneios",
+          "Acompanhamento das informações por pais e responsáveis sem depender de atualizações individuais",
+          "Aplicação prática de análise de processo, organização de informações e desenvolvimento de produto digital"
+        ],
+        image: null,
+        technologies: ["Processos", "Automação", "Produto Digital", "React", "TypeScript", "Experiência do Usuário"],
+        highlights: [
+          "Projeto criado a partir de uma necessidade real observada na rotina de organização de torneios",
+          "Estruturação do fluxo de partidas, horários, campos e classificação",
+          "Redução de retrabalho e centralização das informações do campeonato",
+          "Solução pensada tanto para quem organiza quanto para quem acompanha o torneio"
+        ],
+        githubUrl: "https://github.com/Priscillacahino/Aldrin_soccer",
+        featured: true
+      },
+      {
         id: "adm4all",
         title: "Adm4All — Administração para Todos",
         subtitle: "Plataforma de Capacitação & Interface UX/UI (Fábrica de Software UNIPÊ)",
         category: "ux-ui",
         categoryLabel: "UX/UI Design & Produto",
-        summary: "Plataforma desenvolvida na Fábrica de Software do UNIPÊ para o projeto de extensão comunitário, onde atuei na área de UX/UI prototipando telas, fluxos e interfaces no Figma.",
+        summary: "Projeto de extensão da Fábrica de Software do UNIPÊ em que atuei na concepção de interfaces, fluxos e prototipação no Figma, organizando a jornada de diferentes perfis para apoiar a digitalização de processos antes manuais.",
         description: "Desenvolvido na Fábrica de Software do UNIPÊ para apoiar o projeto de extensão Administração para Todos, que oferece cursos gratuitos de capacitação comunitária em gestão. Atuei na concepção de UX/UI, sendo responsável pela prototipação das telas, organização dos fluxos e arquitetura da informação para três perfis de usuários: Coordenação, Instrutores e Alunos.",
         objective: "Desenvolver interface centrada no humano para digitalizar a gestão de cursos comunitários, organizando os fluxos de 3 perfis de usuários.",
         tools: ["Figma", "UX Research", "Prototipação Interativa", "Design Centrado no Humano", "Metodologias Ágeis"],
@@ -172,7 +199,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         subtitle: "UX/UI com visão de Customer Experience — projeto acadêmico em evolução",
         category: "ux-ui",
         categoryLabel: "UX/UI & Customer Experience",
-        summary: "Projeto acadêmico de UX/UI que reúne proto-persona, jornada do usuário, wireframes e prototipação no Figma, evoluindo também para uma visão de Customer Experience.",
+        summary: "Projeto acadêmico de UX/UI que parte do entendimento da jornada do tutor para identificar necessidades, pontos de atrito e oportunidades, traduzindo essas informações em wireframes, protótipos e uma experiência digital mais clara.",
         description: "Proposta de solução digital mobile para o segmento pet, criada inicialmente como avaliação final do Workshop da Fábrica de Software 2026.1 e posteriormente ampliada como estudo de evolução da experiência. Além da interface, o projeto considera a jornada do tutor, pontos de atrito, confiança na contratação e acompanhamento dos serviços. A nova prototipação de alta fidelidade está em desenvolvimento.",
         objective: "Mapear a jornada do tutor e evoluir uma solução mobile-first para produtos e serviços pet, considerando usabilidade, pontos de atrito, confiança e acompanhamento da experiência.",
         tools: ["Figma", "Miro", "Proto-persona", "Jornada do Usuário", "Customer Experience (CX)", "Prototipação Mobile"],
@@ -269,7 +296,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     projects: {
       eyebrow: "Portafolio Técnico y GitHub",
       title: "Projetos Acadêmicos & GitHub",
-      subtitle: "Proyectos desarrollados durante la carrera de ADS, en la Fábrica de Software de UNIPÊ y en talleres técnicos de datos e interfaz.",
+      subtitle: "Proyectos académicos y prácticos en distintos contextos, en los que aplico tecnología, experiencia de usuario, datos y visión de procesos para comprender problemas y desarrollar soluciones.",
       filterLabel: "Filtrar por área:",
       filters: {
         all: "Todos",
@@ -306,7 +333,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         subtitle: "Customer Experience y Customer Success aplicados a la jornada de financiación de vivienda",
         category: "dev",
         categoryLabel: "CX/CS, Operaciones & Producto",
-        summary: "MVP funcional que organiza la jornada de financiación de vivienda con Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT y Voz del Cliente.",
+        summary: "MVP funcional creado a partir de una jornada operativa real, reuniendo Cliente 360º, Journey Health Score, Central de Prioridades, NPS, CSAT y Voz del Cliente para organizar información, reducir puntos de fricción y apoyar el seguimiento.",
         description: "Proyecto independiente de portafolio inspirado en experiencia profesional real en el acompañamiento de la jornada de financiación de vivienda y reinterpretado desde la perspectiva de CX, CS, operaciones, procesos y tecnología. El MVP utiliza datos ficticios e integra la visión del profesional y del cliente, historial de interacciones, checklist documental, timeline, prioridades y satisfacción.",
         objective: "Transformar una jornada operativa compleja en una experiencia más clara, trazable y orientada al siguiente paso, sin intervenir en decisiones de crédito.",
         tools: ["HTML", "CSS", "JavaScript", "LocalStorage", "Node.js", "GitHub Actions", "CX/CS"],
@@ -330,12 +357,39 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         featured: true
       },
       {
+        id: "aldrin-torneios",
+        title: "Aldrin Torneios",
+        subtitle: "Automatización de una rutina real de organización de campeonatos",
+        category: "dev",
+        categoryLabel: "Procesos, Automatización & Producto Digital",
+        summary: "Aplicación creada a partir de una necesidad real en la organización de torneos de fútbol. El proyecto busca reducir tareas manuales y retrabajo en la preparación de partidos, horarios y campos, además de centralizar información para facilitar el seguimiento de padres y responsables.",
+        description: "Proyecto personal desarrollado a partir de observar la rutina de un profesor de fútbol al preparar torneos. La solución organiza partidos, horarios, campos y clasificaciones, reduce la dependencia de controles manuales y facilita el acceso a la información del campeonato.",
+        objective: "Comprender un proceso real, identificar puntos de retrabajo y usar tecnología para hacer la organización de los torneos más simple, centralizada y eficiente.",
+        tools: ["React", "TypeScript", "Vite", "Procesos", "Automatización", "Git/GitHub"],
+        results: [
+          "Centralización de partidos, horarios, campos y clasificaciones en una sola aplicación",
+          "Reducción de tareas repetitivas en la preparación y actualización de los torneos",
+          "Seguimiento de la información por padres y responsables sin depender de actualizaciones individuales",
+          "Aplicación práctica de análisis de procesos, organización de información y desarrollo de producto digital"
+        ],
+        image: null,
+        technologies: ["Procesos", "Automatización", "Producto Digital", "React", "TypeScript", "Experiencia de Usuario"],
+        highlights: [
+          "Proyecto creado a partir de una necesidad real observada en la rutina de organización de torneos",
+          "Estructuración del flujo de partidos, horarios, campos y clasificación",
+          "Reducción de retrabajo y centralización de la información del campeonato",
+          "Solución pensada tanto para quien organiza como para quien acompaña el torneo"
+        ],
+        githubUrl: "https://github.com/Priscillacahino/Aldrin_soccer",
+        featured: true
+      },
+      {
         id: "adm4all",
         title: "Adm4All — Administración para Todos",
         subtitle: "Plataforma de Capacitación e Interfaz UX/UI (Fábrica de Software UNIPÊ)",
         category: "ux-ui",
         categoryLabel: "Diseño UX/UI & Producto",
-        summary: "Plataforma desarrollada en la Fábrica de Software de UNIPÊ para el proyecto de extensión comunitaria, donde actué en el área de UX/UI prototipando pantallas, flujos e interfaces en Figma.",
+        summary: "Proyecto de extensión de la Fábrica de Software de UNIPÊ en el que trabajé en la concepción de interfaces, flujos y prototipos en Figma, organizando la jornada de distintos perfiles para apoyar la digitalización de procesos antes manuales.",
         description: "Desarrollado en la Fábrica de Software de UNIPÊ para apoyar el proyecto de extensión comunitaria que ofrece cursos gratuitos de gestión. Participé en el diseño UX/UI en Figma, organizando los flujos y la arquitectura de información para tres perfiles de usuario: Coordinación, Instructores y Alumnos.",
         objective: "Diseñar interfaces centradas en las personas para digitalizar la gestión de cursos comunitarios, optimizando la experiencia de 3 perfiles de usuario y reduciendo la fricción.",
         tools: ["Figma", "UX Research", "Prototipado Interactivo", "Diseño Centrado en el Humano", "Metodologías Ágiles"],
@@ -366,7 +420,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         subtitle: "UX/UI con visión de Customer Experience — proyecto académico en evolución",
         category: "ux-ui",
         categoryLabel: "UX/UI & Customer Experience",
-        summary: "Proyecto académico de UX/UI que reúne proto-persona, jornada del usuario, wireframes y prototipado en Figma, evolucionando también hacia una visión de Customer Experience.",
+        summary: "Proyecto académico de UX/UI que parte de comprender la jornada del tutor para identificar necesidades, fricciones y oportunidades, traduciendo esa información en wireframes, prototipos y una experiencia digital más clara.",
         description: "Propuesta de solución digital móvil para el segmento pet, creada inicialmente como evaluación final del Workshop de la Fábrica de Software 2026.1 y posteriormente ampliada como estudio de evolución de la experiencia. Además de la interfaz, el proyecto considera la jornada del tutor, puntos de fricción, confianza en la contratación y seguimiento de los servicios. La nueva prototipación de alta fidelidad está en desarrollo.",
         objective: "Mapear la jornada del tutor y evolucionar una solución mobile-first para productos y servicios pet, considerando usabilidad, puntos de fricción, confianza y seguimiento de la experiencia.",
         tools: ["Figma", "Miro", "Proto-persona", "Jornada del Usuario", "Customer Experience (CX)", "Prototipado Mobile"],
