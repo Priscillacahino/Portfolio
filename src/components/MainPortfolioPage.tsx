@@ -74,6 +74,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
   const isPt = currentLanguage === 'pt';
   const localizedProjects = isPt ? ACADEMIC_PROJECTS : TRANSLATIONS.es.projectsData;
   const featuredProjects = localizedProjects.filter(p => p.id === 'jornada360');
+  const appliedProjects = localizedProjects.filter(p => p.id === 'aldrin-torneios');
   const uxProjects = localizedProjects.filter(p => p.category === 'ux-ui');
 
   const t = isPt ? {
@@ -84,9 +85,9 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     viewProjects: 'Ver projetos',
     downloadResume: 'Baixar currículo',
     positioning: 'Posicionamento & Conexão',
-    heroQuote: '“Conectando experiência financeira, relacionamento com clientes e processos aos novos conhecimentos em tecnologia, construindo meu caminho em direção ao FinOps.”',
+    heroQuote: '“Conectando experiência financeira, relacionamento com clientes e processos aos novos conhecimentos em tecnologia, com foco em entender problemas, organizar processos e apoiar decisões mais eficientes — construindo meu caminho em direção ao FinOps.”',
     heroP1: 'Com mais de dezoito anos de experiência prática nos setores bancário e imobiliário, atuei diretamente em esteiras de crédito, análise documental, conformidade regulatória e resolução de atritos operacionais complexos com alto foco no cliente.',
-    heroP2: 'Essa vivência me ensinou que processos eficientes nascem da escuta ativa e da precisão das informações. Hoje, conecto essa bagagem de negócios aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI e análise de informações, buscando compreender como essas ferramentas podem apoiar processos e decisões.',
+    heroP2: 'Essa vivência me ensinou que processos eficientes começam por entender o problema antes de pensar na solução: identificar necessidades, mapear etapas, reconhecer riscos e pontos de atrito e organizar informações com clareza. Hoje, conecto essa bagagem de negócios aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI e análise de informações, buscando usar essas ferramentas para simplificar processos e apoiar decisões.',
     copyEmail: 'Copiar E-mail',
     copied: 'Copiado!',
     storyEyebrow: 'Trajetória & Contexto Profissional',
@@ -94,7 +95,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     storyBadge: 'Priscilla Cahino • Experiência, Negócios & Tecnologia',
     storyHighlight: '“Minha trajetória profissional foi construída ao longo de 18 anos entre finanças, crédito, processos e relacionamento com clientes. Foi nesse período que aprendi algo que continuo levando para tudo o que faço: uma boa solução precisa fazer sentido não apenas no momento da entrega, mas também depois dela.”',
     storyP1: 'Trabalhando com financiamento imobiliário, por exemplo, minha função envolvia metas e fechamento de contratos. Mas muitas pessoas chegavam até mim movidas principalmente pelo sonho da casa própria e ainda não tinham considerado todas as despesas que acompanhariam aquela conquista. A prestação poderia caber no orçamento naquele momento, mas ainda existiriam condomínio, água, energia, alimentação, manutenção e tantos outros compromissos da vida cotidiana. Por isso, eu procurava apresentar com clareza tanto as possibilidades quanto os riscos daquela decisão. Em alguns casos, depois dessa conversa, o financiamento não acontecia naquele momento porque o próprio cliente percebia que ainda precisava se organizar melhor. Isso poderia significar não fechar uma operação, mas era mais importante que aquela pessoa tomasse uma decisão consciente.',
-    storyP2: 'Muitos desses clientes me procuraram novamente anos depois, já em outras condições e com novas perspectivas. E voltavam justamente porque se lembravam da transparência e da sinceridade daquele primeiro atendimento. Nem sempre a operação aconteceu naquele momento, mas a relação de confiança permaneceu. Hoje levo essa mesma forma de pensar para a tecnologia. Antes de pensar apenas em executar uma tarefa ou implementar uma funcionalidade, procuro entender o problema, as pessoas envolvidas, os processos, os riscos, as possibilidades e o que acontece depois da entrega.',
+    storyP2: 'Muitos desses clientes me procuraram novamente anos depois, já em outras condições e com novas perspectivas. E voltavam justamente porque se lembravam da transparência e da sinceridade daquele primeiro atendimento. Nem sempre a operação aconteceu naquele momento, mas a relação de confiança permaneceu. Hoje levo essa mesma forma de pensar para a tecnologia. Antes de executar uma tarefa ou implementar uma funcionalidade, procuro primeiro entender o problema, as pessoas envolvidas e o contexto; depois mapear o processo, identificar riscos, pontos de atrito e possibilidades; e só então pensar na solução e no que acontece depois da entrega.',
     storyP3: 'Sou formada em Ciências Contábeis, pós-graduada em Engenharia de Dados e atualmente curso Análise e Desenvolvimento de Sistemas. Minha transição para a tecnologia começou já com o FinOps como objetivo profissional, por enxergar nessa área uma conexão entre minha experiência financeira e os conhecimentos em tecnologia que venho desenvolvendo. Como grande parte da minha trajetória também foi construída no atendimento e no relacionamento com clientes, CX e CS se tornaram possibilidades naturais para iniciar profissionalmente na tecnologia, utilizando conhecimentos que já possuo enquanto continuo desenvolvendo minha base técnica. O FinOps continua sendo a direção que pretendo seguir, mas sei que esse é um caminho que exige conhecimento e experiência. Por isso, sigo estudando, desenvolvendo projetos e explorando na prática a relação entre tecnologia, finanças, processos e negócios. Vejo essa transição como uma construção: novos conhecimentos se somam à experiência que já adquiri, enquanto continuo descobrindo possibilidades e entendendo até onde posso chegar na tecnologia.',
     principle: 'Princípio de Ação',
     quote: '“Oportunidades multiplicam-se à medida que são agarradas.”',
@@ -103,7 +104,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     personalText: 'Nos momentos de descanso, gosto de aproveitar o mar e a praia em João Pessoa, assistir a filmes e séries, ler e estar com amigos e família. Também gosto de observar o comportamento das pessoas e o cotidiano, porque acredito que ouvir com atenção e compreender diferentes perspectivas ajuda a desenvolver empatia e a pensar soluções mais úteis.',
     aiTitle: 'Inteligência Artificial como apoio à evolução e à produtividade',
     aiText: 'A Inteligência Artificial passou a fazer parte do meu processo de aprendizado e também da forma como estruturo e desenvolvo projetos. Utilizo essas ferramentas para organizar ideias, apoiar pesquisas, estruturar requisitos, documentar soluções, explorar possibilidades, revisar conteúdos e melhorar a produtividade. Também tenho buscado compreender como a IA pode ser aplicada a automações e a diferentes etapas da construção de soluções digitais, sempre combinando seus recursos com análise crítica, validação das informações e compreensão do contexto.',
-    closing: 'Este espaço reúne um pouco da minha trajetória, dos conhecimentos que venho desenvolvendo e dos projetos que fazem parte da minha transição para tecnologia. Meu objetivo é continuar aprendendo e evoluindo na tecnologia, aproveitando minha experiência em clientes, finanças, operações e processos enquanto construo minha trajetória em direção ao FinOps.',
+    closing: 'Este espaço reúne um pouco da minha trajetória, dos conhecimentos que venho desenvolvendo e dos projetos que fazem parte da minha transição para tecnologia. Embora os contextos dos projetos sejam diferentes, procuro seguir uma lógica comum: entender o problema, organizar informações, mapear processos e pensar em soluções úteis. Meu objetivo é continuar aprendendo e evoluindo na tecnologia, aproveitando minha experiência em clientes, finanças, operações e processos enquanto construo minha trajetória em direção ao FinOps.',
     fullHistory: 'Histórico profissional detalhado (+18 anos), empresas e atribuições disponíveis no documento oficial.',
     viewFullHistory: 'Ver histórico profissional completo em PDF →',
     knowledgeEyebrow: 'Estrutura de Competências',
@@ -123,7 +124,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     development: 'Desenvolvimento',
     projectsEyebrow: 'Portfólio Técnico & Aplicação',
     projectsTitle: 'Projetos',
-    projectsSubtitle: 'Projetos acadêmicos e práticos com foco em CX/CS, operações, processos, produto e UX/UI.',
+    projectsSubtitle: 'Projetos acadêmicos e práticos em diferentes contextos, nos quais aplico tecnologia, experiência do usuário, dados e visão de processos para compreender problemas e desenvolver soluções.',
     viewGithub: 'Ver repositórios no GitHub →',
     dataBI: 'CX/CS, Operações & Produto',
     academicData: 'Projeto de Customer Experience e Customer Success',
@@ -161,9 +162,9 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     viewProjects: 'Ver proyectos',
     downloadResume: 'Descargar currículum',
     positioning: 'Posicionamiento & Conexión',
-    heroQuote: '“Conectando experiencia en relación con clientes, operaciones financieras y procesos con nuevos conocimientos en tecnología y análisis de datos.”',
+    heroQuote: '“Conectando experiencia financiera, relación con clientes y procesos con nuevos conocimientos en tecnología, con foco en comprender problemas, organizar procesos y apoyar decisiones más eficientes.”',
     heroP1: 'Cuento con más de dieciocho años de experiencia práctica en los sectores bancario e inmobiliario, con actuación directa en procesos de crédito, análisis documental, cumplimiento normativo y resolución de situaciones operativas complejas con fuerte enfoque en el cliente.',
-    heroP2: 'Esta experiencia me enseñó que los procesos eficientes nacen de la escucha activa y de la precisión de la información. Hoy conecto esta trayectoria de negocios con los conocimientos que vengo desarrollando en tecnología, UX/UI y análisis de información, buscando comprender cómo estas herramientas pueden apoyar procesos y decisiones.',
+    heroP2: 'Esta experiencia me enseñó que los procesos eficientes comienzan por comprender el problema antes de pensar en la solución: identificar necesidades, mapear etapas, reconocer riesgos y puntos de fricción y organizar la información con claridad. Hoy conecto esta trayectoria de negocios con los conocimientos que vengo desarrollando en tecnología, UX/UI y análisis de información para simplificar procesos y apoyar decisiones.',
     copyEmail: 'Copiar correo',
     copied: '¡Copiado!',
     storyEyebrow: 'Trayectoria & Contexto Profesional',
@@ -180,7 +181,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     personalText: 'En mis momentos de descanso disfruto del mar y de la playa en João Pessoa, ver películas y series, leer y compartir con amigos y familia. También me gusta observar el comportamiento de las personas y la vida cotidiana, porque creo que escuchar con atención y comprender diferentes perspectivas ayuda a desarrollar empatía y pensar soluciones más útiles.',
     aiTitle: 'Inteligencia Artificial como apoyo a la evolución y la productividad',
     aiText: 'La Inteligencia Artificial pasó a formar parte de mi proceso de aprendizaje y también de la forma en que estructuro y desarrollo proyectos. Utilizo estas herramientas para organizar ideas, apoyar investigaciones, estructurar requisitos, documentar soluciones, explorar posibilidades, revisar contenidos y mejorar la productividad. También busco comprender cómo la IA puede aplicarse a automatizaciones y a diferentes etapas de la construcción de soluciones digitales, combinando siempre sus recursos con análisis crítico, validación de la información y comprensión del contexto.',
-    closing: 'Este espacio reúne parte de mi trayectoria, de los conocimientos que vengo desarrollando y de los proyectos que forman parte de mi transición hacia la tecnología. Mi objetivo es seguir aprendiendo y evolucionando, conectando mi experiencia en clientes, operaciones y procesos con las nuevas posibilidades que ofrece la tecnología.',
+    closing: 'Este espacio reúne parte de mi trayectoria, de los conocimientos que vengo desarrollando y de los proyectos que forman parte de mi transición hacia la tecnología. Aunque los contextos de los proyectos sean distintos, procuro seguir una lógica común: comprender el problema, organizar información, mapear procesos y pensar en soluciones útiles. Mi objetivo es seguir aprendiendo y evolucionando, conectando mi experiencia en clientes, finanzas, operaciones y procesos con las nuevas posibilidades de la tecnología.',
     fullHistory: 'Historial profesional detallado (+18 años), empresas y funciones disponibles en el documento oficial.',
     viewFullHistory: 'Ver historial profesional completo en PDF →',
     knowledgeEyebrow: 'Estructura de Competencias',
@@ -200,7 +201,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     development: 'Desarrollo',
     projectsEyebrow: 'Portafolio Técnico & Aplicación',
     projectsTitle: 'Proyectos',
-    projectsSubtitle: 'Proyectos académicos, de práctica y extensión comunitaria con enfoque en Datos, BI y UX/UI.',
+    projectsSubtitle: 'Proyectos académicos y prácticos en distintos contextos, en los que aplico tecnología, experiencia de usuario, datos y visión de procesos para comprender problemas y desarrollar soluciones.',
     viewGithub: 'Ver repositorios en GitHub →',
     dataBI: 'CX/CS, Operaciones & Producto',
     academicData: 'Proyecto de Customer Experience y Customer Success',
@@ -738,6 +739,76 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.slice(0, 7).map((tag, idx) => (
+                    <span key={idx} className="text-xs font-mono bg-[#141414] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3 pt-2">
+                  <button
+                    onClick={() => setActiveProjectModal(project)}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                  >
+                    <span>{t.knowProject}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 border border-[#333] hover:border-[#FF6B35] bg-[#1c1c1c] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+
+          {/* Subcategoria 2: APLICAÇÃO PRÁTICA — Aldrin Torneios */}
+          <div className="space-y-4 pt-2">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
+                {isPt ? 'Aplicação prática • Processos & Automação' : 'Aplicación práctica • Procesos & Automatización'}
+              </span>
+              <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
+            </div>
+
+            {appliedProjects.map((project) => (
+              <div 
+                key={project.id}
+                className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 sm:p-7 space-y-4 transition-colors"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 border border-[#333] bg-[#141414] flex items-center justify-center text-[#FF6B35] shrink-0">
+                      <Code2 className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block mb-1">
+                        {isPt ? 'Problema real • solução digital' : 'Problema real • solución digital'}
+                      </span>
+                      <h3 className="text-2xl font-serif-artistic italic text-white">
+                        {project.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <span className="text-xs font-mono px-2.5 py-1 bg-[#141414] text-[#ccc] border border-[#2a2a2a]">
+                    {project.categoryLabel}
+                  </span>
+                </div>
+
+                <p className="text-sm text-[#ccc] font-light leading-relaxed">
+                  {project.summary}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 6).map((tag, idx) => (
                     <span key={idx} className="text-xs font-mono bg-[#141414] text-[#aaa] px-2.5 py-0.5 border border-[#2a2a2a]">
                       {tag}
                     </span>
