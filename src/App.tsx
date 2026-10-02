@@ -98,13 +98,13 @@ export default function App() {
       pt: {
         home: 'Priscilla Cahino | CX, Dados & Tecnologia',
         about: 'Priscilla Cahino | CX, Dados & Tecnologia',
-        projects: 'Priscilla Cahino | Projetos Acadêmicos & Portfólio',
+        projects: 'Priscilla Cahino | Projetos & Portfólio',
         article: 'Instituições Financeiras e Sustentabilidade | Priscilla Cahino'
       },
       es: {
         home: 'Priscilla Cahino | CX, Datos & Tecnología',
         about: 'Priscilla Cahino | CX, Datos & Tecnología',
-        projects: 'Priscilla Cahino | Proyectos Académicos & Portafolio',
+        projects: 'Priscilla Cahino | Proyectos & Portafolio',
         article: 'Instituciones Financieras y Sostenibilidad | Priscilla Cahino'
       }
     };
