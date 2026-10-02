@@ -17,7 +17,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         "18 anos em negócios, crédito e relacionamento com clientes",
         "Estudante de ADS • Pós-graduação em Engenharia de Dados"
       ],
-      btnProjects: "Ver Projetos Acadêmicos",
+      btnProjects: "Ver Projetos",
       btnResume: "Baixar Currículo (CV)",
       btnWhatsapp: "WhatsApp",
       btnLinkedin: "LinkedIn",
@@ -60,7 +60,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       aiTitle: "Inteligência Artificial como acelerador estratégico",
       aiText: "Utilizo ativamente a Inteligência Artificial no meu cotidiano profissional e acadêmico — para sintetizar requisitos, explorar hipóteses analíticas, documentar sistemas e ampliar a produtividade. Vejo a IA não como um atalho, mas como uma alavanca poderosa quando guiada por senso crítico e sólido conhecimento de negócio.",
       storyClosing: "Este espaço compartilha meu posicionamento profissional autêntico, minha visão de atuação e os projetos práticos que desenvolvo e publico no GitHub.",
-      featuredEyebrow: "Projetos Acadêmicos & Prática",
+      featuredEyebrow: "Projetos & Prática",
       featuredTitle: "Projetos em Destaque",
       featuredSubtitle: "Aplicações práticas desenvolvidas na Fábrica de Software e workshops de tecnologia.",
       viewAllProjects: "Ver todos os projetos detalhados",
@@ -74,7 +74,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     },
     projects: {
       eyebrow: "Portfólio Técnico & GitHub",
-      title: "Projetos Acadêmicos & GitHub",
+      title: "Projetos & GitHub",
       subtitle: "Projetos acadêmicos e práticos em diferentes contextos, nos quais aplico tecnologia, experiência do usuário, dados e visão de processos para compreender problemas e desenvolver soluções.",
       filterLabel: "Filtrar por área:",
       filters: {
@@ -100,7 +100,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     footer: {
       roleLine: "CX, Dados e Tecnologia • 18 anos de bagagem sólida em crédito, atendimento e processos",
       aboutLink: "01. Sobre Mim & Trajetória",
-      projectsLink: "02. Projetos Acadêmicos",
+      projectsLink: "02. Projetos",
       resumeLink: "03. Currículo (CV)",
       rights: "Todos os direitos reservados.",
       portfolioLabel: "Portfólio Profissional"
@@ -238,7 +238,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
         "18 años en negocios, crédito y relación con clientes",
         "Estudiante de ADS • Posgrado en Ingeniería de Datos"
       ],
-      btnProjects: "Ver Proyectos Académicos",
+      btnProjects: "Ver Proyectos",
       btnResume: "Descargar CV",
       btnWhatsapp: "WhatsApp",
       btnLinkedin: "LinkedIn",
@@ -281,7 +281,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
       aiTitle: "Inteligencia Artificial como acelerador estratégico",
       aiText: "Utilizo activamente la Inteligencia Artificial en mi rutina profesional y académica para sintetizar requerimientos, explorar hipótesis analíticas y optimizar la productividad diaria con criterio.",
       storyClosing: "Este espacio comparte mi perfil profesional auténtico, mi visión de impacto y los proyectos prácticos que desarrollo y publico en GitHub.",
-      featuredEyebrow: "Proyectos Académicos y Práctica",
+      featuredEyebrow: "Proyectos y Práctica",
       featuredTitle: "Proyectos Destacados",
       featuredSubtitle: "Soluciones prácticas desarrolladas en la Fábrica de Software y talleres técnicos.",
       viewAllProjects: "Ver todos los proyectos detallados",
@@ -295,7 +295,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     },
     projects: {
       eyebrow: "Portafolio Técnico y GitHub",
-      title: "Projetos Acadêmicos & GitHub",
+      title: "Proyectos & GitHub",
       subtitle: "Proyectos académicos y prácticos en distintos contextos, en los que aplico tecnología, experiencia de usuario, datos y visión de procesos para comprender problemas y desarrollar soluciones.",
       filterLabel: "Filtrar por área:",
       filters: {
@@ -321,7 +321,7 @@ export const TRANSLATIONS: Record<Language, UIContent> = {
     footer: {
       roleLine: "CX, Datos y Tecnología • 18 años de experiencia en crédito, atención y procesos",
       aboutLink: "01. Sobre Mí y Trayectoria",
-      projectsLink: "02. Proyectos Académicos",
+      projectsLink: "02. Proyectos",
       resumeLink: "03. Currículum (CV)",
       rights: "Todos los derechos reservados.",
       portfolioLabel: "Portafolio Profesional"
