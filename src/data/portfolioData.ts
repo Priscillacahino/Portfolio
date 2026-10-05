@@ -47,24 +47,27 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
     id: "aldrin-torneios",
     title: "Aldrin Torneios",
-    subtitle: "Automação de uma rotina real de organização de campeonatos",
+    subtitle: "Produto digital desenvolvido a partir de uma necessidade real de gestão esportiva",
     category: "dev",
     categoryLabel: "Processos, Automação & Produto Digital",
-    summary: "Aplicação criada a partir de uma necessidade real na organização de torneios de futebol. O projeto busca reduzir tarefas manuais e retrabalho na montagem de jogos, horários e campos, além de centralizar informações para facilitar o acompanhamento por pais e responsáveis.",
-    description: "Projeto pessoal desenvolvido a partir da observação da rotina de um professor de futebol na preparação de torneios. A solução organiza partidas, horários, campos e classificações, reduz a dependência de controles manuais e facilita o acesso às informações do campeonato.",
-    objective: "Entender um processo real, identificar pontos de retrabalho e usar tecnologia para tornar a organização dos torneios mais simples, centralizada e eficiente.",
+    summary: "Produto digital que desenvolvi a partir da observação de uma rotina real no futebol de base. A solução organiza atletas, categorias, equipes, jogos, horários e informações dos torneios, reduzindo controles manuais e facilitando o acompanhamento por pais e responsáveis.",
+    description: "Projeto concebido e desenvolvido por mim a partir da rotina de Aldrin Eldrin Santos Cahino, professor de futebol e usuário de referência da solução. Transformei necessidades reais de organização esportiva em requisitos, fluxos e funcionalidades, estruturando uma aplicação para apoiar a gestão de torneios sem atribuir ao usuário a autoria tecnológica do produto.",
+    objective: "Transformar um problema real de organização esportiva em uma solução digital, estruturando requisitos, experiência de uso, regras de negócio e automações para reduzir retrabalho e devolver tempo ao professor para dedicar mais atenção aos alunos.",
     tools: ["React", "TypeScript", "Vite", "Processos", "Automação", "Git/GitHub"],
     results: [
-      "Centralização de jogos, horários, campos e classificações em uma única aplicação",
+      "Produto desenvolvido para uma operação real de futebol de base, com Aldrin como usuário de referência",
+      "Centralização de atletas, categorias, jogos, horários, campos e classificações em uma única aplicação",
       "Redução de tarefas repetitivas na preparação e atualização dos torneios",
       "Acompanhamento das informações por pais e responsáveis sem depender de atualizações individuais",
-      "Aplicação prática de análise de processo, organização de informações e desenvolvimento de produto digital"
+      "Aplicação prática de levantamento de requisitos, análise de processos e desenvolvimento de produto digital"
     ],
     image: null,
     technologies: ["Processos", "Automação", "Produto Digital", "React", "TypeScript", "Experiência do Usuário"],
     highlights: [
+      "Concepção e desenvolvimento: Priscilla Cahino",
+      "Contexto de uso e usuário de referência: Aldrin Eldrin Santos Cahino",
       "Projeto criado a partir de uma necessidade real observada na rotina de organização de torneios",
-      "Estruturação do fluxo de partidas, horários, campos e classificação",
+      "Estruturação do fluxo de atletas, categorias, partidas, horários, campos e classificação",
       "Redução de retrabalho e centralização das informações do campeonato",
       "Solução pensada tanto para quem organiza quanto para quem acompanha o torneio"
     ],
