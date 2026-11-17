@@ -20,17 +20,17 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'inicio', label: 'Início', labelEs: 'Inicio' },
-  { id: 'sobre', label: 'Sobre', labelEs: 'Sobre mí' },
-  { id: 'conhecimentos', label: 'Conhecimentos', labelEs: 'Conocimientos' },
+  { id: 'conhecimentos', label: 'Competências', labelEs: 'Competencias' },
   { id: 'projetos', label: 'Projetos', labelEs: 'Proyectos' },
+  { id: 'sobre', label: 'Sobre', labelEs: 'Sobre mí' },
+  { id: 'certificacoes', label: 'Formação', labelEs: 'Formación' },
   { id: 'artigos', label: 'Artigos', labelEs: 'Artículos' },
-  { id: 'certificacoes', label: 'Certificações', labelEs: 'Certificaciones' },
   { id: 'curriculo', label: 'Currículo', labelEs: 'Currículum' },
   { id: 'contato', label: 'Contato', labelEs: 'Contacto' },
 ];
 
-export const Header: React.FC<HeaderProps> = ({ 
-  currentPage, 
+export const Header: React.FC<HeaderProps> = ({
+  currentPage,
   onSelectPage,
   currentLanguage,
   onSelectLanguage,
@@ -60,13 +60,13 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#2a2a2a] bg-[#121212]/95 backdrop-blur-md">
-      
+
       {/* Top Bar: Brand, Language, CV Button & Mobile Toggle */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18 gap-3">
-          
+
           {/* Brand & Name */}
-          <div 
+          <div
             onClick={() => handleNavClick('inicio')}
             className="flex items-center gap-3 cursor-pointer group text-left min-w-0"
             role="button"
@@ -93,9 +93,9 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Controls: Flags Switcher + CV Modal + Mobile Hamburger */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            
+
             {/* Language Switcher Buttons with Flags */}
-            <div 
+            <div
               className="flex items-center bg-[#1a1a1a] border border-[#333] p-0.5 gap-0.5"
               role="group"
               aria-label="Seleção de idioma"

@@ -5,20 +5,20 @@ import { TRANSLATIONS } from '../data/translations';
 import { SUSTAINABILITY_ARTICLE } from '../data/articleData';
 import { OriginalResearchModal } from './OriginalResearchModal';
 import { PetzoneWireframeViewer } from './PetzoneWireframeViewer';
-import { 
-  ArrowRight, 
-  Linkedin, 
-  Github, 
-  Mail, 
-  Phone, 
-  MessageCircle, 
-  CheckCircle2, 
-  Layers, 
-  Database, 
+import {
+  ArrowRight,
+  Linkedin,
+  Github,
+  Mail,
+  Phone,
+  MessageCircle,
+  CheckCircle2,
+  Layers,
+  Database,
   ExternalLink,
-  Bot, 
+  Bot,
   Coffee,
-  Copy, 
+  Copy,
   Check,
   FileText,
   Download,
@@ -42,6 +42,7 @@ interface MainPortfolioPageProps {
   onOpenResume?: () => void;
   onOpenArticle: () => void;
   onSelectProject?: (projectId: string) => void;
+  fullAboutOnly?: boolean;
 }
 
 const RESUME_PDF_URL = '/Curriculo_Priscilla_Cahino.pdf?v=20260928-6';
@@ -51,7 +52,8 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
   currentLanguage,
   onOpenResume,
   onOpenArticle,
-  onSelectProject
+  onSelectProject,
+  fullAboutOnly = false
 }) => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [activeProjectModal, setActiveProjectModal] = useState<AcademicProject | null>(null);
@@ -85,7 +87,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     viewProjects: 'Ver projetos',
     downloadResume: 'Baixar currículo',
     positioning: 'Posicionamento & Conexão',
-    heroQuote: '“Conectando experiência financeira, relacionamento com clientes e processos aos novos conhecimentos em tecnologia, com foco em entender problemas, organizar processos e apoiar decisões mais eficientes — construindo meu caminho em direção ao FinOps.”',
+    heroQuote: 'Conectando experiência financeira, relacionamento com clientes e processos aos novos conhecimentos em tecnologia, com foco em entender problemas, organizar processos e apoiar decisões mais eficientes — construindo meu caminho em direção ao FinOps.',
     heroP1: 'Com mais de dezoito anos de experiência prática nos setores bancário e imobiliário, atuei diretamente em esteiras de crédito, análise documental, conformidade regulatória e resolução de atritos operacionais complexos com alto foco no cliente.',
     heroP2: 'Essa vivência me ensinou que processos eficientes começam por entender o problema antes de pensar na solução: identificar necessidades, mapear etapas, reconhecer riscos e pontos de atrito e organizar informações com clareza. Hoje, conecto essa bagagem de negócios aos conhecimentos que venho desenvolvendo em tecnologia, UX/UI e análise de informações, buscando usar essas ferramentas para simplificar processos e apoiar decisões.',
     copyEmail: 'Copiar E-mail',
@@ -136,11 +138,11 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     testWireframe: 'Testar Wireframe',
     articlesEyebrow: 'Produção & Análise',
     articlesTitle: 'Artigos e Estudos',
-    articlesSubtitle: '“Produções acadêmicas e reflexões que conectam minha formação em Ciências Contábeis, experiência profissional e os conhecimentos que venho desenvolvendo em tecnologia, dados e experiência do cliente.”',
+    articlesSubtitle: 'Produções acadêmicas e reflexões que conectam minha formação em Ciências Contábeis, experiência profissional e os conhecimentos que venho desenvolvendo em tecnologia, dados e experiência do cliente.',
     readArticle: 'Ler artigo completo',
     originalResearch: 'Sobre a pesquisa original',
     certEyebrow: 'Qualificações Estratégicas',
-    certTitle: 'Cursos e certificações',
+    certTitle: 'Formação e certificações',
     certSubtitle: 'Prioridade para certificações e formações que sustentam a transição para tecnologia.',
     toolsEyebrow: 'Prática & Ferramental',
     toolsTitle: 'Ferramentas que utilizo em estudos e projetos',
@@ -217,7 +219,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     readArticle: 'Leer artículo completo',
     originalResearch: 'Sobre la investigación original',
     certEyebrow: 'Cualificaciones Estratégicas',
-    certTitle: 'Cursos y certificaciones',
+    certTitle: 'Formación y certificaciones',
     certSubtitle: 'Prioridad para certificaciones y formaciones que acompañan la transición hacia la tecnología.',
     toolsEyebrow: 'Práctica & Herramientas',
     toolsTitle: 'Herramientas que utilizo en estudios y proyectos',
@@ -233,6 +235,112 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
     close: 'Cerrar'
   };
 
+  if (fullAboutOnly) return (<div className="space-y-20 sm:space-y-28 pb-20 pt-8">
+      <section id="sobre-completo" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div className="border border-[#333] bg-[#181818] p-6 sm:p-12 lg:p-14 shadow-xl relative overflow-hidden space-y-8">
+
+          <div className="text-center max-w-2xl mx-auto border-b border-[#2e2e2e] pb-6">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
+              {t.storyEyebrow}
+            </span>
+            <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal mb-3">
+              {t.aboutMe}
+            </h2>
+            <div className="inline-block h-[1px] w-16 bg-[#FF6B35] mb-3"></div>
+            <div>
+              <span className="text-xs uppercase tracking-widest text-[#9ca3af] font-mono font-medium">
+                {t.storyBadge}
+              </span>
+            </div>
+          </div>
+
+          {/* Core Story Content */}
+          <div className="max-w-3xl mx-auto space-y-6 text-[#d1d5db] text-base sm:text-[17px] leading-relaxed font-light">
+
+            <div className="p-6 border border-[#333] bg-[#141414] text-[#f5f5f5]">
+              <p className="leading-relaxed italic font-serif-artistic text-lg text-center sm:text-left">
+                {t.storyHighlight}
+              </p>
+            </div>
+
+            <p>
+              {t.storyP1}
+            </p>
+
+            <p>
+              {t.storyP2}
+            </p>
+
+            <p>
+              {t.storyP3}
+            </p>
+
+            {/* Sun Tzu Quote Box */}
+            <div className="p-5 border border-[#333] hover:border-[#FF6B35] bg-[#141414] transition-colors space-y-1">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF6B35]">{t.principle}</span>
+              <p className="text-white font-serif-artistic italic text-lg">
+                {t.quote}
+              </p>
+              <p className="text-xs text-[#999] font-mono">{t.quoteAuthor}</p>
+            </div>
+
+            {/* O lado pessoal / humano */}
+            <div className="flex items-start gap-4 p-5 border border-[#333] bg-[#141414]">
+              <div className="p-2.5 bg-[#222] text-[#FF6B35] shrink-0 border border-[#333]">
+                <Coffee className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-serif-artistic italic text-white mb-1">
+                  {t.personalTitle}
+                </h3>
+                <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
+                  {t.personalText}
+                </p>
+              </div>
+            </div>
+
+            {/* A IA no dia a dia */}
+            <div className="flex items-start gap-4 p-5 border border-[#333] bg-[#141414]">
+              <div className="p-2.5 bg-[#222] text-[#FF6B35] shrink-0 border border-[#333]">
+                <Bot className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-serif-artistic italic text-white mb-1">
+                  {t.aiTitle}
+                </h3>
+                <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
+                  {t.aiText}
+                </p>
+              </div>
+            </div>
+
+            {/* Fechamento Conector Solicitado */}
+            <div className="p-6 border-l-4 border-l-[#FF6B35] border border-[#2e2e2e] bg-[#161616] space-y-4">
+              <p className="text-white font-medium text-base leading-relaxed">
+                {t.closing}
+              </p>
+              {onOpenResume && (
+                <div className="pt-2 flex items-center justify-between flex-wrap gap-3 border-t border-[#2a2a2a]">
+                  <span className="text-xs text-[#888] font-mono">
+                    {t.fullHistory}
+                  </span>
+                  <button
+                    onClick={onOpenResume}
+                    className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer font-semibold"
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    <span>{t.viewFullHistory}</span>
+                  </button>
+                </div>
+              )}
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+</div>);
+
   return (
     <div className="space-y-20 sm:space-y-28 pb-20">
 
@@ -242,13 +350,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
       <section id="inicio" className="pt-4 sm:pt-8 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border border-[#333] bg-[#181818] overflow-hidden shadow-2xl">
-            
+
             {/* Top Bar with Badge */}
             <div className="bg-[#141414] border-b border-[#333] px-6 sm:px-10 py-3.5 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <span className="w-2 h-2 bg-[#FF6B35]"></span>
                 <span className="text-xs uppercase tracking-[0.2em] font-mono text-[#FF6B35] font-semibold">
-                  {currentLanguage === 'pt' 
+                  {currentLanguage === 'pt'
                     ? t.identityRole
                     : 'Customer Experience (CX/CS) • Análisis de Datos • Tecnología'}
                 </span>
@@ -260,7 +368,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
             {/* Narrative Split: Portrait (Left) & Value Proposition (Right) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-[#333]">
-              
+
               {/* Left Column: Portrait Photo & Identity */}
               <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 bg-[#161616] flex flex-col justify-between space-y-8">
                 <div className="space-y-6">
@@ -293,9 +401,9 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                     <h1 className="text-4xl sm:text-5xl font-serif-artistic italic mb-4 leading-none text-[#f5f5f5]">
                       Cahino
                     </h1>
-                    
+
                     <div className="h-[2px] w-20 bg-[#FF6B35] mb-4"></div>
-                    
+
                     <div className="space-y-1.5 text-xs font-mono uppercase tracking-wider text-[#d1d5db]">
                       <p className="text-white font-semibold flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-[#FF6B35] shrink-0"></span>
@@ -313,7 +421,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     <button
                       id="hero-btn-about"
-                      onClick={() => scrollToSection('sobre')}
+                      onClick={() => { window.location.hash = '#/sobre'; }}
                       className="flex items-center justify-center gap-2 px-4 py-3.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-[#121212] font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md"
                     >
                       <span>{t.knowJourney}</span>
@@ -419,122 +527,9 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         </div>
       </section>
 
-
-      {/* =========================================================================
-          2. SOBRE MIM (#sobre)
-          ========================================================================= */}
-      <section id="sobre" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-        <div className="border border-[#333] bg-[#181818] p-6 sm:p-12 lg:p-14 shadow-xl relative overflow-hidden space-y-8">
-          
-          <div className="text-center max-w-2xl mx-auto border-b border-[#2e2e2e] pb-6">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-              {t.storyEyebrow}
-            </span>
-            <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal mb-3">
-              {t.aboutMe}
-            </h2>
-            <div className="inline-block h-[1px] w-16 bg-[#FF6B35] mb-3"></div>
-            <div>
-              <span className="text-xs uppercase tracking-widest text-[#9ca3af] font-mono font-medium">
-                {t.storyBadge}
-              </span>
-            </div>
-          </div>
-
-          {/* Core Story Content */}
-          <div className="max-w-3xl mx-auto space-y-6 text-[#d1d5db] text-base sm:text-[17px] leading-relaxed font-light">
-            
-            <div className="p-6 border border-[#333] bg-[#141414] text-[#f5f5f5]">
-              <p className="leading-relaxed italic font-serif-artistic text-lg text-center sm:text-left">
-                {t.storyHighlight}
-              </p>
-            </div>
-
-            <p>
-              {t.storyP1}
-            </p>
-
-            <p>
-              {t.storyP2}
-            </p>
-
-            <p>
-              {t.storyP3}
-            </p>
-
-            {/* Sun Tzu Quote Box */}
-            <div className="p-5 border border-[#333] hover:border-[#FF6B35] bg-[#141414] transition-colors space-y-1">
-              <span className="text-[11px] font-mono uppercase tracking-widest text-[#FF6B35]">{t.principle}</span>
-              <p className="text-white font-serif-artistic italic text-lg">
-                {t.quote}
-              </p>
-              <p className="text-xs text-[#999] font-mono">{t.quoteAuthor}</p>
-            </div>
-
-            {/* O lado pessoal / humano */}
-            <div className="flex items-start gap-4 p-5 border border-[#333] bg-[#141414]">
-              <div className="p-2.5 bg-[#222] text-[#FF6B35] shrink-0 border border-[#333]">
-                <Coffee className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-sm font-serif-artistic italic text-white mb-1">
-                  {t.personalTitle}
-                </h3>
-                <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  {t.personalText}
-                </p>
-              </div>
-            </div>
-
-            {/* A IA no dia a dia */}
-            <div className="flex items-start gap-4 p-5 border border-[#333] bg-[#141414]">
-              <div className="p-2.5 bg-[#222] text-[#FF6B35] shrink-0 border border-[#333]">
-                <Bot className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-sm font-serif-artistic italic text-white mb-1">
-                  {t.aiTitle}
-                </h3>
-                <p className="text-sm text-[#d1d5db] leading-relaxed font-light">
-                  {t.aiText}
-                </p>
-              </div>
-            </div>
-
-            {/* Fechamento Conector Solicitado */}
-            <div className="p-6 border-l-4 border-l-[#FF6B35] border border-[#2e2e2e] bg-[#161616] space-y-4">
-              <p className="text-white font-medium text-base leading-relaxed">
-                {t.closing}
-              </p>
-              {onOpenResume && (
-                <div className="pt-2 flex items-center justify-between flex-wrap gap-3 border-t border-[#2a2a2a]">
-                  <span className="text-xs text-[#888] font-mono">
-                    {t.fullHistory}
-                  </span>
-                  <button
-                    onClick={onOpenResume}
-                    className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer font-semibold"
-                  >
-                    <FileText className="w-3.5 h-3.5" />
-                    <span>{t.viewFullHistory}</span>
-                  </button>
-                </div>
-              )}
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* =========================================================================
-          3. ÁREAS DE CONHECIMENTO (#conhecimentos)
-          (Separando experiência consolidada de conhecimentos em desenvolvimento)
-          ========================================================================= */}
       <section id="conhecimentos" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="space-y-8">
-          
+
           <div className="border-b border-[#2e2e2e] pb-4">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
               {t.knowledgeEyebrow}
@@ -548,7 +543,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             {/* Bloco 1: {t.expKnowledge} */}
             <div className="border border-[#333] bg-[#181818] p-6 sm:p-7 space-y-6">
               <div className="border-b border-[#2a2a2a] pb-3">
@@ -564,7 +559,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
 
               <div className="space-y-5 text-xs sm:text-sm">
-                
+
                 <div className="space-y-1">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B35]" />
@@ -613,7 +608,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
               </div>
 
               <div className="space-y-5 text-xs sm:text-sm">
-                
+
                 <div className="space-y-1.5">
                   <h4 className="font-semibold text-white flex items-center gap-1.5">
                     <Database className="w-3.5 h-3.5 text-[#FF6B35]" />
@@ -664,14 +659,9 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         </div>
       </section>
 
-
-      {/* =========================================================================
-          4. PROJETOS (#projetos)
-          (Dados & BI + UX/UI Design)
-          ========================================================================= */}
       <section id="projetos" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="space-y-10">
-          
+
           <div className="border-b border-[#2e2e2e] pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
@@ -706,7 +696,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </div>
 
             {featuredProjects.map((project) => (
-              <div 
+              <div
                 key={project.id}
                 className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 sm:p-7 space-y-4 transition-colors"
               >
@@ -769,6 +759,130 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
           </div>
 
 
+          {/* Subcategoria 3: UX/UI — PetZona & Adm4All */}
+          <div className="space-y-4 pt-2">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
+                {t.uxArea}
+              </span>
+              <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* PetZona */}
+              {uxProjects.filter(p => p.id === 'petzona').map((project) => (
+                <div
+                  key={project.id}
+                  className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 space-y-4 transition-colors flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] block">
+                      {project.subtitle || (isPt ? 'UX/UI com visão de Customer Experience — projeto acadêmico em evolução' : 'UX/UI con visión de Customer Experience — proyecto académico en evolución')}
+                    </span>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
+                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
+                        loading="lazy"
+                      />
+                      <h3 className="text-xl font-serif-artistic italic text-white">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="text-xs text-[#ccc] font-light leading-relaxed">
+                      {project.summary}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {['Persona', 'Jornada', 'Wireframe', 'Figma'].map((tag, idx) => (
+                        <span key={idx} className="text-[11px] font-mono bg-[#141414] text-[#aaa] px-2 py-0.5 border border-[#2a2a2a]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-[#2a2a2a]">
+                    <button
+                      onClick={() => setActiveProjectModal(project)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                    >
+                      <span>{t.viewProject}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                      onClick={() => setShowWireframeStandalone(true)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-black font-semibold text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
+                    >
+                      <Smartphone className="w-3.5 h-3.5" />
+                      <span>{t.testWireframe}</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+
+              {/* Adm4All */}
+              {uxProjects.filter(p => p.id === 'adm4all').map((project) => (
+                <div
+                  key={project.id}
+                  className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 space-y-4 transition-colors flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block">
+                      {t.extensionProject}
+                    </span>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
+                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
+                        loading="lazy"
+                      />
+                      <h3 className="text-xl font-serif-artistic italic text-white">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="text-xs text-[#ccc] font-light leading-relaxed">
+                      {t.admSummary}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {(isPt ? ['Figma', 'UX/UI', 'Fluxos', 'Prototipação'] : ['Figma', 'UX/UI', 'Flujos', 'Prototipado']).map((tag, idx) => (
+                        <span key={idx} className="text-[11px] font-mono bg-[#141414] text-[#aaa] px-2 py-0.5 border border-[#2a2a2a]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 pt-4 border-t border-[#2a2a2a]">
+                    <button
+                      onClick={() => setActiveProjectModal(project)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                    >
+                      <span>{t.viewProject}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+
+                    {project.figmaUrl && (
+                      <a
+                        href={project.figmaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#333] hover:border-[#FF6B35] bg-[#1c1c1c] text-white text-xs font-mono uppercase tracking-wider transition-colors"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>Figma</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
           {/* Subcategoria 2: APLICAÇÃO PRÁTICA — Aldrin Torneios */}
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-2">
@@ -779,7 +893,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             </div>
 
             {appliedProjects.map((project) => (
-              <div 
+              <div
                 key={project.id}
                 className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 sm:p-7 space-y-4 transition-colors"
               >
@@ -838,140 +952,136 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
             ))}
           </div>
 
-          {/* Subcategoria 3: UX/UI — Adm4All & PetZona */}
-          <div className="space-y-4 pt-2">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#FF6B35] font-semibold">
-                {t.uxArea}
+        <div className="max-w-5xl mx-auto mt-8 p-6 border border-[#333] bg-[#181818]">
+          <p className="text-xs font-mono uppercase text-[#FF6B35] mb-4">{isPt ? 'Ferramentas utilizadas nos projetos' : 'Herramientas utilizadas en los proyectos'}</p>
+          <div className="flex flex-wrap gap-2.5 pt-2">
+            {[
+              'SQL',
+              'Power BI',
+              'Figma',
+              'Git',
+              'GitHub',
+              'HTML',
+              'CSS',
+              'Kotlin',
+              'Python'
+            ].map((tool, idx) => (
+              <span
+                key={idx}
+                className="px-3.5 py-1.5 bg-[#141414] hover:bg-[#222] border border-[#333] hover:border-[#FF6B35] text-[#f0f0f0] font-mono text-xs uppercase tracking-wider transition-colors"
+              >
+                {tool}
               </span>
-              <span className="h-[1px] flex-1 bg-[#2a2a2a]"></span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div className="border border-[#333] bg-[#181818] p-6 sm:p-12 lg:p-14 shadow-xl space-y-6">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold font-mono">{t.storyEyebrow}</span>
+          <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white">{t.aboutMe}</h2>
+          <p className="text-[#d1d5db] font-light leading-relaxed">{t.storyHighlight}</p>
+          <a href="#/sobre" className="inline-flex items-center gap-2 px-4 py-3 bg-[#FF6B35] text-[#121212] font-bold text-xs uppercase tracking-wider">{isPt ? 'Conhecer minha trajetória completa' : 'Conocer mi trayectoria completa'} <ArrowRight className="w-4 h-4"/></a>
+        </div>
+      </section>
+
+      <section id="certificacoes" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div className="space-y-8">
+          <div className="border-b border-[#2e2e2e] pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
+                {t.certEyebrow}
+              </span>
+              <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
+                {t.certTitle}
+              </h2>
+              <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
+                {t.certSubtitle}
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Adm4All */}
-              {uxProjects.filter(p => p.id === 'adm4all').map((project) => (
-                <div 
-                  key={project.id}
-                  className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 space-y-4 transition-colors flex flex-col justify-between"
-                >
-                  <div className="space-y-3">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#999] block">
-                      {t.extensionProject}
-                    </span>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={project.image}
-                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
-                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
-                        loading="lazy"
-                      />
-                      <h3 className="text-xl font-serif-artistic italic text-white">
-                        {project.title}
-                      </h3>
-                    </div>
-                    <p className="text-xs text-[#ccc] font-light leading-relaxed">
-                      {t.admSummary}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {(isPt ? ['Figma', 'UX/UI', 'Fluxos', 'Prototipação'] : ['Figma', 'UX/UI', 'Flujos', 'Prototipado']).map((tag, idx) => (
-                        <span key={idx} className="text-[11px] font-mono bg-[#141414] text-[#aaa] px-2 py-0.5 border border-[#2a2a2a]">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+            {onOpenResume && (
+              <button
+                onClick={onOpenResume}
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer"
+              >
+                <span>{isPt ? 'Ver mais certificações no currículo →' : 'Ver más certificaciones en el currículum →'}</span>
+              </button>
+            )}
+          </div>
 
-                  <div className="flex items-center gap-2 pt-4 border-t border-[#2a2a2a]">
-                    <button
-                      onClick={() => setActiveProjectModal(project)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-                    >
-                      <span>{t.viewProject}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {(isPt ? ['Ciências Contábeis', 'MBA em Engenharia de Dados', 'Análise e Desenvolvimento de Sistemas'] : ['Ciencias Contables', 'MBA en Ingeniería de Datos', 'Análisis y Desarrollo de Sistemas']).map((item) => (
+              <div key={item} className="p-4 border border-[#333] bg-[#181818] text-sm text-[#d1d5db]">{item}</div>
+            ))}
+          </div>
 
-                    {project.figmaUrl && (
-                      <a
-                        href={project.figmaUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#333] hover:border-[#FF6B35] bg-[#1c1c1c] text-white text-xs font-mono uppercase tracking-wider transition-colors"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                        <span>Figma</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
 
-              {/* PetZona */}
-              {uxProjects.filter(p => p.id === 'petzona').map((project) => (
-                <div 
-                  key={project.id}
-                  className="border border-[#333] hover:border-[#FF6B35] bg-[#181818] p-6 space-y-4 transition-colors flex flex-col justify-between"
-                >
-                  <div className="space-y-3">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-[#FF6B35] block">
-                      {project.subtitle || (isPt ? 'UX/UI com visão de Customer Experience — projeto acadêmico em evolução' : 'UX/UI con visión de Customer Experience — proyecto académico en evolución')}
-                    </span>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={project.image}
-                        alt={`${project.title} — ${isPt ? 'prévia do projeto' : 'vista previa del proyecto'}`}
-                        className="w-12 h-12 object-cover border border-[#333] bg-[#111] shrink-0"
-                        loading="lazy"
-                      />
-                      <h3 className="text-xl font-serif-artistic italic text-white">
-                        {project.title}
-                      </h3>
-                    </div>
-                    <p className="text-xs text-[#ccc] font-light leading-relaxed">
-                      {project.summary}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {['Persona', 'Jornada', 'Wireframe', 'Figma'].map((tag, idx) => (
-                        <span key={idx} className="text-[11px] font-mono bg-[#141414] text-[#aaa] px-2 py-0.5 border border-[#2a2a2a]">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
 
-                  <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-[#2a2a2a]">
-                    <button
-                      onClick={() => setActiveProjectModal(project)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF6B35] hover:bg-[#ff7f4d] text-black font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-                    >
-                      <span>{t.viewProject}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-
-                    <button
-                      onClick={() => setShowWireframeStandalone(true)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-black font-semibold text-xs font-mono uppercase tracking-wider transition-colors cursor-pointer"
-                    >
-                      <Smartphone className="w-3.5 h-3.5" />
-                      <span>{t.testWireframe}</span>
-                    </button>
-                  </div>
-                </div>
-              ))}
-
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <Award className="w-4 h-4 text-[#FF6B35]" />
+                <span>Microsoft AI-900</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">IA / Microsoft Learn</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Fundamentos e aplicações de Inteligência Artificial na nuvem.' : 'Fundamentos y aplicaciones de Inteligencia Artificial en la nube.'}</p>
             </div>
+
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <Database className="w-4 h-4 text-[#FF6B35]" />
+                <span>Dados / SQL / Power BI</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'Workshop & Projetos Práticos' : 'Workshop & Proyectos Prácticos'}</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Modelagem relacional, consultas estruturadas e dashboards executivos.' : 'Modelado relacional, consultas estructuradas y dashboards ejecutivos.'}</p>
+            </div>
+
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <Layers className="w-4 h-4 text-[#FF6B35]" />
+                <span>UX/UI Design</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">Fábrica de Software UBTech Office</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Pesquisa com usuários, personas, mapeamento de jornada e prototipação.' : 'Investigación con usuarios, personas, mapeo de jornada y prototipado.'}</p>
+            </div>
+
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#FF6B35]" />
+                <span>{isPt ? 'Agilidade (Scrum Fundamentals)' : 'Agilidad (Scrum Fundamentals)'}</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'SFPC / Metodologias Ágeis' : 'SFPC / Metodologías Ágiles'}</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Sprints, rituais ágeis e colaboração contínua em equipes de produto.' : 'Sprints, rituales ágiles y colaboración continua en equipos de producto.'}</p>
+            </div>
+
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <Code2 className="w-4 h-4 text-[#FF6B35]" />
+                <span>{isPt ? 'Tecnologia e Desenvolvimento' : 'Tecnología y Desarrollo'}</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">Alura & UNIPÊ</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Lógica de programação, Git/GitHub, introdução a Kotlin e interfaces web.' : 'Lógica de programación, Git/GitHub, introducción a Kotlin e interfaces web.'}</p>
+            </div>
+
+            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold">
+                <ShieldCheck className="w-4 h-4 text-[#FF6B35]" />
+                <span>{isPt ? 'Ouvidoria e Conflitos' : 'Atención de Reclamos y Conflictos'}</span>
+              </div>
+              <p className="text-[#999] font-mono text-[11px]">ENAP — Escola Nacional de Adm. Pública</p>
+              <p className="text-[#bbb] font-light">{isPt ? 'Mediação de atritos críticos, escuta qualificada e conformidade com o cliente.' : 'Mediación de situaciones críticas, escucha cualificada y cumplimiento orientado al cliente.'}</p>
+            </div>
+
           </div>
 
         </div>
       </section>
 
-
-      {/* =========================================================================
-          6. NOVA SEÇÃO — ARTIGOS E ESTUDOS (#artigos)
-          ========================================================================= */}
       <section id="artigos" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="border border-[#333] bg-[#181818] p-6 sm:p-10 lg:p-12 space-y-8">
-          
+
           <div className="space-y-3">
             <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] font-bold block font-mono">
               {t.articlesEyebrow}
@@ -1042,7 +1152,7 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
           {/* Featured Article Card */}
           <div className="border border-[#3a3a3a] hover:border-[#FF6B35] bg-[#151515] p-6 sm:p-8 space-y-5 transition-colors">
-            
+
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#252525] pb-4">
               <div className="flex items-center gap-2">
                 <span className="p-2 bg-[#222] border border-[#333] text-[#FF6B35]">
@@ -1106,142 +1216,6 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         </div>
       </section>
 
-
-      {/* =========================================================================
-          6. CURSOS E CERTIFICAÇÕES (#certificacoes)
-          ========================================================================= */}
-      <section id="certificacoes" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-        <div className="space-y-8">
-          
-          <div className="border-b border-[#2e2e2e] pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-2 font-bold block font-mono">
-                {t.certEyebrow}
-              </span>
-              <h2 className="font-serif-artistic italic text-3xl sm:text-4xl text-white font-normal">
-                {t.certTitle}
-              </h2>
-              <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-                {t.certSubtitle}
-              </p>
-            </div>
-
-            {onOpenResume && (
-              <button
-                onClick={onOpenResume}
-                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-mono text-[#FF6B35] hover:underline cursor-pointer"
-              >
-                <span>{isPt ? 'Ver mais certificações no currículo →' : 'Ver más certificaciones en el currículum →'}</span>
-              </button>
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
-            
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <Award className="w-4 h-4 text-[#FF6B35]" />
-                <span>Microsoft AI-900</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">IA / Microsoft Learn</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Fundamentos e aplicações de Inteligência Artificial na nuvem.' : 'Fundamentos y aplicaciones de Inteligencia Artificial en la nube.'}</p>
-            </div>
-
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <Database className="w-4 h-4 text-[#FF6B35]" />
-                <span>Dados / SQL / Power BI</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'Workshop & Projetos Práticos' : 'Workshop & Proyectos Prácticos'}</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Modelagem relacional, consultas estruturadas e dashboards executivos.' : 'Modelado relacional, consultas estructuradas y dashboards ejecutivos.'}</p>
-            </div>
-
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <Layers className="w-4 h-4 text-[#FF6B35]" />
-                <span>UX/UI Design</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">Fábrica de Software UBTech Office</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Pesquisa com usuários, personas, mapeamento de jornada e prototipação.' : 'Investigación con usuarios, personas, mapeo de jornada y prototipado.'}</p>
-            </div>
-
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#FF6B35]" />
-                <span>{isPt ? 'Agilidade (Scrum Fundamentals)' : 'Agilidad (Scrum Fundamentals)'}</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">{isPt ? 'SFPC / Metodologias Ágeis' : 'SFPC / Metodologías Ágiles'}</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Sprints, rituais ágeis e colaboração contínua em equipes de produto.' : 'Sprints, rituales ágiles y colaboración continua en equipos de producto.'}</p>
-            </div>
-
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <Code2 className="w-4 h-4 text-[#FF6B35]" />
-                <span>{isPt ? 'Tecnologia e Desenvolvimento' : 'Tecnología y Desarrollo'}</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">Alura & UNIPÊ</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Lógica de programação, Git/GitHub, introdução a Kotlin e interfaces web.' : 'Lógica de programación, Git/GitHub, introducción a Kotlin e interfaces web.'}</p>
-            </div>
-
-            <div className="p-4 border border-[#333] hover:border-[#FF6B35] bg-[#181818] transition-colors space-y-1.5">
-              <div className="flex items-center gap-2 text-white font-semibold">
-                <ShieldCheck className="w-4 h-4 text-[#FF6B35]" />
-                <span>{isPt ? 'Ouvidoria e Conflitos' : 'Atención de Reclamos y Conflictos'}</span>
-              </div>
-              <p className="text-[#999] font-mono text-[11px]">ENAP — Escola Nacional de Adm. Pública</p>
-              <p className="text-[#bbb] font-light">{isPt ? 'Mediação de atritos críticos, escuta qualificada e conformidade com o cliente.' : 'Mediación de situaciones críticas, escucha cualificada y cumplimiento orientado al cliente.'}</p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* =========================================================================
-          9. FERRAMENTAS E TECNOLOGIAS (#ferramentas)
-          ========================================================================= */}
-      <section id="ferramentas" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
-        <div className="p-6 sm:p-8 border border-[#333] bg-[#181818] space-y-5">
-          <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-[#FF6B35] mb-1 font-bold block font-mono">
-              {t.toolsEyebrow}
-            </span>
-            <h2 className="font-serif-artistic italic text-2xl sm:text-3xl text-white font-normal">
-              {t.toolsTitle}
-            </h2>
-            <p className="text-xs sm:text-sm text-[#9ca3af] font-light mt-1">
-              {t.toolsSubtitle}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-2.5 pt-2">
-            {[
-              'SQL',
-              'Power BI',
-              'Figma',
-              'Git',
-              'GitHub',
-              'HTML',
-              'CSS',
-              'Kotlin',
-              'Python'
-            ].map((tool, idx) => (
-              <span 
-                key={idx}
-                className="px-3.5 py-1.5 bg-[#141414] hover:bg-[#222] border border-[#333] hover:border-[#FF6B35] text-[#f0f0f0] font-mono text-xs uppercase tracking-wider transition-colors"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* =========================================================================
-          8. CURRÍCULO (#curriculo)
-          ========================================================================= */}
       <section id="curriculo" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="p-8 sm:p-10 border border-[#333] bg-[#161616] flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center sm:text-left">
@@ -1279,10 +1253,6 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
         </div>
       </section>
 
-
-      {/* =========================================================================
-          9. ONDE ME ENCONTRAR / CONTATO (#contato)
-          ========================================================================= */}
       <section id="contato" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="border border-[#333] bg-[#181818] p-8 sm:p-12 space-y-6">
           <div className="space-y-2">
@@ -1343,13 +1313,13 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
       {/* Modal de Detalhes do Projeto */}
       {activeProjectModal && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-sm animate-fadeIn overflow-y-auto"
           onClick={() => setActiveProjectModal(null)}
           role="dialog"
           aria-modal="true"
         >
-          <div 
+          <div
             className="relative w-full max-w-3xl bg-[#161616] border border-[#333] shadow-2xl p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto text-left"
             onClick={(e) => e.stopPropagation()}
           >
@@ -1451,15 +1421,15 @@ export const MainPortfolioPage: React.FC<MainPortfolioPageProps> = ({
 
       {/* Standalone Wireframe Simulator Modal */}
       {showWireframeStandalone && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-sm animate-fadeIn overflow-y-auto"
           onClick={() => setShowWireframeStandalone(false)}
         >
-          <div 
+          <div
             className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto bg-[#141414] border border-[#3a3a3a] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <PetzoneWireframeViewer 
+            <PetzoneWireframeViewer
               onClose={() => setShowWireframeStandalone(false)}
               isModal={true}
             />

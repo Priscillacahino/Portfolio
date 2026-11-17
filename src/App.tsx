@@ -12,6 +12,7 @@ import { ProjectsPage } from './components/ProjectsPage';
 import { ArticlePage } from './components/ArticlePage';
 import { LegadoUrbanoArticlePage } from './components/LegadoUrbanoArticlePage';
 import { ResumeModal } from './components/ResumeModal';
+import { MainPortfolioPage } from './components/MainPortfolioPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('about');
@@ -24,7 +25,10 @@ export default function App() {
   const handleHashChange = useCallback(() => {
     const hash = window.location.hash.toLowerCase();
 
-    if (hash.startsWith('#/artigo')) {
+    if (hash === '#/sobre') {
+      setCurrentPage('home');
+      setActiveProjectId(null);
+    } else if (hash.startsWith('#/artigo')) {
       setCurrentPage('article');
       setActiveProjectId(null);
       const parts = hash.split('/');
@@ -120,8 +124,8 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#121212] text-[#f5f5f5] selection:bg-[#FF6B35]/30 selection:text-[#FF6B35]">
       {/* Persistent Navigation Header with 9 items */}
-      <Header 
-        currentPage={currentPage} 
+      <Header
+        currentPage={currentPage}
         onSelectPage={handleSelectPage}
         currentLanguage={currentLanguage}
         onSelectLanguage={setCurrentLanguage}
@@ -143,17 +147,19 @@ export default function App() {
               onOpenResume={handleOpenResume}
             />
           )
+        ) : currentPage === 'home' ? (
+          <MainPortfolioPage onSelectPage={handleSelectPage} currentLanguage={currentLanguage} onOpenResume={handleOpenResume} onOpenArticle={() => handleSelectPage('article')} onSelectProject={handleSelectProject} fullAboutOnly />
         ) : currentPage === 'projects' ? (
-          <ProjectsPage 
-            onSelectPage={handleSelectPage} 
-            currentLanguage={currentLanguage} 
+          <ProjectsPage
+            onSelectPage={handleSelectPage}
+            currentLanguage={currentLanguage}
             onOpenResume={handleOpenResume}
             activeProjectId={activeProjectId}
             onSelectProject={handleSelectProject}
           />
         ) : (
-          <AboutPage 
-            onSelectPage={handleSelectPage} 
+          <AboutPage
+            onSelectPage={handleSelectPage}
             currentLanguage={currentLanguage}
             onOpenResume={handleOpenResume}
             onSelectProject={handleSelectProject}
@@ -163,9 +169,9 @@ export default function App() {
       </main>
 
       {/* Shared Footer with Contact & Links */}
-      <Footer 
-        onSelectPage={handleSelectPage} 
-        currentLanguage={currentLanguage} 
+      <Footer
+        onSelectPage={handleSelectPage}
+        currentLanguage={currentLanguage}
         onOpenResume={handleOpenResume}
       />
 
